@@ -16191,7 +16191,7 @@ exports = module.exports = __webpack_require__(11)(undefined);
 
 
 // module
-exports.push([module.i, "\nbody {\n  overflow-x: hidden;\n  overflow-y: auto;\n}\nbody {\n  width: 100wh;\n  height: 100vh;\n  background: linear-gradient(-45deg, #e61b1b, #E73C7E);\n  background-size: 400% 400%;\n  -webkit-animation: Gradient 15s ease infinite;\n          animation: Gradient 15s ease infinite;\n}\n#targetThree {\n  width: 100wh;\n  height: 100vh;\n}\n@-webkit-keyframes Gradient {\n0% {\n    background-position: 0% 50%;\n}\n50% {\n    background-position: 100% 50%;\n}\n100% {\n    background-position: 0% 50%;\n}\n}\n@keyframes Gradient {\n0% {\n    background-position: 0% 50%;\n}\n50% {\n    background-position: 100% 50%;\n}\n100% {\n    background-position: 0% 50%;\n}\n}\ncanvas {\n  display: block;\n  background: transparent;\n}\n", ""]);
+exports.push([module.i, "/*body{*/\n/*overflow-x: hidden;*/\n/*overflow-y: auto;*/\n/*}*/\nbody {\n  width: 100vw;\n  height: 100vh;\n  font-size: 2rem;\n  background: linear-gradient(-45deg, #e61b1b, #ec2548);\n  background-size: 100% 100%;\n  /*animation: Gradient 15s ease infinite;*/\n}\n#targetThree {\n  width: 100vw;\n  height: 100vh;\n  display: block;\n  background: transparent;\n}\n.mainLogo {\n  top: 50%;\n  left: 50%;\n  text-align: center;\n  position: absolute;\n  -webkit-transform: translate3d(-50%, -50%, 0);\n          transform: translate3d(-50%, -50%, 0);\n}\n.mainLogo h2 {\n    /*color: $color-1;  */\n    color: #FFF;\n    /*text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);*/\n    display: inline-block;\n    background: #e61b1b;\n    padding: 14px 30px;\n}\n.subscribe {\n  padding: 10rem 0;\n  background: #FFF;\n}\n.subscribe .text, .subscribe form {\n    color: #000;\n    font-weight: bold;\n    vertical-align: middle;\n    display: inline-block;\n}\n.subscribe .text {\n    margin-right: 30px;\n}\n.subscribe input {\n    padding: 10px 20px;\n    border: 2px solid #e61b1b;\n}\n.subscribe button {\n    border: 0;\n    color: #FFF;\n    border-radius: 0;\n    padding: 12px 20px;\n    background: #e61b1b;\n}\n.opinions {\n  color: #FFF;\n  padding: 9rem 0;\n  background: linear-gradient(-45deg, #e61b1b, #e6742b);\n  background-size: 100% 100%;\n}\n.opinions .single {\n    width: 40%;\n    margin-bottom: 30px;\n    margin-left: 10%;\n    position: relative;\n}\n.opinions .single img {\n      width: 70%;\n      margin-top: 20px;\n}\n.opinions .single:last-of-type {\n      margin-left: 50%;\n      margin-bottom: 0;\n}\n.desc, .half-half {\n  position: relative;\n  padding: 9rem 0;\n  background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#cdcdcd));\n  background: linear-gradient(180deg, #FFF, #cdcdcd);\n  background-size: 100% 100%;\n}\n.desc .single, .half-half .single {\n    padding: 2rem;\n}\n.desc h3, .half-half h3 {\n    color: #000;\n    font-weight: bold;\n    text-transform: uppercase;\n    /*text-align: center;*/\n    letter-spacing: 15px;\n}\n.desc #targetThreeTwo, .half-half #targetThreeTwo {\n    position: absolute;\n    right: 0;\n    bottom: 0;\n}\n.half-half {\n  color: #FFF;\n  font-size: 0;\n  background: #e61b1b;\n}\n.half-half .half {\n    width: 50%;\n    vertical-align: top;\n    display: inline-block;\n    padding: 0 20px;\n}\n.half-half .half .title {\n      letter-spacing: 3px;\n      font-size: 2.2rem;\n}\n.half-half .half p {\n      margin: 30px 0;\n      font-size: 2rem;\n}\n.half-half .half img {\n      display: block;\n      max-width: 100%;\n      margin: 10px auto;\n}\n.half-half p {\n    margin: 15px 0;\n    font-size: 2rem;\n}\n", ""]);
 
 // exports
 
@@ -16206,6 +16206,75 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_sweetalert__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_sweetalert___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vue_sweetalert__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -16291,7 +16360,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             }).then(function (response) {
                 console.log(response);
                 self.userEmail = '';
-                self.$swal('Gracias por registrarte, te enviaremos las instrucciones próximamente');
+                self.$swal('You are Inn, We\'ll let you know by email what\'s next');
             }).catch(function (error) {
                 console.log(error);
             });
@@ -16313,7 +16382,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             var camera = new THREE.PerspectiveCamera(80, window.innerWidth / window.innerHeight, 0.1, 800);
             camera.position.set(0, 5, 10);
 
+            var camera2 = new THREE.PerspectiveCamera(80, window.innerWidth / window.innerHeight, 0.1, 800);
+            camera2.position.set(0, 20, 20);
+
             var renderer = new THREE.WebGLRenderer({ alpha: true });
+            var renderer2 = new THREE.WebGLRenderer({ alpha: true });
             renderer.setClearColor(0xffffff, 0);
             renderer.setPixelRatio(window.devicePixelRatio);
             renderer.setSize(window.innerWidth, window.innerHeight);
@@ -16323,16 +16396,27 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             renderer.shadowMap.enabled = true;
             renderer.shadowMap.type = THREE.PCFShadowMap;
 
+            renderer2.setClearColor(0xffffff, 0);
+            renderer2.setPixelRatio(window.devicePixelRatio);
+            renderer2.setSize(window.innerWidth, window.innerHeight);
+
+            renderer2.toneMapping = THREE.LinearToneMapping;
+            renderer2.toneMappingExposure = Math.pow(0.94, 5.0);
+            renderer2.shadowMap.enabled = true;
+            renderer2.shadowMap.type = THREE.PCFShadowMap;
+
             window.addEventListener('resize', function () {
                 camera.aspect = window.innerWidth / window.innerHeight;
                 camera.updateProjectionMatrix();
                 renderer.setSize(window.innerWidth, window.innerHeight);
+                renderer2.setSize(window.innerWidth, window.innerHeight);
             }, false);
 
             document.getElementById('targetThree').appendChild(renderer.domElement);
+            document.getElementById('targetThreeTwo').appendChild(renderer2.domElement);
 
             function renderScene() {
-                renderer.render(scene, camera);
+                renderer.render(scene, camera);renderer2.render(scene, camera2);
             }
             renderCalls.push(renderScene);
 
@@ -16376,7 +16460,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             });
 
             scene.add(mesh);
-        }, 1000);
+        }, 100);
     }
 });
 
@@ -16391,49 +16475,53 @@ var render = function() {
   return _c("div", [
     _vm._m(0, false, false),
     _vm._v(" "),
-    _c("div", {}, [
-      _c("div", { staticClass: "subscribe" }, [
-        _c("div", { staticClass: "container" }, [
-          _vm._m(1, false, false),
-          _vm._v(" "),
-          _c(
-            "form",
-            {
+    _c("div", { staticClass: "subscribe" }, [
+      _c("div", { staticClass: "container" }, [
+        _vm._m(1, false, false),
+        _vm._v(" "),
+        _c(
+          "form",
+          {
+            on: {
+              submit: function($event) {
+                $event.preventDefault()
+                _vm.submitEmail($event)
+              }
+            }
+          },
+          [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.userEmail,
+                  expression: "userEmail"
+                }
+              ],
+              attrs: { type: "email", placeholder: "alex@domain.com" },
+              domProps: { value: _vm.userEmail },
               on: {
-                submit: function($event) {
-                  $event.preventDefault()
-                  _vm.submitEmail($event)
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.userEmail = $event.target.value
                 }
               }
-            },
-            [
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.userEmail,
-                    expression: "userEmail"
-                  }
-                ],
-                attrs: { type: "email", placeholder: "alex@domain.com" },
-                domProps: { value: _vm.userEmail },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.userEmail = $event.target.value
-                  }
-                }
-              }),
-              _vm._v(" "),
-              _c("button", { attrs: { type: "submit" } }, [_vm._v("Submit")])
-            ]
-          )
-        ])
+            }),
+            _vm._v(" "),
+            _c("button", { attrs: { type: "submit" } }, [_vm._v("Submit")])
+          ]
+        )
       ])
-    ])
+    ]),
+    _vm._v(" "),
+    _vm._m(2, false, false),
+    _vm._v(" "),
+    _vm._m(3, false, false),
+    _vm._v(" "),
+    _vm._m(4, false, false)
   ])
 }
 var staticRenderFns = [
@@ -16442,33 +16530,35 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "section" }, [
-      _c("div", { staticClass: "logo" }, [
+      _c("div", { staticClass: "mainLogo" }, [
         _c("img", {
           attrs: { src: "/images/PowerLineUp.png", alt: "Power LineUp" }
         }),
         _vm._v(" "),
-        _c(
-          "script",
-          { attrs: { type: "x-shader/x-vertex", id: "wrapVertexShader" } },
-          [
-            _vm._v(
-              "\n              varying vec2 vUv;\n              uniform float t;\n              uniform vec2 resolution;\n              const float Pi = 3.1415926;\n              const float TwoPi = Pi * 2.0;\n              void main() {\n                vUv = uv;\n                vec3 pos = position;\n                pos.z += (\n                  (\n                    ( sin( t + ( position.x / ( resolution.x * 0.5) * TwoPi ) ) * 2.0)\n                    + ( sin( t + 3.5 + ( position.y / ( resolution.y * 0.5) * TwoPi ) ) * 0.75)\n                    + ( cos( t + position.z ) * 1.0 )\n                  )\n                  / 2.0\n                );\n                gl_Position = projectionMatrix * modelViewMatrix * vec4( pos, 1.0 );\n              }\n            "
-            )
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "script",
-          { attrs: { type: "x-shader/x-fragment", id: "wrapFragmentShader" } },
-          [
-            _vm._v(
-              "\n                varying vec2 vUv;\n                uniform float numStripes;\n                void main(){\n                  float k;\n                  if(fract(vUv.y * numStripes) < 0.20){\n                      k = 1.0;\n                      gl_FragColor = vec4(vec3( k ), 1);\n                      gl_FragColor.a = 1.0;\n                  }else{\n                    gl_FragColor.a = 0.0;\n                  }\n                }\n            "
-            )
-          ]
-        ),
-        _vm._v(" "),
-        _c("div", { attrs: { id: "targetThree" } })
-      ])
+        _c("h2", [_vm._v("Fantasy Strategy powered by the Ethereum Network")])
+      ]),
+      _vm._v(" "),
+      _c(
+        "script",
+        { attrs: { type: "x-shader/x-vertex", id: "wrapVertexShader" } },
+        [
+          _vm._v(
+            "\n          varying vec2 vUv;\n          uniform float t;\n          uniform vec2 resolution;\n          const float Pi = 3.1415926;\n          const float TwoPi = Pi * 2.0;\n          void main() {\n            vUv = uv;\n            vec3 pos = position;\n            pos.z += (\n              (\n                ( sin( t + ( position.x / ( resolution.x * 0.5) * TwoPi ) ) * 2.0)\n                + ( sin( t + 3.5 + ( position.y / ( resolution.y * 0.5) * TwoPi ) ) * 0.75)\n                + ( cos( t + position.z ) * 1.0 )\n              )\n              / 2.0\n            );\n            gl_Position = projectionMatrix * modelViewMatrix * vec4( pos, 1.0 );\n          }\n        "
+          )
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "script",
+        { attrs: { type: "x-shader/x-fragment", id: "wrapFragmentShader" } },
+        [
+          _vm._v(
+            "\n            varying vec2 vUv;\n            uniform float numStripes;\n            void main(){\n              float k;\n              if(fract(vUv.y * numStripes) < 0.20){\n                  k = 1.0;\n                  gl_FragColor = vec4(vec3( k ), 1);\n                  gl_FragColor.a = 1.0;\n              }else{\n                gl_FragColor.a = 0.0;\n              }\n            }\n        "
+          )
+        ]
+      ),
+      _vm._v(" "),
+      _c("div", { attrs: { id: "targetThree" } })
     ])
   },
   function() {
@@ -16479,6 +16569,158 @@ var staticRenderFns = [
       _vm._v("Apply for "),
       _c("strong", [_vm._v("AirDrop")]),
       _vm._v(".")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "opinions" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "single" }, [
+          _c("div", { staticClass: "text" }, [
+            _vm._v(
+              "\n                    Is like FanDuel but open, bigger, and more exciting! – "
+            ),
+            _c("strong", [_vm._v("CoinDesk.")])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "logo" }, [
+            _c("img", {
+              attrs: {
+                src:
+                  "https://surveymonkey-assets.s3.amazonaws.com/survey/123258376/6c9cda2a-cb03-4ae8-bfdb-282d4df5000c.png",
+                alt: "CoinDesk"
+              }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "single" }, [
+          _c("div", { staticClass: "text" }, [
+            _vm._v(
+              "\n                    “Draft Kings meets Ethereum in a never ending exciting game.” –"
+            ),
+            _c("strong", [_vm._v("The Merkle.")])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "logo" }, [
+            _c("img", {
+              attrs: {
+                src:
+                  "https://www.merkleinc.com/themes/custom/merkle/build/images/icons/Merkle_Logo.svg",
+                alt: "The Merkle"
+              }
+            })
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "desc" }, [
+      _c(
+        "div",
+        {
+          staticClass: "container",
+          staticStyle: { position: "relative", "z-index": "2" }
+        },
+        [
+          _c("div", { staticClass: "single" }, [
+            _c("h3", [_vm._v("Fantasy Sports")]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "All the excitement of classic fantasy sports brought to the blockchain in an open peer-to-peer, fair, solid, massive game."
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "single" }, [
+            _c("h3", [_vm._v("Fantasy Networks")]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "Prepare your budget to align Youtube stars in our already built-in Smart Contracts to play this brand new kind of Fantasy Tournament."
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "single" }, [
+            _c("h3", [_vm._v("Fantasy Movies")]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "Stake on your favorite movies and win with the next blockbuster or the unexpected boom of an indie underdog."
+              )
+            ])
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c("div", { attrs: { id: "targetThreeTwo" } })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "half-half" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "half" }, [
+          _c("div", { staticClass: "title" }, [
+            _vm._v("Classic-Style Tournament")
+          ]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "Play against other players, and win\n                    the jackpot. Wether you win or loose,\n                    your stacked tokens return to you\n                    always. The prize is all the new tokens\n                    generated during the tournament.\n                    The winners take it all!"
+            )
+          ]),
+          _vm._v(" "),
+          _c("img", {
+            attrs: {
+              src: "images/ClassicTournament.png",
+              alt: "Classic Tournament"
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "half" }, [
+          _c("div", { staticClass: "title" }, [_vm._v("Solo Mining")]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "Stake on your favorites and mine new\n                    tokens for every touchdown, goal,\n                    subscriber, platinum disk, ticket sold, etc.\n                    Remember this is fantasy world and fans\n                    from sports, movies, esports and the whole\n                    internet are welcome."
+            )
+          ]),
+          _vm._v(" "),
+          _c("img", {
+            attrs: { src: "images/SoloMining.png", alt: "Solo Mining" }
+          })
+        ]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "\n                Watch out, you never expend or loose your tokens! You just stake them during the tournament to get more\n                Learn How.\n            "
+          )
+        ]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "\n                Betting is not fun. In Fantasy World you stake your tokens in a Smart contract on your\n                favorite athletes, movies and stars, and you win new tokens if your strategy is good.\n            "
+          )
+        ]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "\n                But after every tournament, it doesn’t matter if you won or loose, you get back your original\n                tokens. This is the new way to play strategic fantasy powered by the ethereum network.\n            "
+          )
+        ])
+      ])
     ])
   }
 ]

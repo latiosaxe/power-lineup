@@ -1,59 +1,128 @@
 <template>
     <div>
         <div class="section">
-            <div class="logo">
+            <div class="mainLogo">
                 <img src="/images/PowerLineUp.png" alt="Power LineUp">
-                <!--<h2>ERC20 Ethereum Standard Token for Embedded Computing</h2>-->
-
-
-                <script type="x-shader/x-vertex" id="wrapVertexShader">
-                  varying vec2 vUv;
-                  uniform float t;
-                  uniform vec2 resolution;
-                  const float Pi = 3.1415926;
-                  const float TwoPi = Pi * 2.0;
-                  void main() {
-                    vUv = uv;
-                    vec3 pos = position;
-                    pos.z += (
-                      (
-                        ( sin( t + ( position.x / ( resolution.x * 0.5) * TwoPi ) ) * 2.0)
-                        + ( sin( t + 3.5 + ( position.y / ( resolution.y * 0.5) * TwoPi ) ) * 0.75)
-                        + ( cos( t + position.z ) * 1.0 )
-                      )
-                      / 2.0
-                    );
-                    gl_Position = projectionMatrix * modelViewMatrix * vec4( pos, 1.0 );
+                <h2>Fantasy Strategy powered by the Ethereum Network</h2>
+            </div>
+            <script type="x-shader/x-vertex" id="wrapVertexShader">
+              varying vec2 vUv;
+              uniform float t;
+              uniform vec2 resolution;
+              const float Pi = 3.1415926;
+              const float TwoPi = Pi * 2.0;
+              void main() {
+                vUv = uv;
+                vec3 pos = position;
+                pos.z += (
+                  (
+                    ( sin( t + ( position.x / ( resolution.x * 0.5) * TwoPi ) ) * 2.0)
+                    + ( sin( t + 3.5 + ( position.y / ( resolution.y * 0.5) * TwoPi ) ) * 0.75)
+                    + ( cos( t + position.z ) * 1.0 )
+                  )
+                  / 2.0
+                );
+                gl_Position = projectionMatrix * modelViewMatrix * vec4( pos, 1.0 );
+              }
+            </script>
+            <script type="x-shader/x-fragment" id="wrapFragmentShader">
+                varying vec2 vUv;
+                uniform float numStripes;
+                void main(){
+                  float k;
+                  if(fract(vUv.y * numStripes) < 0.20){
+                      k = 1.0;
+                      gl_FragColor = vec4(vec3( k ), 1);
+                      gl_FragColor.a = 1.0;
+                  }else{
+                    gl_FragColor.a = 0.0;
                   }
-                </script>
+                }
+            </script>
 
-                                <script type="x-shader/x-fragment" id="wrapFragmentShader">
-                    varying vec2 vUv;
-                    uniform float numStripes;
-                    void main(){
-                      float k;
-                      if(fract(vUv.y * numStripes) < 0.20){
-                          k = 1.0;
-                          gl_FragColor = vec4(vec3( k ), 1);
-                          gl_FragColor.a = 1.0;
-                      }else{
-                        gl_FragColor.a = 0.0;
-                      }
-                    }
-                </script>
-
-                <div id="targetThree"></div>
+            <div id="targetThree"></div>
+        </div>
+        <div class="subscribe">
+            <div class="container">
+                <div class="text">Apply for <strong>AirDrop</strong>.</div>
+                <form @submit.prevent="submitEmail">
+                    <input type="email" v-model="userEmail" placeholder="alex@domain.com">
+                    <button type="submit">Submit</button>
+                </form>
             </div>
         </div>
-        <div class="">
-            <div class="subscribe">
-                <div class="container">
-                    <div class="text">Apply for <strong>AirDrop</strong>.</div>
-                    <form @submit.prevent="submitEmail">
-                        <input type="email" v-model="userEmail" placeholder="alex@domain.com">
-                        <button type="submit">Submit</button>
-                    </form>
+        <div class="opinions">
+            <div class="container">
+                <div class="single">
+                    <div class="text">
+                        Is like FanDuel but open, bigger, and more exciting! – <strong>CoinDesk.</strong>
+                    </div>
+                    <div class="logo">
+                        <img src="https://surveymonkey-assets.s3.amazonaws.com/survey/123258376/6c9cda2a-cb03-4ae8-bfdb-282d4df5000c.png" alt="CoinDesk">
+                    </div>
                 </div>
+                <div class="single">
+                    <div class="text">
+                        “Draft Kings meets Ethereum in a never ending exciting game.” –<strong>The Merkle.</strong>
+                    </div>
+                    <div class="logo">
+                        <img src="https://www.merkleinc.com/themes/custom/merkle/build/images/icons/Merkle_Logo.svg" alt="The Merkle">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="desc">
+            <div class="container" style="position: relative; z-index: 2">
+                <div class="single">
+                    <h3>Fantasy Sports</h3>
+                    <p>All the excitement of classic fantasy sports brought to the blockchain in an open peer-to-peer, fair, solid, massive game.</p>
+                </div>
+                <div class="single">
+                    <h3>Fantasy Networks</h3>
+                    <p>Prepare your budget to align Youtube stars in our already built-in Smart Contracts to play this brand new kind of Fantasy Tournament.</p>
+                </div>
+                <div class="single">
+                    <h3>Fantasy Movies</h3>
+                    <p>Stake on your favorite movies and win with the next blockbuster or the unexpected boom of an indie underdog.</p>
+                </div>
+            </div>
+            <div id="targetThreeTwo"></div>
+        </div>
+        <div class="half-half">
+            <div class="container">
+                <div class="half">
+                    <div class="title">Classic-Style Tournament</div>
+                    <p>Play against other players, and win
+                        the jackpot. Wether you win or loose,
+                        your stacked tokens return to you
+                        always. The prize is all the new tokens
+                        generated during the tournament.
+                        The winners take it all!</p>
+                    <img src="images/ClassicTournament.png" alt="Classic Tournament">
+                </div>
+                <div class="half">
+                    <div class="title">Solo Mining</div>
+                    <p>Stake on your favorites and mine new
+                        tokens for every touchdown, goal,
+                        subscriber, platinum disk, ticket sold, etc.
+                        Remember this is fantasy world and fans
+                        from sports, movies, esports and the whole
+                        internet are welcome.</p>
+                    <img src="images/SoloMining.png" alt="Solo Mining">
+                </div>
+
+                <p>
+                    Watch out, you never expend or loose your tokens! You just stake them during the tournament to get more
+                    Learn How.
+                </p>
+                <p>
+                    Betting is not fun. In Fantasy World you stake your tokens in a Smart contract on your
+                    favorite athletes, movies and stars, and you win new tokens if your strategy is good.
+                </p>
+                <p>
+                    But after every tournament, it doesn’t matter if you won or loose, you get back your original
+                    tokens. This is the new way to play strategic fantasy powered by the ethereum network.
+                </p>
             </div>
         </div>
     </div>
@@ -83,7 +152,7 @@
                 .then(function (response) {
                     console.log(response);
                     self.userEmail = '';
-                    self.$swal('Gracias por registrarte, te enviaremos las instrucciones próximamente');
+                    self.$swal('You are Inn, We\'ll let you know by email what\'s next');
                 })
                 .catch(function (error) {
                     console.log(error);
@@ -104,7 +173,11 @@
                 var camera = new THREE.PerspectiveCamera( 80, window.innerWidth / window.innerHeight, 0.1, 800 );
                 camera.position.set(0, 5, 10);
 
+                var camera2 = new THREE.PerspectiveCamera( 80, window.innerWidth / window.innerHeight, 0.1, 800 );
+                camera2.position.set(0, 20, 20);
+
                 var renderer = new THREE.WebGLRenderer({ alpha: true });
+                var renderer2 = new THREE.WebGLRenderer({ alpha: true });
                 renderer.setClearColor( 0xffffff, 0);
                 renderer.setPixelRatio( window.devicePixelRatio );
                 renderer.setSize( window.innerWidth, window.innerHeight );
@@ -114,15 +187,26 @@
                 renderer.shadowMap.enabled = true;
                 renderer.shadowMap.type = THREE.PCFShadowMap;
 
+                renderer2.setClearColor( 0xffffff, 0);
+                renderer2.setPixelRatio( window.devicePixelRatio );
+                renderer2.setSize( window.innerWidth, window.innerHeight );
+
+                renderer2.toneMapping = THREE.LinearToneMapping;
+                renderer2.toneMappingExposure = Math.pow( 0.94, 5.0 );
+                renderer2.shadowMap.enabled = true;
+                renderer2.shadowMap.type = THREE.PCFShadowMap;
+
                 window.addEventListener( 'resize', function () {
                     camera.aspect = window.innerWidth / window.innerHeight;
                     camera.updateProjectionMatrix();
                     renderer.setSize( window.innerWidth, window.innerHeight );
+                    renderer2.setSize( window.innerWidth, window.innerHeight );
                 }, false );
 
                 document.getElementById('targetThree').appendChild( renderer.domElement);
+                document.getElementById('targetThreeTwo').appendChild( renderer2.domElement);
 
-                function renderScene(){ renderer.render( scene, camera ); }
+                function renderScene(){ renderer.render( scene, camera ); renderer2.render( scene, camera2 ); }
                 renderCalls.push(renderScene);
 
                 var width = 50.0,
@@ -168,45 +252,142 @@
                 });
 
                 scene.add(mesh);
-            }, 1000);
+            }, 100);
         }
     }
 </script>
 
 <style lang="scss">
-    body{
-        overflow-x: hidden;
-        overflow-y: auto;
-    }
+    /*body{*/
+        /*overflow-x: hidden;*/
+        /*overflow-y: auto;*/
+    /*}*/
     $color-1: #e61b1b;
 
-
     body {
-        width: 100wh;
+        width: 100vw;
         height: 100vh;
-        background: linear-gradient(-45deg, #e61b1b, #E73C7E);
-        background-size: 400% 400%;
-        animation: Gradient 15s ease infinite;
+        font-size: 2rem;
+        background: linear-gradient(-45deg, #e61b1b, #ec2548);
+        background-size: 100% 100%;
+        /*animation: Gradient 15s ease infinite;*/
     }
     #targetThree{
-        width: 100wh;
+        width: 100vw;
         height: 100vh;
-    }
-
-    @keyframes Gradient {
-        0% {
-            background-position: 0% 50%
-        }
-        50% {
-            background-position: 100% 50%
-        }
-        100% {
-            background-position: 0% 50%
-        }
-    }
-
-    canvas {
         display: block;
         background: transparent;
     }
+
+    .mainLogo{
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        position: absolute;
+        transform: translate3d( -50%, -50%, 0 );
+        h2{
+            /*color: $color-1;  */
+            color: #FFF;
+            /*text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);*/
+            display: inline-block;
+            background: $color-1;
+            padding: 14px 30px;
+        }
+    }
+
+    .subscribe{
+        padding: 10rem 0;
+        background: #FFF;
+        .text, form{
+            color: #000;
+            font-weight: bold;
+            vertical-align: middle;
+            display: inline-block;
+        }
+        .text{
+            margin-right: 30px;
+        }
+        input{
+            padding: 10px 20px;
+            border: 2px solid $color-1;
+        }
+        button{
+            border: 0;
+            color: #FFF;
+            border-radius: 0;
+            padding: 12px 20px;
+            background: $color-1;
+        }
+    }
+
+    .opinions{
+        color: #FFF;
+        padding: 9rem 0;
+        background: linear-gradient(-45deg, #e61b1b, #e6742b);
+        background-size: 100% 100%;
+        .single{
+            width: 40%;
+            margin-bottom: 30px;
+            margin-left: 10%;
+            position: relative;
+            img{
+                width: 70%;
+                margin-top: 20px;
+            }
+            &:last-of-type{
+                margin-left: 50%;
+                 margin-bottom: 0;
+             }
+        }
+    }
+    .desc, .half-half{
+        position: relative;
+        padding: 9rem 0;
+        background: linear-gradient(180deg, #FFF, #cdcdcd);
+        background-size: 100% 100%;
+        .single{
+            padding: 2rem;
+        }
+        h3{
+            color: #000;
+            font-weight: bold;
+            text-transform: uppercase;
+            /*text-align: center;*/
+            letter-spacing: 15px;
+        }
+        #targetThreeTwo{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+    }
+    .half-half{
+        color: #FFF;
+        font-size: 0;
+        background: $color-1;
+        .half{
+            width: 50%;
+            vertical-align: top;
+            display: inline-block;
+            padding: 0 20px;
+            .title{
+                letter-spacing: 3px;
+                font-size: 2.2rem;
+            }
+            p{
+                margin: 30px 0;
+                font-size: 2rem;
+            }
+            img{
+                display: block;
+                max-width: 100%;
+                margin: 10px auto;
+            }
+        }
+        p{
+            margin: 15px 0;
+            font-size: 2rem;
+        }
+    }
+
 </style>
