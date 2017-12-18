@@ -1,0 +1,161 @@
+.wysihtml5-sandbox,
+.text-area_editorial {
+  border: 1px solid #d2d6de ;
+  outline: none !important;
+  color: #555 !important;
+}
+.wysihtml5-sandbox {
+  padding: 8px 12px !important;
+}
+.pleseKillMe {
+  float: right;
+  margin: 10px;
+}
+.gifs {
+  width: 100%;
+  overflow: auto;
+}
+.gifs ul {
+  padding: 0;
+  list-style: none;
+  margin: 0 0 5px 0;
+  white-space: nowrap;
+}
+.gifs ul li {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+.gifs ul li button {
+  top: 5px;
+  opacity: 0;
+  right: 5px;
+  color: #FFF;
+  background: red;
+  position: absolute;
+  pointer-events: none;
+  transition: opacity 350ms ease-out;
+}
+.gifs ul li button:hover {
+  color: #FFF;
+  background: #b40000;
+}
+.gifs ul li img {
+  display: block;
+}
+.gifs ul li.form {
+  padding: 0 50px;
+}
+.gifs ul li.pointerClick {
+  cursor: pointer;
+}
+.gifs ul li.uploading {
+  border: 5px solid #3c8dbc;
+  transition: border-color 300ms ease-out;
+}
+.gifs ul li.uploading:before {
+  opacity: 1;
+  content: 'Uploading...';
+  top: 10px;
+  color: #FFF;
+  right: 10px;
+  padding: 7px 13px;
+  position: absolute;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+  background: #3c8dbc;
+  transition: opacity 300ms ease-out;
+}
+.gifs ul li.done {
+  border-color: #54d587;
+}
+.gifs ul li.done:before {
+  opacity: 0;
+}
+.gifs ul li:hover button {
+  pointer-events: all;
+  opacity: 1;
+}
+.gifs.bottom {
+  margin-top: 30px;
+}
+.chosen-container-multi .chosen-choices {
+  border-radius: 0;
+  box-shadow: none;
+  background: #FFF;
+  font-size: 14px;
+  padding: 2px 12px;
+  border-color: #d2d6de;
+}
+.work-style {
+  margin: 40px 0;
+}
+.multiple_relation.removing {
+  opacity: 0.5;
+  position: relative;
+}
+.multiple_relation.removing:after {
+  color: #367fa9;
+  margin-left: 253px;
+  content: 'Please press Update to remove this';
+}
+.episodeOrder .input {
+  width: 50px;
+}
+.episodeOrder .input input {
+  width: 100%;
+  text-align: center;
+}
+.browseAnimeComponent {
+  position: relative;
+}
+.browseAnimeComponent .browseAnimeReady {
+  top: 2px;
+  right: 2px;
+  z-index: 2;
+  color: #FFF;
+  padding: 4px;
+  background: #367fa9;
+  border-radius: 4px;
+  position: absolute;
+}
+.browseAnimeComponent .browseAnimeInput {
+  padding-right: 50px;
+  border: 1px solid #999;
+}
+.browseAnimeComponent .browseAnimeResult {
+  top: 33px;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  display: none;
+  position: absolute;
+  border: 1px solid #999;
+}
+.browseAnimeComponent .browseAnimeResult .browseAnimeResultUL {
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  list-style: none;
+  max-height: 300px;
+}
+.browseAnimeComponent .browseAnimeResult .browseAnimeResultUL li {
+  padding: 5px;
+  background: #FFF;
+  list-style: none;
+  cursor: pointer;
+}
+.browseAnimeComponent .browseAnimeResult .browseAnimeResultUL li:nth-of-type(2n) {
+  background: #eaeaea;
+}
+.browseAnimeComponent .browseAnimeResult .browseAnimeResultUL li:hover {
+  background: #d9d9d9;
+}
+.browseAnimeComponent .browseAnimeResult .browseAnimeResultUL li.active {
+  border-left: 5px solid #367fa9;
+}
+.browseAnimeComponent .browseAnimeResult.active {
+  display: block;
+}

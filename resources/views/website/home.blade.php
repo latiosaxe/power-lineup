@@ -38,6 +38,7 @@
 </script>
 <script src="/js/libs/three.min.js"></script>
 <script src="/js/libs/TweenMax.min.js"></script>
+<script src="/js/libs/anime.min.js"></script>
 
 {{--<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>--}}
 {{--<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>--}}

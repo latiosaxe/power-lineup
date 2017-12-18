@@ -43,12 +43,34 @@
             <div id="targetThree"></div>
         </div>
         <div class="subscribe">
-            <div class="container">
-                <div class="text">Apply for <strong>AirDrop</strong>.</div>
-                <form @submit.prevent="submitEmail">
-                    <input type="email" v-model="userEmail" placeholder="alex@domain.com">
-                    <button type="submit">Submit</button>
-                </form>
+            <div class="container" style="position: relative">
+                <p class="title">Tokens</p>
+                <div class="green">
+                    <div class="progress">
+                        <div class="inner">
+                            <div class="percent"><span v-text="tokens.percentage"></span>%</div>
+                            <div class="water" :style="{top: 100-tokens.percentage +'%'}"></div>
+                            <div class="glare"></div>
+                        </div>
+                    </div>
+                    <div class="bar">
+                        <div class="text">
+                            <span v-text="tokens.init"></span> / <strong v-text="tokens.end"></strong> Tokens
+                        </div>
+                        <div class="block" :style="{width: tokens.percentage +'%'}"></div>
+                    </div>
+                    <div class="water" :style="{top: 100-tokens.percentage +'%'}"></div>
+                </div>
+                <!--<div class="text">Apply for <strong>AirDrop</strong>.</div>-->
+                <!--<form @submit.prevent="submitEmail">-->
+                    <!--<input type="email" v-model="userEmail" placeholder="alex@domain.com">-->
+                    <!--<button type="submit">Submit</button>-->
+                <!--</form>-->
+            </div>
+
+            <div class="ocean">
+                <div class="wave"></div>
+                <div class="wave"></div>
             </div>
         </div>
         <div class="opinions">
@@ -138,6 +160,11 @@
                 userEmail: '',
                 hero: {
                     particles: 80
+                },
+                tokens: {
+                    init: 0,
+                    end: 0,
+                    percentage: 0
                 }
             }
         },
@@ -157,10 +184,8 @@
                 .catch(function (error) {
                     console.log(error);
                 });
-            }
-        },
-        mounted(){
-            setTimeout(function(){
+            },
+            generateCanvas: function () {
                 var renderCalls = [];
                 function render () {
                     requestAnimationFrame( render );
@@ -252,7 +277,26 @@
                 });
 
                 scene.add(mesh);
-            }, 100);
+            },
+
+        },
+        mounted(){
+            let self = this;
+            axios.get('/getTokens')
+            .then(function (response) {
+                console.log(response.data.tokens[0]);
+                self.tokens.init = response.data.tokens[0].token_init;
+                self.tokens.end = response.data.tokens[0].token_end;
+
+                self.tokens.percentage = parseInt( ( self.tokens.init * 100 ) / self.tokens.end );
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+
+            setTimeout(function(){
+                this.generateCanvas()
+            }.bind(this), 100);
         }
     }
 </script>
@@ -296,8 +340,20 @@
     }
 
     .subscribe{
+        overflow: hidden;
         padding: 10rem 0;
         background: #FFF;
+        position: relative;
+        .title{
+            z-index: 3;
+            top: 5rem;
+            left: 15px;
+            color: #000;
+            font-size: 3rem;
+            position: absolute;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
         .text, form{
             color: #000;
             font-weight: bold;
@@ -318,12 +374,53 @@
             padding: 12px 20px;
             background: $color-1;
         }
+        .ocean {
+            height: 0;
+            width:100%;
+            position:absolute;
+            bottom:0;
+            left:0;
+            background: #e61b1b;
+            .wave {
+                background: url('/images/wave.svg') repeat-x;
+                position: absolute;
+                top: -198px;
+                width: 6400px;
+                height: 198px;
+                animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+                transform: translate3d(0, 0, 0);
+                &:nth-of-type(2) {
+                     top: -175px;
+                     animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+                     opacity: 1;
+                 }
+            }
+        }
+
+        @keyframes wave {
+            0% {
+                margin-left: 0;
+            }
+            100% {
+                margin-left: -1600px;
+            }
+        }
+
+        @keyframes swell {
+            0%, 100% {
+                transform: translate3d(0,-25px,0);
+            }
+            50% {
+                transform: translate3d(0,5px,0);
+            }
+        }
     }
 
     .opinions{
         color: #FFF;
         padding: 9rem 0;
-        background: linear-gradient(-45deg, #e61b1b, #e6742b);
+        background: linear-gradient(0deg, #e6742b, #b30e0e);
+        /*background: linear-gradient(-45deg, #e61b1b, #e6742b);*/
         background-size: 100% 100%;
         .single{
             width: 40%;
@@ -389,5 +486,154 @@
             font-size: 2rem;
         }
     }
+
+
+    .green {
+        height: 250px;
+        margin-top: 15px;
+        position: relative;
+        .progress {
+            float: right;
+            position: relative;
+            border-radius: 50%;
+            width: 250px;
+            height: 250px;
+            border: 5px solid #e61b1b;
+            -webkit-transition: all 1s ease;
+            transition: all 1s ease;
+            .inner {
+                position: absolute;
+                overflow: hidden;
+                z-index: 2;
+                border-radius: 50%;
+
+                width: 240px;
+                height: 240px;
+
+                -webkit-transition: all 1s ease;
+                transition: all 1s ease;
+
+                .water {
+                    position: absolute;
+                    z-index: 1;
+                    width: 200%;
+                    height: 200%;
+                    left: -50%;
+                    border-radius: 40%;
+                    -webkit-animation-iteration-count: infinite;
+                    animation-iteration-count: infinite;
+                    -webkit-animation-timing-function: linear;
+                    animation-timing-function: linear;
+                    -webkit-animation-name: spin;
+                    animation-name: spin;
+                    top: 25%;
+                    background: rgba(230, 27, 27, 0.8);
+
+                    -webkit-transition: all 1s ease;
+                    transition: all 1s ease;
+
+                    -webkit-animation-duration: 10s;
+                    animation-duration: 10s;
+                }
+            }
+        }
+        .bar{
+            left: 0;
+            top: 50%;
+            z-index: 2;
+            right: 100px;
+            height: 70px;
+            margin-top: 15px;
+            position: absolute;
+            border-bottom: 3px solid #e61b1b;
+            .block{
+                padding: 2px;
+                height: 28px;
+                display: block;
+                position: relative;
+                border-radius: 30px;
+                border: 4px solid #FFF;
+                transition: width 500ms ease-out;
+                background: linear-gradient(-90deg, #e61b1b, #e6742b);
+            }
+        }
+    }
+    .green .progress .inner .glare,
+    .red .progress .inner .glare,
+    .orange .progress .inner .glare {
+        position: absolute;
+        top: -120%;
+        left: -120%;
+        z-index: 5;
+        width: 200%;
+        height: 200%;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        border-radius: 50%;
+    }
+    .green .progress .inner .glare,
+    .red .progress .inner .glare,
+    .orange .progress .inner .glare {
+        background-color: rgba(255,255,255,0.15);
+    }
+    .green .progress .inner .glare,
+    .red .progress .inner .glare,
+    .orange .progress .inner .glare {
+        -webkit-transition: all 1s ease;
+        transition: all 1s ease;
+    }
+    .green .progress .inner .percent,
+    .red .progress .inner .percent,
+    .orange .progress .inner .percent {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        font-weight: bold;
+        text-align: center;
+    }
+    .green .progress .inner .percent,
+    .red .progress .inner .percent,
+    .orange .progress .inner .percent {
+        line-height: 240px;
+        font-size: 92.3076923076923px;
+    }
+    .green .progress .inner .percent {
+        color: #FFFFFF;
+        z-index: 2;
+    }
+    .green .progress .inner .percent {
+        /*text-shadow: 0 0 10px #029502;*/
+    }
+    .green .progress .inner .percent,
+    .red .progress .inner .percent,
+    .orange .progress .inner .percent {
+        -webkit-transition: all 1s ease;
+        transition: all 1s ease;
+    }
+
+
+    @-webkit-keyframes spin {
+        from {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+        to {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes spin {
+        from {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+        to {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+
 
 </style>

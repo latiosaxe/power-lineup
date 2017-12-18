@@ -11,8 +11,23 @@
 |
 */
 
-Route::get('/', function () {
-    return view('website/home');
+Route::group(['middleware' => ['web']], function(){
+    Route::get('/', function () {
+        return view('website/home');
+    });
+    Route::get('/login', 'Auth\AuthController@login');
+    Route::get('/logout', 'Auth\AuthController@logout');
+    Route::post('/authenticate', 'Auth\AuthController@authenticate');
+
+    Route::get('/getTokens', 'Control\DashboardController@getTokens');
+});
+
+Route::group(['middleware' => ['web', 'auth'], 'prefix' => 'control', 'namespace' => 'Control'], function(){
+    Route::get('/validation', 'Auth\AuthController@validateUser');
+    Route::get('/', 'DashboardController@index');
+
+    Route::post('tokensUpdate/', 'DashboardController@fakeUpdate');
+
 });
 
 
