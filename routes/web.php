@@ -25,9 +25,7 @@ Route::group(['middleware' => ['web']], function(){
 Route::group(['middleware' => ['web', 'auth'], 'prefix' => 'control', 'namespace' => 'Control'], function(){
     Route::get('/validation', 'Auth\AuthController@validateUser');
     Route::get('/', 'DashboardController@index');
-
     Route::post('tokensUpdate/', 'DashboardController@fakeUpdate');
-
 });
 
 

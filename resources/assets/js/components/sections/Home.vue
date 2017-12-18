@@ -48,7 +48,7 @@
                 <div class="green">
                     <div class="progress">
                         <div class="inner">
-                            <div class="percent"><span v-text="tokens.percentage"></span>%</div>
+                            <div class="percent" :class="[(tokens.percentage>34)?'white':'']"><span v-text="tokens.percentage"></span>%</div>
                             <div class="water" :style="{top: 100-tokens.percentage +'%'}"></div>
                             <div class="glare"></div>
                         </div>
@@ -419,8 +419,8 @@
     .opinions{
         color: #FFF;
         padding: 9rem 0;
-        background: linear-gradient(0deg, #e6742b, #b30e0e);
-        /*background: linear-gradient(-45deg, #e61b1b, #e6742b);*/
+        background: linear-gradient(0deg, #f44164, #b30e0e);
+        /*background: linear-gradient(-45deg, #e61b1b, #f44164);*/
         background-size: 100% 100%;
         .single{
             width: 40%;
@@ -554,7 +554,7 @@
                 border-radius: 30px;
                 border: 4px solid #FFF;
                 transition: width 500ms ease-out;
-                background: linear-gradient(-90deg, #e61b1b, #e6742b);
+                background: linear-gradient(-90deg, #e61b1b, #f44164);
             }
         }
     }
@@ -600,8 +600,12 @@
         font-size: 92.3076923076923px;
     }
     .green .progress .inner .percent {
-        color: #FFFFFF;
+        color: #f44164;
         z-index: 2;
+        &.white{
+            color: #FFF;
+            text-shadow: 0 0 20px rgba(236, 37, 72, 0.51);
+         }
     }
     .green .progress .inner .percent {
         /*text-shadow: 0 0 10px #029502;*/
