@@ -43,8 +43,12 @@
             <div id="targetThree"></div>
         </div>
         <div class="subscribe">
-            <div class="container" style="position: relative">
-                <p class="title">Tokens</p>
+            <div class="container upupup">
+                <p class="title">PowerLineUp (POW) Token Distribution</p>
+                <p class="subtitle">Only 30,000,000 POW tokens are going to be distributed. Since PreSale was a huge success, this
+                    open distribution is to promote the mass-adoption of POW token and the PowerLineUp
+                    platform giving a 300% bonus. Distribution starts Dec 20th 2017 and closes permanently at
+                    block 5523769.</p>
                 <div class="green">
                     <div class="progress">
                         <div class="inner">
@@ -61,6 +65,16 @@
                     </div>
                     <div class="water" :style="{top: 100-tokens.percentage +'%'}"></div>
                 </div>
+                <p class="caption">
+                    Distribution bonus will close permanetly at block 5523769 (the last block of 2017) or sooner if all tokens are purchased. No distribution is going to be held
+                    ever again. Platform Will open Q2 2018. Tokens Will be tradeable at regular price.
+                </p>
+
+                <div class="count-down-time">
+                    <p class="time-left">Time Left: <span v-text="timeLeft"></span></p>
+                    <button @click.prevent="iWantTokens()">Get Tokens Now</button>
+                </div>
+
                 <!--<div class="text">Apply for <strong>AirDrop</strong>.</div>-->
                 <!--<form @submit.prevent="submitEmail">-->
                     <!--<input type="email" v-model="userEmail" placeholder="alex@domain.com">-->
@@ -94,7 +108,7 @@
             </div>
         </div>
         <div class="desc">
-            <div class="container" style="position: relative; z-index: 2">
+            <div class="container upupup">
                 <div class="single">
                     <h3>Fantasy Sports</h3>
                     <p>All the excitement of classic fantasy sports brought to the blockchain in an open peer-to-peer, fair, solid, massive game.</p>
@@ -165,7 +179,8 @@
                     init: 0,
                     end: 0,
                     percentage: 0
-                }
+                },
+                timeLeft: '',
             }
         },
         methods: {
@@ -278,7 +293,9 @@
 
                 scene.add(mesh);
             },
-
+            iWantTokens: function () {
+                console.log( "Tokens" );
+            }
         },
         mounted(){
             let self = this;
@@ -295,7 +312,48 @@
             });
 
             setTimeout(function(){
-                this.generateCanvas()
+
+
+
+                var deadline = 'Dec 31 2017 23:00:00 GMT-0600';
+                function time_remaining(endtime){
+                    var t = Date.parse(endtime) - Date.parse(new Date());
+                    var seconds = Math.floor( (t/1000) % 60 );
+                    var minutes = Math.floor( (t/1000/60) % 60 );
+                    var hours = Math.floor( (t/(1000*60*60)) % 24 );
+                    var days = Math.floor( t/(1000*60*60*24) );
+                    return {'total':t, 'days':days, 'hours':hours, 'minutes':minutes, 'seconds':seconds};
+                }
+                function run_clock(endtime){
+                    var clock = '';
+
+                    // get spans where our clock numbers are held
+                    var days_span;
+                    var hours_span;
+                    var minutes_span;
+                    var seconds_span;
+
+                    function update_clock(){
+                        var t = time_remaining(endtime);
+
+                        // update the numbers in each part of the clock
+                        days_span = t.days + ' days ';
+                        hours_span = ('0' + t.hours).slice(-2) + ' hours ';
+                        minutes_span = ('0' + t.minutes).slice(-2) + ' minutes ';
+                        seconds_span = ('0' + t.seconds).slice(-2) + ' seconds';
+
+                        self.timeLeft = days_span + hours_span + minutes_span + seconds_span;
+                        console.log( self.timeLeft );
+
+                        if(t.total<=0){ clearInterval(timeinterval); }
+                    }
+                    update_clock();
+                    var timeinterval = setInterval(update_clock,1000);
+                }
+                run_clock(deadline);
+
+
+//                this.generateCanvas()
             }.bind(this), 100);
         }
     }
@@ -322,7 +380,17 @@
         display: block;
         background: transparent;
     }
-
+    .count-down-time{
+        color: #000; 
+        font-weight: bold;
+        text-align: center;
+        .time-left{
+            margin: 0 0 10px 0;
+            letter-spacing: 2px;
+            padding: 40px 0 20px;
+            text-transform: uppercase;
+        }
+    }
     .mainLogo{
         top: 50%;
         left: 50%;
@@ -338,7 +406,10 @@
             padding: 14px 30px;
         }
     }
-
+    .upupup{
+        position: relative;
+        z-index: 2;
+    }
     .subscribe{
         overflow: hidden;
         padding: 10rem 0;
@@ -346,11 +417,30 @@
         position: relative;
         .title{
             z-index: 3;
-            top: 5rem;
+            top: 2rem;
             left: 15px;
             color: #000;
             font-size: 3rem;
             position: absolute;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .subtitle{
+            z-index: 3;
+            top: 7rem;
+            width: 50%;
+            left: 15px;
+            color: #000;
+            font-size: 1rem;
+            position: absolute;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .caption{
+            z-index: 9;
+            top: 7rem;
+            color: #000;
+            font-size: 1rem;
             letter-spacing: 2px;
             text-transform: uppercase;
         }

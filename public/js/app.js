@@ -16191,7 +16191,7 @@ exports = module.exports = __webpack_require__(11)(undefined);
 
 
 // module
-exports.push([module.i, "/*body{*/\n/*overflow-x: hidden;*/\n/*overflow-y: auto;*/\n/*}*/\nbody {\n  width: 100vw;\n  height: 100vh;\n  font-size: 2rem;\n  background: linear-gradient(-45deg, #e61b1b, #ec2548);\n  background-size: 100% 100%;\n  /*animation: Gradient 15s ease infinite;*/\n}\n#targetThree {\n  width: 100vw;\n  height: 100vh;\n  display: block;\n  background: transparent;\n}\n.mainLogo {\n  top: 50%;\n  left: 50%;\n  text-align: center;\n  position: absolute;\n  -webkit-transform: translate3d(-50%, -50%, 0);\n          transform: translate3d(-50%, -50%, 0);\n}\n.mainLogo h2 {\n    /*color: $color-1;  */\n    color: #FFF;\n    /*text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);*/\n    display: inline-block;\n    background: #e61b1b;\n    padding: 14px 30px;\n}\n.subscribe {\n  overflow: hidden;\n  padding: 10rem 0;\n  background: #FFF;\n  position: relative;\n}\n.subscribe .title {\n    z-index: 3;\n    top: 5rem;\n    left: 15px;\n    color: #000;\n    font-size: 3rem;\n    position: absolute;\n    letter-spacing: 2px;\n    text-transform: uppercase;\n}\n.subscribe .text, .subscribe form {\n    color: #000;\n    font-weight: bold;\n    vertical-align: middle;\n    display: inline-block;\n}\n.subscribe .text {\n    margin-right: 30px;\n}\n.subscribe input {\n    padding: 10px 20px;\n    border: 2px solid #e61b1b;\n}\n.subscribe button {\n    border: 0;\n    color: #FFF;\n    border-radius: 0;\n    padding: 12px 20px;\n    background: #e61b1b;\n}\n.subscribe .ocean {\n    height: 0;\n    width: 100%;\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    background: #e61b1b;\n}\n.subscribe .ocean .wave {\n      background: url(\"/images/wave.svg\") repeat-x;\n      position: absolute;\n      top: -198px;\n      width: 6400px;\n      height: 198px;\n      -webkit-animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;\n              animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;\n      -webkit-transform: translate3d(0, 0, 0);\n              transform: translate3d(0, 0, 0);\n}\n.subscribe .ocean .wave:nth-of-type(2) {\n        top: -175px;\n        -webkit-animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 7s ease -1.25s infinite;\n                animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 7s ease -1.25s infinite;\n        opacity: 1;\n}\n@-webkit-keyframes wave {\n0% {\n    margin-left: 0;\n}\n100% {\n    margin-left: -1600px;\n}\n}\n@keyframes wave {\n0% {\n    margin-left: 0;\n}\n100% {\n    margin-left: -1600px;\n}\n}\n@-webkit-keyframes swell {\n0%, 100% {\n    -webkit-transform: translate3d(0, -25px, 0);\n            transform: translate3d(0, -25px, 0);\n}\n50% {\n    -webkit-transform: translate3d(0, 5px, 0);\n            transform: translate3d(0, 5px, 0);\n}\n}\n@keyframes swell {\n0%, 100% {\n    -webkit-transform: translate3d(0, -25px, 0);\n            transform: translate3d(0, -25px, 0);\n}\n50% {\n    -webkit-transform: translate3d(0, 5px, 0);\n            transform: translate3d(0, 5px, 0);\n}\n}\n.opinions {\n  color: #FFF;\n  padding: 9rem 0;\n  background: -webkit-gradient(linear, left bottom, left top, from(#f44164), to(#b30e0e));\n  background: linear-gradient(0deg, #f44164, #b30e0e);\n  /*background: linear-gradient(-45deg, #e61b1b, #f44164);*/\n  background-size: 100% 100%;\n}\n.opinions .single {\n    width: 40%;\n    margin-bottom: 30px;\n    margin-left: 10%;\n    position: relative;\n}\n.opinions .single img {\n      width: 70%;\n      margin-top: 20px;\n}\n.opinions .single:last-of-type {\n      margin-left: 50%;\n      margin-bottom: 0;\n}\n.desc, .half-half {\n  position: relative;\n  padding: 9rem 0;\n  background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#cdcdcd));\n  background: linear-gradient(180deg, #FFF, #cdcdcd);\n  background-size: 100% 100%;\n}\n.desc .single, .half-half .single {\n    padding: 2rem;\n}\n.desc h3, .half-half h3 {\n    color: #000;\n    font-weight: bold;\n    text-transform: uppercase;\n    /*text-align: center;*/\n    letter-spacing: 15px;\n}\n.desc #targetThreeTwo, .half-half #targetThreeTwo {\n    position: absolute;\n    right: 0;\n    bottom: 0;\n}\n.half-half {\n  color: #FFF;\n  font-size: 0;\n  background: #e61b1b;\n}\n.half-half .half {\n    width: 50%;\n    vertical-align: top;\n    display: inline-block;\n    padding: 0 20px;\n}\n.half-half .half .title {\n      letter-spacing: 3px;\n      font-size: 2.2rem;\n}\n.half-half .half p {\n      margin: 30px 0;\n      font-size: 2rem;\n}\n.half-half .half img {\n      display: block;\n      max-width: 100%;\n      margin: 10px auto;\n}\n.half-half p {\n    margin: 15px 0;\n    font-size: 2rem;\n}\n.green {\n  height: 250px;\n  margin-top: 15px;\n  position: relative;\n}\n.green .progress {\n    float: right;\n    position: relative;\n    border-radius: 50%;\n    width: 250px;\n    height: 250px;\n    border: 5px solid #e61b1b;\n    -webkit-transition: all 1s ease;\n    transition: all 1s ease;\n}\n.green .progress .inner {\n      position: absolute;\n      overflow: hidden;\n      z-index: 2;\n      border-radius: 50%;\n      width: 240px;\n      height: 240px;\n      -webkit-transition: all 1s ease;\n      transition: all 1s ease;\n}\n.green .progress .inner .water {\n        position: absolute;\n        z-index: 1;\n        width: 200%;\n        height: 200%;\n        left: -50%;\n        border-radius: 40%;\n        -webkit-animation-iteration-count: infinite;\n        animation-iteration-count: infinite;\n        -webkit-animation-timing-function: linear;\n        animation-timing-function: linear;\n        -webkit-animation-name: spin;\n        animation-name: spin;\n        top: 25%;\n        background: rgba(230, 27, 27, 0.8);\n        -webkit-transition: all 1s ease;\n        transition: all 1s ease;\n        -webkit-animation-duration: 10s;\n        animation-duration: 10s;\n}\n.green .bar {\n    left: 0;\n    top: 50%;\n    z-index: 2;\n    right: 100px;\n    height: 70px;\n    margin-top: 15px;\n    position: absolute;\n    border-bottom: 3px solid #e61b1b;\n}\n.green .bar .block {\n      padding: 2px;\n      height: 28px;\n      display: block;\n      position: relative;\n      border-radius: 30px;\n      border: 4px solid #FFF;\n      -webkit-transition: width 500ms ease-out;\n      transition: width 500ms ease-out;\n      background: -webkit-gradient(linear, right top, left top, from(#e61b1b), to(#f44164));\n      background: linear-gradient(-90deg, #e61b1b, #f44164);\n}\n.green .progress .inner .glare,\n.red .progress .inner .glare,\n.orange .progress .inner .glare {\n  position: absolute;\n  top: -120%;\n  left: -120%;\n  z-index: 5;\n  width: 200%;\n  height: 200%;\n  -webkit-transform: rotate(45deg);\n  transform: rotate(45deg);\n  border-radius: 50%;\n}\n.green .progress .inner .glare,\n.red .progress .inner .glare,\n.orange .progress .inner .glare {\n  background-color: rgba(255, 255, 255, 0.15);\n}\n.green .progress .inner .glare,\n.red .progress .inner .glare,\n.orange .progress .inner .glare {\n  -webkit-transition: all 1s ease;\n  transition: all 1s ease;\n}\n.green .progress .inner .percent,\n.red .progress .inner .percent,\n.orange .progress .inner .percent {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  font-weight: bold;\n  text-align: center;\n}\n.green .progress .inner .percent,\n.red .progress .inner .percent,\n.orange .progress .inner .percent {\n  line-height: 240px;\n  font-size: 92.3076923076923px;\n}\n.green .progress .inner .percent {\n  color: #f44164;\n  z-index: 2;\n}\n.green .progress .inner .percent.white {\n    color: #FFF;\n    text-shadow: 0 0 20px rgba(236, 37, 72, 0.51);\n}\n.green .progress .inner .percent {\n  /*text-shadow: 0 0 10px #029502;*/\n}\n.green .progress .inner .percent,\n.red .progress .inner .percent,\n.orange .progress .inner .percent {\n  -webkit-transition: all 1s ease;\n  transition: all 1s ease;\n}\n@-webkit-keyframes spin {\nfrom {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n}\nto {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n}\n}\n@keyframes spin {\nfrom {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n}\nto {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n}\n}\n", ""]);
+exports.push([module.i, "/*body{*/\n/*overflow-x: hidden;*/\n/*overflow-y: auto;*/\n/*}*/\nbody {\n  width: 100vw;\n  height: 100vh;\n  font-size: 2rem;\n  background: linear-gradient(-45deg, #e61b1b, #ec2548);\n  background-size: 100% 100%;\n  /*animation: Gradient 15s ease infinite;*/\n}\n#targetThree {\n  width: 100vw;\n  height: 100vh;\n  display: block;\n  background: transparent;\n}\n.count-down-time {\n  color: #000;\n  font-weight: bold;\n  text-align: center;\n}\n.count-down-time .time-left {\n    margin: 0 0 10px 0;\n    letter-spacing: 2px;\n    padding: 40px 0 20px;\n    text-transform: uppercase;\n}\n.mainLogo {\n  top: 50%;\n  left: 50%;\n  text-align: center;\n  position: absolute;\n  -webkit-transform: translate3d(-50%, -50%, 0);\n          transform: translate3d(-50%, -50%, 0);\n}\n.mainLogo h2 {\n    /*color: $color-1;  */\n    color: #FFF;\n    /*text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);*/\n    display: inline-block;\n    background: #e61b1b;\n    padding: 14px 30px;\n}\n.upupup {\n  position: relative;\n  z-index: 2;\n}\n.subscribe {\n  overflow: hidden;\n  padding: 10rem 0;\n  background: #FFF;\n  position: relative;\n}\n.subscribe .title {\n    z-index: 3;\n    top: 2rem;\n    left: 15px;\n    color: #000;\n    font-size: 3rem;\n    position: absolute;\n    letter-spacing: 2px;\n    text-transform: uppercase;\n}\n.subscribe .subtitle {\n    z-index: 3;\n    top: 7rem;\n    width: 50%;\n    left: 15px;\n    color: #000;\n    font-size: 1rem;\n    position: absolute;\n    letter-spacing: 2px;\n    text-transform: uppercase;\n}\n.subscribe .caption {\n    z-index: 9;\n    top: 7rem;\n    color: #000;\n    font-size: 1rem;\n    letter-spacing: 2px;\n    text-transform: uppercase;\n}\n.subscribe .text, .subscribe form {\n    color: #000;\n    font-weight: bold;\n    vertical-align: middle;\n    display: inline-block;\n}\n.subscribe .text {\n    margin-right: 30px;\n}\n.subscribe input {\n    padding: 10px 20px;\n    border: 2px solid #e61b1b;\n}\n.subscribe button {\n    border: 0;\n    color: #FFF;\n    border-radius: 0;\n    padding: 12px 20px;\n    background: #e61b1b;\n}\n.subscribe .ocean {\n    height: 0;\n    width: 100%;\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    background: #e61b1b;\n}\n.subscribe .ocean .wave {\n      background: url(\"/images/wave.svg\") repeat-x;\n      position: absolute;\n      top: -198px;\n      width: 6400px;\n      height: 198px;\n      -webkit-animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;\n              animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;\n      -webkit-transform: translate3d(0, 0, 0);\n              transform: translate3d(0, 0, 0);\n}\n.subscribe .ocean .wave:nth-of-type(2) {\n        top: -175px;\n        -webkit-animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 7s ease -1.25s infinite;\n                animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 7s ease -1.25s infinite;\n        opacity: 1;\n}\n@-webkit-keyframes wave {\n0% {\n    margin-left: 0;\n}\n100% {\n    margin-left: -1600px;\n}\n}\n@keyframes wave {\n0% {\n    margin-left: 0;\n}\n100% {\n    margin-left: -1600px;\n}\n}\n@-webkit-keyframes swell {\n0%, 100% {\n    -webkit-transform: translate3d(0, -25px, 0);\n            transform: translate3d(0, -25px, 0);\n}\n50% {\n    -webkit-transform: translate3d(0, 5px, 0);\n            transform: translate3d(0, 5px, 0);\n}\n}\n@keyframes swell {\n0%, 100% {\n    -webkit-transform: translate3d(0, -25px, 0);\n            transform: translate3d(0, -25px, 0);\n}\n50% {\n    -webkit-transform: translate3d(0, 5px, 0);\n            transform: translate3d(0, 5px, 0);\n}\n}\n.opinions {\n  color: #FFF;\n  padding: 9rem 0;\n  background: -webkit-gradient(linear, left bottom, left top, from(#f44164), to(#b30e0e));\n  background: linear-gradient(0deg, #f44164, #b30e0e);\n  /*background: linear-gradient(-45deg, #e61b1b, #f44164);*/\n  background-size: 100% 100%;\n}\n.opinions .single {\n    width: 40%;\n    margin-bottom: 30px;\n    margin-left: 10%;\n    position: relative;\n}\n.opinions .single img {\n      width: 70%;\n      margin-top: 20px;\n}\n.opinions .single:last-of-type {\n      margin-left: 50%;\n      margin-bottom: 0;\n}\n.desc, .half-half {\n  position: relative;\n  padding: 9rem 0;\n  background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#cdcdcd));\n  background: linear-gradient(180deg, #FFF, #cdcdcd);\n  background-size: 100% 100%;\n}\n.desc .single, .half-half .single {\n    padding: 2rem;\n}\n.desc h3, .half-half h3 {\n    color: #000;\n    font-weight: bold;\n    text-transform: uppercase;\n    /*text-align: center;*/\n    letter-spacing: 15px;\n}\n.desc #targetThreeTwo, .half-half #targetThreeTwo {\n    position: absolute;\n    right: 0;\n    bottom: 0;\n}\n.half-half {\n  color: #FFF;\n  font-size: 0;\n  background: #e61b1b;\n}\n.half-half .half {\n    width: 50%;\n    vertical-align: top;\n    display: inline-block;\n    padding: 0 20px;\n}\n.half-half .half .title {\n      letter-spacing: 3px;\n      font-size: 2.2rem;\n}\n.half-half .half p {\n      margin: 30px 0;\n      font-size: 2rem;\n}\n.half-half .half img {\n      display: block;\n      max-width: 100%;\n      margin: 10px auto;\n}\n.half-half p {\n    margin: 15px 0;\n    font-size: 2rem;\n}\n.green {\n  height: 250px;\n  margin-top: 15px;\n  position: relative;\n}\n.green .progress {\n    float: right;\n    position: relative;\n    border-radius: 50%;\n    width: 250px;\n    height: 250px;\n    border: 5px solid #e61b1b;\n    -webkit-transition: all 1s ease;\n    transition: all 1s ease;\n}\n.green .progress .inner {\n      position: absolute;\n      overflow: hidden;\n      z-index: 2;\n      border-radius: 50%;\n      width: 240px;\n      height: 240px;\n      -webkit-transition: all 1s ease;\n      transition: all 1s ease;\n}\n.green .progress .inner .water {\n        position: absolute;\n        z-index: 1;\n        width: 200%;\n        height: 200%;\n        left: -50%;\n        border-radius: 40%;\n        -webkit-animation-iteration-count: infinite;\n        animation-iteration-count: infinite;\n        -webkit-animation-timing-function: linear;\n        animation-timing-function: linear;\n        -webkit-animation-name: spin;\n        animation-name: spin;\n        top: 25%;\n        background: rgba(230, 27, 27, 0.8);\n        -webkit-transition: all 1s ease;\n        transition: all 1s ease;\n        -webkit-animation-duration: 10s;\n        animation-duration: 10s;\n}\n.green .bar {\n    left: 0;\n    top: 50%;\n    z-index: 2;\n    right: 100px;\n    height: 70px;\n    margin-top: 15px;\n    position: absolute;\n    border-bottom: 3px solid #e61b1b;\n}\n.green .bar .block {\n      padding: 2px;\n      height: 28px;\n      display: block;\n      position: relative;\n      border-radius: 30px;\n      border: 4px solid #FFF;\n      -webkit-transition: width 500ms ease-out;\n      transition: width 500ms ease-out;\n      background: -webkit-gradient(linear, right top, left top, from(#e61b1b), to(#f44164));\n      background: linear-gradient(-90deg, #e61b1b, #f44164);\n}\n.green .progress .inner .glare,\n.red .progress .inner .glare,\n.orange .progress .inner .glare {\n  position: absolute;\n  top: -120%;\n  left: -120%;\n  z-index: 5;\n  width: 200%;\n  height: 200%;\n  -webkit-transform: rotate(45deg);\n  transform: rotate(45deg);\n  border-radius: 50%;\n}\n.green .progress .inner .glare,\n.red .progress .inner .glare,\n.orange .progress .inner .glare {\n  background-color: rgba(255, 255, 255, 0.15);\n}\n.green .progress .inner .glare,\n.red .progress .inner .glare,\n.orange .progress .inner .glare {\n  -webkit-transition: all 1s ease;\n  transition: all 1s ease;\n}\n.green .progress .inner .percent,\n.red .progress .inner .percent,\n.orange .progress .inner .percent {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  font-weight: bold;\n  text-align: center;\n}\n.green .progress .inner .percent,\n.red .progress .inner .percent,\n.orange .progress .inner .percent {\n  line-height: 240px;\n  font-size: 92.3076923076923px;\n}\n.green .progress .inner .percent {\n  color: #f44164;\n  z-index: 2;\n}\n.green .progress .inner .percent.white {\n    color: #FFF;\n    text-shadow: 0 0 20px rgba(236, 37, 72, 0.51);\n}\n.green .progress .inner .percent {\n  /*text-shadow: 0 0 10px #029502;*/\n}\n.green .progress .inner .percent,\n.red .progress .inner .percent,\n.orange .progress .inner .percent {\n  -webkit-transition: all 1s ease;\n  transition: all 1s ease;\n}\n@-webkit-keyframes spin {\nfrom {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n}\nto {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n}\n}\n@keyframes spin {\nfrom {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n}\nto {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n}\n}\n", ""]);
 
 // exports
 
@@ -16206,6 +16206,20 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_sweetalert__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_sweetalert___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vue_sweetalert__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -16373,7 +16387,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 init: 0,
                 end: 0,
                 percentage: 0
-            }
+            },
+            timeLeft: ''
         };
     },
 
@@ -16485,8 +16500,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             });
 
             scene.add(mesh);
+        },
+        iWantTokens: function iWantTokens() {
+            console.log("Tokens");
         }
-
     },
     mounted: function mounted() {
         var self = this;
@@ -16501,7 +16518,47 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         });
 
         setTimeout(function () {
-            this.generateCanvas();
+
+            var deadline = 'Dec 31 2017 23:00:00 GMT-0600';
+            function time_remaining(endtime) {
+                var t = Date.parse(endtime) - Date.parse(new Date());
+                var seconds = Math.floor(t / 1000 % 60);
+                var minutes = Math.floor(t / 1000 / 60 % 60);
+                var hours = Math.floor(t / (1000 * 60 * 60) % 24);
+                var days = Math.floor(t / (1000 * 60 * 60 * 24));
+                return { 'total': t, 'days': days, 'hours': hours, 'minutes': minutes, 'seconds': seconds };
+            }
+            function run_clock(endtime) {
+                var clock = '';
+
+                // get spans where our clock numbers are held
+                var days_span;
+                var hours_span;
+                var minutes_span;
+                var seconds_span;
+
+                function update_clock() {
+                    var t = time_remaining(endtime);
+
+                    // update the numbers in each part of the clock
+                    days_span = t.days + ' days ';
+                    hours_span = ('0' + t.hours).slice(-2) + ' hours ';
+                    minutes_span = ('0' + t.minutes).slice(-2) + ' minutes ';
+                    seconds_span = ('0' + t.seconds).slice(-2) + ' seconds';
+
+                    self.timeLeft = days_span + hours_span + minutes_span + seconds_span;
+                    console.log(self.timeLeft);
+
+                    if (t.total <= 0) {
+                        clearInterval(timeinterval);
+                    }
+                }
+                update_clock();
+                var timeinterval = setInterval(update_clock, 1000);
+            }
+            run_clock(deadline);
+
+            //                this.generateCanvas()
         }.bind(this), 100);
     }
 });
@@ -16518,63 +16575,93 @@ var render = function() {
     _vm._m(0, false, false),
     _vm._v(" "),
     _c("div", { staticClass: "subscribe" }, [
-      _c(
-        "div",
-        { staticClass: "container", staticStyle: { position: "relative" } },
-        [
-          _c("p", { staticClass: "title" }, [_vm._v("Tokens")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "green" }, [
-            _c("div", { staticClass: "progress" }, [
-              _c("div", { staticClass: "inner" }, [
-                _c(
-                  "div",
-                  {
-                    staticClass: "percent",
-                    class: [_vm.tokens.percentage > 34 ? "white" : ""]
-                  },
-                  [
-                    _c("span", {
-                      domProps: { textContent: _vm._s(_vm.tokens.percentage) }
-                    }),
-                    _vm._v("%")
-                  ]
-                ),
-                _vm._v(" "),
-                _c("div", {
-                  staticClass: "water",
-                  style: { top: 100 - _vm.tokens.percentage + "%" }
-                }),
-                _vm._v(" "),
-                _c("div", { staticClass: "glare" })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "bar" }, [
-              _c("div", { staticClass: "text" }, [
-                _c("span", {
-                  domProps: { textContent: _vm._s(_vm.tokens.init) }
-                }),
-                _vm._v(" / "),
-                _c("strong", {
-                  domProps: { textContent: _vm._s(_vm.tokens.end) }
-                }),
-                _vm._v(" Tokens\n                    ")
-              ]),
+      _c("div", { staticClass: "container upupup" }, [
+        _c("p", { staticClass: "title" }, [
+          _vm._v("PowerLineUp (POW) Token Distribution")
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "subtitle" }, [
+          _vm._v(
+            "Only 30,000,000 POW tokens are going to be distributed. Since PreSale was a huge success, this\n                open distribution is to promote the mass-adoption of POW token and the PowerLineUp\n                platform giving a 300% bonus. Distribution starts Dec 20th 2017 and closes permanently at\n                block 5523769."
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "green" }, [
+          _c("div", { staticClass: "progress" }, [
+            _c("div", { staticClass: "inner" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "percent",
+                  class: [_vm.tokens.percentage > 34 ? "white" : ""]
+                },
+                [
+                  _c("span", {
+                    domProps: { textContent: _vm._s(_vm.tokens.percentage) }
+                  }),
+                  _vm._v("%")
+                ]
+              ),
               _vm._v(" "),
               _c("div", {
-                staticClass: "block",
-                style: { width: _vm.tokens.percentage + "%" }
-              })
+                staticClass: "water",
+                style: { top: 100 - _vm.tokens.percentage + "%" }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "glare" })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "bar" }, [
+            _c("div", { staticClass: "text" }, [
+              _c("span", {
+                domProps: { textContent: _vm._s(_vm.tokens.init) }
+              }),
+              _vm._v(" / "),
+              _c("strong", {
+                domProps: { textContent: _vm._s(_vm.tokens.end) }
+              }),
+              _vm._v(" Tokens\n                    ")
             ]),
             _vm._v(" "),
             _c("div", {
-              staticClass: "water",
-              style: { top: 100 - _vm.tokens.percentage + "%" }
+              staticClass: "block",
+              style: { width: _vm.tokens.percentage + "%" }
             })
-          ])
-        ]
-      ),
+          ]),
+          _vm._v(" "),
+          _c("div", {
+            staticClass: "water",
+            style: { top: 100 - _vm.tokens.percentage + "%" }
+          })
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "caption" }, [
+          _vm._v(
+            "\n                Distribution bonus will close permanetly at block 5523769 (the last block of 2017) or sooner if all tokens are purchased. No distribution is going to be held\n                ever again. Platform Will open Q2 2018. Tokens Will be tradeable at regular price.\n            "
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "count-down-time" }, [
+          _c("p", { staticClass: "time-left" }, [
+            _vm._v("Time Left: "),
+            _c("span", { domProps: { textContent: _vm._s(_vm.timeLeft) } })
+          ]),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              on: {
+                click: function($event) {
+                  $event.preventDefault()
+                  _vm.iWantTokens()
+                }
+              }
+            },
+            [_vm._v("Get Tokens Now")]
+          )
+        ])
+      ]),
       _vm._v(" "),
       _vm._m(1, false, false)
     ]),
@@ -16684,44 +16771,37 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "desc" }, [
-      _c(
-        "div",
-        {
-          staticClass: "container",
-          staticStyle: { position: "relative", "z-index": "2" }
-        },
-        [
-          _c("div", { staticClass: "single" }, [
-            _c("h3", [_vm._v("Fantasy Sports")]),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                "All the excitement of classic fantasy sports brought to the blockchain in an open peer-to-peer, fair, solid, massive game."
-              )
-            ])
-          ]),
+      _c("div", { staticClass: "container upupup" }, [
+        _c("div", { staticClass: "single" }, [
+          _c("h3", [_vm._v("Fantasy Sports")]),
           _vm._v(" "),
-          _c("div", { staticClass: "single" }, [
-            _c("h3", [_vm._v("Fantasy Networks")]),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                "Prepare your budget to align Youtube stars in our already built-in Smart Contracts to play this brand new kind of Fantasy Tournament."
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "single" }, [
-            _c("h3", [_vm._v("Fantasy Movies")]),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                "Stake on your favorite movies and win with the next blockbuster or the unexpected boom of an indie underdog."
-              )
-            ])
+          _c("p", [
+            _vm._v(
+              "All the excitement of classic fantasy sports brought to the blockchain in an open peer-to-peer, fair, solid, massive game."
+            )
           ])
-        ]
-      ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "single" }, [
+          _c("h3", [_vm._v("Fantasy Networks")]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "Prepare your budget to align Youtube stars in our already built-in Smart Contracts to play this brand new kind of Fantasy Tournament."
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "single" }, [
+          _c("h3", [_vm._v("Fantasy Movies")]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "Stake on your favorite movies and win with the next blockbuster or the unexpected boom of an indie underdog."
+            )
+          ])
+        ])
+      ]),
       _vm._v(" "),
       _c("div", { attrs: { id: "targetThreeTwo" } })
     ])
