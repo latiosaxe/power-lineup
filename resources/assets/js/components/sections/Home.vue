@@ -39,7 +39,6 @@
                   }
                 }
             </script>
-
             <div id="targetThree"></div>
         </div>
         <div class="subscribe">
@@ -325,9 +324,6 @@
                     return {'total':t, 'days':days, 'hours':hours, 'minutes':minutes, 'seconds':seconds};
                 }
                 function run_clock(endtime){
-                    var clock = '';
-
-                    // get spans where our clock numbers are held
                     var days_span;
                     var hours_span;
                     var minutes_span;
@@ -335,25 +331,18 @@
 
                     function update_clock(){
                         var t = time_remaining(endtime);
-
-                        // update the numbers in each part of the clock
                         days_span = t.days + ' days ';
                         hours_span = ('0' + t.hours).slice(-2) + ' hours ';
                         minutes_span = ('0' + t.minutes).slice(-2) + ' minutes ';
                         seconds_span = ('0' + t.seconds).slice(-2) + ' seconds';
-
                         self.timeLeft = days_span + hours_span + minutes_span + seconds_span;
-                        console.log( self.timeLeft );
-
                         if(t.total<=0){ clearInterval(timeinterval); }
                     }
                     update_clock();
                     var timeinterval = setInterval(update_clock,1000);
                 }
                 run_clock(deadline);
-
-
-//                this.generateCanvas()
+                this.generateCanvas();
             }.bind(this), 100);
         }
     }
@@ -381,7 +370,7 @@
         background: transparent;
     }
     .count-down-time{
-        color: #000; 
+        color: #000;
         font-weight: bold;
         text-align: center;
         .time-left{
