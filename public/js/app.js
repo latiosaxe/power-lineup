@@ -16626,7 +16626,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 var timeinterval = setInterval(update_clock, 1000);
             }
             run_clock(deadline);
-            //this.generateCanvas();
+            this.generateCanvas();
         }.bind(this), 100);
     }
 });

@@ -388,7 +388,7 @@
                     var timeinterval = setInterval(update_clock,1000);
                 }
                 run_clock(deadline);
-                //this.generateCanvas();
+                this.generateCanvas();
             }.bind(this), 100);
         }
     }
