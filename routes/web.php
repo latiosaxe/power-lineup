@@ -13,8 +13,28 @@
 
 Route::group(['middleware' => ['web']], function(){
     Route::get('/', function () {
-        return view('website/home');
+        return view('website/website');
     });
+    Route::get('/faqs', function () {
+        return view('website/website');
+    });
+
+    Route::get('/blog', function () {
+        return view('website/website');
+    });
+    Route::get('/whitepaper', function () {
+        return view('website/website');
+    });
+    Route::get('/etherscan', function () {
+        return view('website/website');
+    });
+    Route::get('/contact', function () {
+        return view('website/website');
+    });
+    Route::get('/get-tokens', function () {
+        return view('website/website');
+    });
+
     Route::get('/login', 'Auth\AuthController@login');
     Route::get('/logout', 'Auth\AuthController@logout');
     Route::post('/authenticate', 'Auth\AuthController@authenticate');

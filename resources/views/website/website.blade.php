@@ -29,8 +29,9 @@
 
 </head>
 <body>
-<div id="app">
-</div>
+    @include('website.partial.header')
+    <div id="app"></div>
+
 <script>
     window.Laravel = <?php echo json_encode([
             'csrfToken' => csrf_token(),

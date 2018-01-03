@@ -1414,6 +1414,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_App_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__components_App_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_sections_Home_vue__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_sections_Home_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__components_sections_Home_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_sections_Token_vue__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_sections_Token_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__components_sections_Token_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_sections_Faqs_vue__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_sections_Faqs_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__components_sections_Faqs_vue__);
 
 
 
@@ -1427,10 +1431,36 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_4_vue_
 
 
 
+
+
 var routes = [{
     name: 'Home',
     path: '/',
     component: __WEBPACK_IMPORTED_MODULE_6__components_sections_Home_vue___default.a
+}, {
+    name: 'Faqs',
+    path: '/faqs',
+    component: __WEBPACK_IMPORTED_MODULE_8__components_sections_Faqs_vue___default.a
+}, {
+    name: 'Token',
+    path: '/get-tokens',
+    component: __WEBPACK_IMPORTED_MODULE_7__components_sections_Token_vue___default.a
+}, {
+    name: 'Faqs',
+    path: '/blog',
+    component: __WEBPACK_IMPORTED_MODULE_8__components_sections_Faqs_vue___default.a
+}, {
+    name: 'Faqs',
+    path: '/whitepaper',
+    component: __WEBPACK_IMPORTED_MODULE_8__components_sections_Faqs_vue___default.a
+}, {
+    name: 'Faqs',
+    path: '/etherscan',
+    component: __WEBPACK_IMPORTED_MODULE_8__components_sections_Faqs_vue___default.a
+}, {
+    name: 'Faqs',
+    path: '/contact',
+    component: __WEBPACK_IMPORTED_MODULE_8__components_sections_Faqs_vue___default.a
 }];
 var router = new __WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]({ mode: 'history', routes: routes });
 new __WEBPACK_IMPORTED_MODULE_0_vue___default.a(__WEBPACK_IMPORTED_MODULE_0_vue___default.a.util.extend({ router: router }, __WEBPACK_IMPORTED_MODULE_5__components_App_vue___default.a)).$mount('#app');
@@ -16191,7 +16221,7 @@ exports = module.exports = __webpack_require__(11)(undefined);
 
 
 // module
-exports.push([module.i, "/*body{*/\n/*overflow-x: hidden;*/\n/*overflow-y: auto;*/\n/*}*/\nbody {\n  width: 100vw;\n  height: 100vh;\n  font-size: 2rem;\n  background: linear-gradient(-45deg, #e61b1b, #ec2548);\n  background-size: 100% 100%;\n  /*animation: Gradient 15s ease infinite;*/\n}\n#targetThree {\n  width: 100vw;\n  height: 100vh;\n  display: block;\n  background: transparent;\n}\n.count-down-time {\n  color: #000;\n  font-weight: bold;\n  text-align: center;\n}\n.count-down-time .time-left {\n    margin: 0 0 10px 0;\n    letter-spacing: 2px;\n    padding: 40px 0 20px;\n    text-transform: uppercase;\n}\n.mainLogo {\n  top: 50%;\n  left: 50%;\n  text-align: center;\n  position: absolute;\n  -webkit-transform: translate3d(-50%, -50%, 0);\n          transform: translate3d(-50%, -50%, 0);\n}\n.mainLogo h2 {\n    /*color: $color-1;  */\n    color: #FFF;\n    /*text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);*/\n    display: inline-block;\n    background: #e61b1b;\n    padding: 14px 30px;\n}\n.upupup {\n  position: relative;\n  z-index: 2;\n}\n.subscribe {\n  overflow: hidden;\n  padding: 10rem 0;\n  background: #FFF;\n  position: relative;\n}\n.subscribe .title {\n    z-index: 3;\n    top: 2rem;\n    left: 15px;\n    color: #000;\n    font-size: 3rem;\n    position: absolute;\n    letter-spacing: 2px;\n    text-transform: uppercase;\n}\n.subscribe .subtitle {\n    z-index: 3;\n    top: 7rem;\n    width: 50%;\n    left: 15px;\n    color: #000;\n    font-size: 1rem;\n    position: absolute;\n    letter-spacing: 2px;\n    text-transform: uppercase;\n}\n.subscribe .caption {\n    z-index: 9;\n    top: 7rem;\n    color: #000;\n    font-size: 1rem;\n    letter-spacing: 2px;\n    text-transform: uppercase;\n}\n.subscribe .text, .subscribe form {\n    color: #000;\n    font-weight: bold;\n    vertical-align: middle;\n    display: inline-block;\n}\n.subscribe .text {\n    margin-right: 30px;\n}\n.subscribe input {\n    padding: 10px 20px;\n    border: 2px solid #e61b1b;\n}\n.subscribe button {\n    border: 0;\n    color: #FFF;\n    border-radius: 0;\n    padding: 12px 20px;\n    background: #e61b1b;\n}\n.subscribe .ocean {\n    height: 0;\n    width: 100%;\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    background: #e61b1b;\n}\n.subscribe .ocean .wave {\n      background: url(\"/images/wave.svg\") repeat-x;\n      position: absolute;\n      top: -198px;\n      width: 6400px;\n      height: 198px;\n      -webkit-animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;\n              animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;\n      -webkit-transform: translate3d(0, 0, 0);\n              transform: translate3d(0, 0, 0);\n}\n.subscribe .ocean .wave:nth-of-type(2) {\n        top: -175px;\n        -webkit-animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 7s ease -1.25s infinite;\n                animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 7s ease -1.25s infinite;\n        opacity: 1;\n}\n@-webkit-keyframes wave {\n0% {\n    margin-left: 0;\n}\n100% {\n    margin-left: -1600px;\n}\n}\n@keyframes wave {\n0% {\n    margin-left: 0;\n}\n100% {\n    margin-left: -1600px;\n}\n}\n@-webkit-keyframes swell {\n0%, 100% {\n    -webkit-transform: translate3d(0, -25px, 0);\n            transform: translate3d(0, -25px, 0);\n}\n50% {\n    -webkit-transform: translate3d(0, 5px, 0);\n            transform: translate3d(0, 5px, 0);\n}\n}\n@keyframes swell {\n0%, 100% {\n    -webkit-transform: translate3d(0, -25px, 0);\n            transform: translate3d(0, -25px, 0);\n}\n50% {\n    -webkit-transform: translate3d(0, 5px, 0);\n            transform: translate3d(0, 5px, 0);\n}\n}\n.opinions {\n  color: #FFF;\n  padding: 9rem 0;\n  background: -webkit-gradient(linear, left bottom, left top, from(#f44164), to(#b30e0e));\n  background: linear-gradient(0deg, #f44164, #b30e0e);\n  /*background: linear-gradient(-45deg, #e61b1b, #f44164);*/\n  background-size: 100% 100%;\n}\n.opinions .single {\n    width: 40%;\n    margin-bottom: 30px;\n    margin-left: 10%;\n    position: relative;\n}\n.opinions .single img {\n      width: 70%;\n      margin-top: 20px;\n}\n.opinions .single:last-of-type {\n      margin-left: 50%;\n      margin-bottom: 0;\n}\n.desc, .half-half {\n  position: relative;\n  padding: 9rem 0;\n  background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#cdcdcd));\n  background: linear-gradient(180deg, #FFF, #cdcdcd);\n  background-size: 100% 100%;\n}\n.desc .single, .half-half .single {\n    padding: 2rem;\n}\n.desc h3, .half-half h3 {\n    color: #000;\n    font-weight: bold;\n    text-transform: uppercase;\n    /*text-align: center;*/\n    letter-spacing: 15px;\n}\n.desc #targetThreeTwo, .half-half #targetThreeTwo {\n    position: absolute;\n    right: 0;\n    bottom: 0;\n}\n.half-half {\n  color: #FFF;\n  font-size: 0;\n  background: #e61b1b;\n}\n.half-half .half {\n    width: 50%;\n    vertical-align: top;\n    display: inline-block;\n    padding: 0 20px;\n}\n.half-half .half .title {\n      letter-spacing: 3px;\n      font-size: 2.2rem;\n}\n.half-half .half p {\n      margin: 30px 0;\n      font-size: 2rem;\n}\n.half-half .half img {\n      display: block;\n      max-width: 100%;\n      margin: 10px auto;\n}\n.half-half p {\n    margin: 15px 0;\n    font-size: 2rem;\n}\n.green {\n  height: 250px;\n  margin-top: 15px;\n  position: relative;\n}\n.green .progress {\n    float: right;\n    position: relative;\n    border-radius: 50%;\n    width: 250px;\n    height: 250px;\n    border: 5px solid #e61b1b;\n    -webkit-transition: all 1s ease;\n    transition: all 1s ease;\n}\n.green .progress .inner {\n      position: absolute;\n      overflow: hidden;\n      z-index: 2;\n      border-radius: 50%;\n      width: 240px;\n      height: 240px;\n      -webkit-transition: all 1s ease;\n      transition: all 1s ease;\n}\n.green .progress .inner .water {\n        position: absolute;\n        z-index: 1;\n        width: 200%;\n        height: 200%;\n        left: -50%;\n        border-radius: 40%;\n        -webkit-animation-iteration-count: infinite;\n        animation-iteration-count: infinite;\n        -webkit-animation-timing-function: linear;\n        animation-timing-function: linear;\n        -webkit-animation-name: spin;\n        animation-name: spin;\n        top: 25%;\n        background: rgba(230, 27, 27, 0.8);\n        -webkit-transition: all 1s ease;\n        transition: all 1s ease;\n        -webkit-animation-duration: 10s;\n        animation-duration: 10s;\n}\n.green .bar {\n    left: 0;\n    top: 50%;\n    z-index: 2;\n    right: 100px;\n    height: 70px;\n    margin-top: 15px;\n    position: absolute;\n    border-bottom: 3px solid #e61b1b;\n}\n.green .bar .block {\n      padding: 2px;\n      height: 28px;\n      display: block;\n      position: relative;\n      border-radius: 30px;\n      border: 4px solid #FFF;\n      -webkit-transition: width 500ms ease-out;\n      transition: width 500ms ease-out;\n      background: -webkit-gradient(linear, right top, left top, from(#e61b1b), to(#f44164));\n      background: linear-gradient(-90deg, #e61b1b, #f44164);\n}\n.green .progress .inner .glare,\n.red .progress .inner .glare,\n.orange .progress .inner .glare {\n  position: absolute;\n  top: -120%;\n  left: -120%;\n  z-index: 5;\n  width: 200%;\n  height: 200%;\n  -webkit-transform: rotate(45deg);\n  transform: rotate(45deg);\n  border-radius: 50%;\n}\n.green .progress .inner .glare,\n.red .progress .inner .glare,\n.orange .progress .inner .glare {\n  background-color: rgba(255, 255, 255, 0.15);\n}\n.green .progress .inner .glare,\n.red .progress .inner .glare,\n.orange .progress .inner .glare {\n  -webkit-transition: all 1s ease;\n  transition: all 1s ease;\n}\n.green .progress .inner .percent,\n.red .progress .inner .percent,\n.orange .progress .inner .percent {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  font-weight: bold;\n  text-align: center;\n}\n.green .progress .inner .percent,\n.red .progress .inner .percent,\n.orange .progress .inner .percent {\n  line-height: 240px;\n  font-size: 92.3076923076923px;\n}\n.green .progress .inner .percent {\n  color: #f44164;\n  z-index: 2;\n}\n.green .progress .inner .percent.white {\n    color: #FFF;\n    text-shadow: 0 0 20px rgba(236, 37, 72, 0.51);\n}\n.green .progress .inner .percent {\n  /*text-shadow: 0 0 10px #029502;*/\n}\n.green .progress .inner .percent,\n.red .progress .inner .percent,\n.orange .progress .inner .percent {\n  -webkit-transition: all 1s ease;\n  transition: all 1s ease;\n}\n@-webkit-keyframes spin {\nfrom {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n}\nto {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n}\n}\n@keyframes spin {\nfrom {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n}\nto {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n}\n}\n", ""]);
+exports.push([module.i, "/*body{*/\n/*overflow-x: hidden;*/\n/*overflow-y: auto;*/\n/*}*/\nbody {\n  width: 100vw;\n  height: 100vh;\n  font-size: 2rem;\n  background: linear-gradient(-45deg, #e61b1b, #ec2548);\n  background-size: 100% 100%;\n  /*animation: Gradient 15s ease infinite;*/\n}\n#targetThree {\n  width: 100vw;\n  height: 100vh;\n  display: block;\n  background: transparent;\n}\n.count-down-time {\n  color: #000;\n  font-weight: bold;\n  text-align: center;\n}\n.count-down-time .time-left {\n    margin: 0 0 10px 0;\n    letter-spacing: 2px;\n    padding: 40px 0 20px;\n    text-transform: uppercase;\n}\n.mainLogo {\n  top: 50%;\n  left: 50%;\n  text-align: center;\n  position: absolute;\n  -webkit-transform: translate3d(-50%, -50%, 0);\n          transform: translate3d(-50%, -50%, 0);\n}\n.mainLogo h2 {\n    /*color: $color-1;  */\n    color: #FFF;\n    /*text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);*/\n    display: inline-block;\n    background: #e61b1b;\n    padding: 14px 30px;\n}\n.upupup {\n  position: relative;\n  z-index: 2;\n}\n.tableReference {\n  width: 100%;\n  display: block;\n  padding: 10rem 0;\n  background: #b30e0e;\n}\n.tableReference table {\n    margin: 0 auto;\n    max-width: 1200px;\n}\n.tableReference table tr td {\n      color: #FFF;\n      padding: 10px;\n      font-size: 1.8rem;\n      border: 1px solid #FFF;\n}\n.subscribe {\n  overflow: hidden;\n  padding: 10rem 0;\n  background: #FFF;\n  position: relative;\n}\n.subscribe .title {\n    z-index: 3;\n    top: 2rem;\n    left: 15px;\n    color: #000;\n    font-size: 3rem;\n    position: absolute;\n    letter-spacing: 2px;\n    text-transform: uppercase;\n}\n.subscribe .subtitle {\n    z-index: 3;\n    top: 7rem;\n    width: 50%;\n    left: 15px;\n    color: #000;\n    font-size: 1rem;\n    position: absolute;\n    letter-spacing: 2px;\n    text-transform: uppercase;\n}\n.subscribe .caption {\n    z-index: 9;\n    /*top: 7rem;*/\n    color: #000;\n    margin: 0;\n    font-size: 1.4rem;\n    text-align: center;\n    letter-spacing: 2px;\n    text-transform: uppercase;\n}\n.subscribe .endedText {\n    color: #FFF;\n    margin-top: 20px;\n    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);\n    text-align: center;\n    font-size: 1.3rem;\n}\n.subscribe .text, .subscribe form {\n    color: #000;\n    font-weight: bold;\n    vertical-align: middle;\n    display: inline-block;\n}\n.subscribe .text {\n    margin-right: 30px;\n}\n.subscribe input {\n    padding: 10px 20px;\n    border: 2px solid #e61b1b;\n}\n.subscribe button, .subscribe .btn {\n    border: 0;\n    color: #FFF;\n    border-radius: 0;\n    padding: 12px 20px;\n    background: #e61b1b;\n}\n.subscribe .ocean {\n    height: 0;\n    width: 100%;\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    background: #e61b1b;\n}\n.subscribe .ocean .wave {\n      background: url(\"/images/wave.svg\") repeat-x;\n      position: absolute;\n      top: -198px;\n      width: 6400px;\n      height: 198px;\n      -webkit-animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;\n              animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;\n      -webkit-transform: translate3d(0, 0, 0);\n              transform: translate3d(0, 0, 0);\n}\n.subscribe .ocean .wave:nth-of-type(2) {\n        top: -175px;\n        -webkit-animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 7s ease -1.25s infinite;\n                animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 7s ease -1.25s infinite;\n        opacity: 1;\n}\n@-webkit-keyframes wave {\n0% {\n    margin-left: 0;\n}\n100% {\n    margin-left: -1600px;\n}\n}\n@keyframes wave {\n0% {\n    margin-left: 0;\n}\n100% {\n    margin-left: -1600px;\n}\n}\n@-webkit-keyframes swell {\n0%, 100% {\n    -webkit-transform: translate3d(0, -25px, 0);\n            transform: translate3d(0, -25px, 0);\n}\n50% {\n    -webkit-transform: translate3d(0, 5px, 0);\n            transform: translate3d(0, 5px, 0);\n}\n}\n@keyframes swell {\n0%, 100% {\n    -webkit-transform: translate3d(0, -25px, 0);\n            transform: translate3d(0, -25px, 0);\n}\n50% {\n    -webkit-transform: translate3d(0, 5px, 0);\n            transform: translate3d(0, 5px, 0);\n}\n}\n.opinions {\n  color: #FFF;\n  padding: 9rem 0;\n  background: -webkit-gradient(linear, left bottom, left top, from(#f44164), to(#b30e0e));\n  background: linear-gradient(0deg, #f44164, #b30e0e);\n  /*background: linear-gradient(-45deg, #e61b1b, #f44164);*/\n  background-size: 100% 100%;\n}\n.opinions .single {\n    width: 40%;\n    margin-bottom: 30px;\n    margin-left: 10%;\n    position: relative;\n}\n.opinions .single img {\n      width: 70%;\n      margin-top: 20px;\n}\n.opinions .single:last-of-type {\n      margin-left: 50%;\n      margin-bottom: 0;\n}\n.desc, .half-half {\n  position: relative;\n  padding: 9rem 0;\n  background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#cdcdcd));\n  background: linear-gradient(180deg, #FFF, #cdcdcd);\n  background-size: 100% 100%;\n}\n.desc .single, .half-half .single {\n    padding: 2rem;\n}\n.desc h3, .half-half h3 {\n    color: #000;\n    font-weight: bold;\n    text-transform: uppercase;\n    /*text-align: center;*/\n    letter-spacing: 15px;\n}\n.desc #targetThreeTwo, .half-half #targetThreeTwo {\n    position: absolute;\n    right: 0;\n    bottom: 0;\n}\n.half-half {\n  color: #FFF;\n  font-size: 0;\n  background: #e61b1b;\n}\n.half-half .half {\n    width: 50%;\n    vertical-align: top;\n    display: inline-block;\n    padding: 0 20px;\n}\n.half-half .half .title {\n      letter-spacing: 3px;\n      font-size: 2.2rem;\n}\n.half-half .half p {\n      margin: 30px 0;\n      font-size: 2rem;\n}\n.half-half .half img {\n      display: block;\n      max-width: 100%;\n      margin: 10px auto;\n}\n.half-half p {\n    margin: 15px 0;\n    font-size: 2rem;\n}\n.green {\n  height: 250px;\n  margin-top: 15px;\n  position: relative;\n  overflow: hidden;\n  clear: both;\n}\n.green .progress {\n    float: right;\n    position: relative;\n    border-radius: 50%;\n    width: 250px;\n    height: 250px;\n    border: 5px solid #e61b1b;\n    -webkit-transition: all 1s ease;\n    transition: all 1s ease;\n}\n.green .progress .inner {\n      position: absolute;\n      overflow: hidden;\n      z-index: 2;\n      border-radius: 50%;\n      width: 240px;\n      height: 240px;\n      -webkit-transition: all 1s ease;\n      transition: all 1s ease;\n}\n.green .progress .inner .water {\n        position: absolute;\n        z-index: 1;\n        width: 200%;\n        height: 200%;\n        left: -50%;\n        border-radius: 40%;\n        -webkit-animation-iteration-count: infinite;\n        animation-iteration-count: infinite;\n        -webkit-animation-timing-function: linear;\n        animation-timing-function: linear;\n        -webkit-animation-name: spin;\n        animation-name: spin;\n        top: 25%;\n        background: rgba(230, 27, 27, 0.8);\n        -webkit-transition: all 1s ease;\n        transition: all 1s ease;\n        -webkit-animation-duration: 10s;\n        animation-duration: 10s;\n}\n.green .bar {\n    left: 0;\n    top: 50%;\n    z-index: 2;\n    right: 100px;\n    height: 70px;\n    margin-top: 15px;\n    position: absolute;\n    border-bottom: 3px solid #e61b1b;\n}\n.green .bar .block {\n      padding: 2px;\n      height: 28px;\n      display: block;\n      position: relative;\n      border-radius: 30px;\n      border: 4px solid #FFF;\n      -webkit-transition: width 500ms ease-out;\n      transition: width 500ms ease-out;\n      background: -webkit-gradient(linear, right top, left top, from(#e61b1b), to(#f44164));\n      background: linear-gradient(-90deg, #e61b1b, #f44164);\n}\n.green .progress .inner .glare,\n.red .progress .inner .glare,\n.orange .progress .inner .glare {\n  position: absolute;\n  top: -120%;\n  left: -120%;\n  z-index: 5;\n  width: 200%;\n  height: 200%;\n  -webkit-transform: rotate(45deg);\n  transform: rotate(45deg);\n  border-radius: 50%;\n}\n.green .progress .inner .glare,\n.red .progress .inner .glare,\n.orange .progress .inner .glare {\n  background-color: rgba(255, 255, 255, 0.15);\n}\n.green .progress .inner .glare,\n.red .progress .inner .glare,\n.orange .progress .inner .glare {\n  -webkit-transition: all 1s ease;\n  transition: all 1s ease;\n}\n.green .progress .inner .percent,\n.red .progress .inner .percent,\n.orange .progress .inner .percent {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  font-weight: bold;\n  text-align: center;\n}\n.green .progress .inner .percent,\n.red .progress .inner .percent,\n.orange .progress .inner .percent {\n  line-height: 240px;\n  font-size: 92.3076923076923px;\n}\n.green .progress .inner .percent {\n  color: #f44164;\n  z-index: 2;\n}\n.green .progress .inner .percent.white {\n    color: #FFF;\n    text-shadow: 0 0 20px rgba(236, 37, 72, 0.51);\n}\n.green .progress .inner .percent {\n  /*text-shadow: 0 0 10px #029502;*/\n}\n.green .progress .inner .percent,\n.red .progress .inner .percent,\n.orange .progress .inner .percent {\n  -webkit-transition: all 1s ease;\n  transition: all 1s ease;\n}\n@-webkit-keyframes spin {\nfrom {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n}\nto {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n}\n}\n@keyframes spin {\nfrom {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n}\nto {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n}\n}\n", ""]);
 
 // exports
 
@@ -16206,6 +16236,49 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_sweetalert__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_sweetalert___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vue_sweetalert__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -16517,8 +16590,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         });
 
         setTimeout(function () {
-
-            var deadline = 'Dec 31 2017 23:00:00 GMT-0600';
+            var deadline = 'Jan 31 2018 23:00:00 GMT-0600';
             function time_remaining(endtime) {
                 var t = Date.parse(endtime) - Date.parse(new Date());
                 var seconds = Math.floor(t / 1000 % 60);
@@ -16535,20 +16607,26 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
                 function update_clock() {
                     var t = time_remaining(endtime);
-                    days_span = t.days + ' days ';
-                    hours_span = ('0' + t.hours).slice(-2) + ' hours ';
-                    minutes_span = ('0' + t.minutes).slice(-2) + ' minutes ';
-                    seconds_span = ('0' + t.seconds).slice(-2) + ' seconds';
-                    self.timeLeft = days_span + hours_span + minutes_span + seconds_span;
-                    if (t.total <= 0) {
-                        clearInterval(timeinterval);
+                    console.log(t);
+
+                    if (t.total > 0) {
+                        days_span = t.days + ' days ';
+                        hours_span = ('0' + t.hours).slice(-2) + ' hours ';
+                        minutes_span = ('0' + t.minutes).slice(-2) + ' minutes ';
+                        seconds_span = ('0' + t.seconds).slice(-2) + ' seconds';
+                        self.timeLeft = days_span + hours_span + minutes_span + seconds_span;
+                        if (t.total <= 0) {
+                            clearInterval(timeinterval);
+                        }
+                    } else {
+                        self.timeLeft = 'Time ended';
                     }
                 }
                 update_clock();
                 var timeinterval = setInterval(update_clock, 1000);
             }
             run_clock(deadline);
-            this.generateCanvas();
+            //this.generateCanvas();
         }.bind(this), 100);
     }
 });
@@ -16570,11 +16648,7 @@ var render = function() {
           _vm._v("PowerLineUp (POW) Token Distribution")
         ]),
         _vm._v(" "),
-        _c("p", { staticClass: "subtitle" }, [
-          _vm._v(
-            "Only 30,000,000 POW tokens are going to be distributed. Since PreSale was a huge success, this\n                open distribution is to promote the mass-adoption of POW token and the PowerLineUp\n                platform giving a 300% bonus. Distribution starts Dec 20th 2017 and closes permanently at\n                block 5523769."
-          )
-        ]),
+        _vm._m(1, false, false),
         _vm._v(" "),
         _c("div", { staticClass: "green" }, [
           _c("div", { staticClass: "progress" }, [
@@ -16627,9 +16701,11 @@ var render = function() {
         ]),
         _vm._v(" "),
         _c("p", { staticClass: "caption" }, [
-          _vm._v(
-            "\n                Distribution bonus will close permanetly at block 5523769 (the last block of 2017) or sooner if all tokens are purchased. No distribution is going to be held\n                ever again. Platform Will open Q2 2018. Tokens Will be tradeable at regular price.\n            "
-          )
+          _vm._v("\n                1st Day Mega Bonus 300%\n                ")
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "caption" }, [
+          _vm._v("\n                1 ETH = 3000 POW\n            ")
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "count-down-time" }, [
@@ -16638,29 +16714,26 @@ var render = function() {
             _c("span", { domProps: { textContent: _vm._s(_vm.timeLeft) } })
           ]),
           _vm._v(" "),
-          _c(
-            "button",
-            {
-              on: {
-                click: function($event) {
-                  $event.preventDefault()
-                  _vm.iWantTokens()
-                }
-              }
-            },
-            [_vm._v("Get Tokens Now")]
-          )
+          _c("a", { staticClass: "btn", attrs: { href: "/get-tokens" } }, [
+            _vm._v("Get Tokens Now")
+          ])
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "endedText" }, [
+          _vm._v("Next Stage 1 ETH = 2000 POW.")
         ])
       ]),
       _vm._v(" "),
-      _vm._m(1, false, false)
+      _vm._m(2, false, false)
     ]),
-    _vm._v(" "),
-    _vm._m(2, false, false),
     _vm._v(" "),
     _vm._m(3, false, false),
     _vm._v(" "),
-    _vm._m(4, false, false)
+    _vm._m(4, false, false),
+    _vm._v(" "),
+    _vm._m(5, false, false),
+    _vm._v(" "),
+    _vm._m(6, false, false)
   ])
 }
 var staticRenderFns = [
@@ -16704,10 +16777,90 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
+    return _c("p", { staticClass: "subtitle" }, [
+      _vm._v("Regular Price: 1 ETH = 1000 POW."),
+      _c("br"),
+      _vm._v("\n                CrowdSale starts Jan 1st 2018."),
+      _c("br"),
+      _vm._v("\n                Closes Permanently at Block"),
+      _c("br"),
+      _vm._v("\n                5012600.")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
     return _c("div", { staticClass: "ocean" }, [
       _c("div", { staticClass: "wave" }),
       _vm._v(" "),
       _c("div", { staticClass: "wave" })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "tableReference" }, [
+      _c("table", [
+        _c("tbody", [
+          _c("tr", [
+            _c("td", [_vm._v("Stage 1")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("1st Day")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("300% Bonus")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("1 ETH = 3000 POW")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("January 1st Only.")])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("td", [_vm._v("Stage 2")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("1st Week")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("200% Bonus")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("1 ETH = 2000 POW")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("Opens Jan 2nd - Closes  Jan 7th 2018.")])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("td", [_vm._v("Stage 3")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("2nd Week")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("150% Bonus")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("1 ETH = 1500 POW")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("Opens Jan 8th - Closes Jan  14th 2018.")])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("td", [_vm._v("Last Stage")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("Last 2 Weeks")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("Regular Price")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("1 ETH = 1000 POW")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("Opens Jan 15th - Closes Jan 31th 2018.")])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("td", { staticClass: "text-center", attrs: { colspan: "5" } }, [
+              _vm._v(
+                "Open Distribution Closes Permanently Jan 31st 2018 at Block 5012600."
+              )
+            ])
+          ])
+        ])
+      ])
     ])
   },
   function() {
@@ -16870,6 +17023,1250 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 51 */,
+/* 52 */,
+/* 53 */,
+/* 54 */,
+/* 55 */,
+/* 56 */,
+/* 57 */,
+/* 58 */,
+/* 59 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(60)
+}
+var normalizeComponent = __webpack_require__(13)
+/* script */
+var __vue_script__ = __webpack_require__(62)
+/* template */
+var __vue_template__ = __webpack_require__(63)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/sections/Faqs.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {  return key !== "default" && key.substr(0, 2) !== "__"})) {  console.error("named exports are not supported in *.vue files.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-767df3f7", Component.options)
+  } else {
+    hotAPI.reload("data-v-767df3f7", Component.options)
+' + '  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 60 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(61);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(12)("f3c80814", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-767df3f7\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./Faqs.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-767df3f7\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./Faqs.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 61 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(11)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/***/ }),
+/* 62 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_sweetalert__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_sweetalert___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vue_sweetalert__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    name: 'Faqs',
+    data: function data() {
+        return {
+            userEmail: ''
+        };
+    },
+
+    methods: {},
+    mounted: function mounted() {}
+});
+
+/***/ }),
+/* 63 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0, false, false)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("div", { staticClass: "section" }, [
+        _c("div", { staticClass: "mainLogo" }, [
+          _c("img", {
+            attrs: { src: "/images/PowerLineUp.png", alt: "Power LineUp" }
+          }),
+          _vm._v(" "),
+          _c("h2", [_vm._v("Building content")])
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-767df3f7", module.exports)
+  }
+}
+
+/***/ }),
+/* 64 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(65)
+}
+var normalizeComponent = __webpack_require__(13)
+/* script */
+var __vue_script__ = __webpack_require__(67)
+/* template */
+var __vue_template__ = __webpack_require__(68)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/sections/Token.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {  return key !== "default" && key.substr(0, 2) !== "__"})) {  console.error("named exports are not supported in *.vue files.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-5d29fee2", Component.options)
+  } else {
+    hotAPI.reload("data-v-5d29fee2", Component.options)
+' + '  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 65 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(66);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(12)("4c3d11a0", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-5d29fee2\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./Token.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-5d29fee2\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./Token.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 66 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(11)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "\n.tokenAddress {\n  width: 100%;\n  color: #e61b1b;\n  padding: 3rem 0;\n  background: #FFF;\n  text-align: center;\n  letter-spacing: 2px;\n}\n.copyText {\n  float: right;\n  margin: 10px 0;\n  cursor: pointer;\n  font-size: 1.5rem;\n  text-align: right;\n  display: inline-block;\n  border-bottom: 1px solid #FFF;\n}\n.grid-text {\n  margin: 5rem 0;\n  text-align: center;\n}\n.grid-text .col-md-4.col-xs-12 {\n    position: relative;\n}\n.grid-text .col-md-4.col-xs-12:nth-of-type(2):before, .grid-text .col-md-4.col-xs-12:nth-of-type(2):after {\n      content: '';\n      top: 0;\n      bottom: 0;\n      width: 1px;\n      /*height: 30px;*/\n      position: absolute;\n      background: #FFF;\n}\n.grid-text .col-md-4.col-xs-12:nth-of-type(2):before {\n      left: 0;\n}\n.grid-text .col-md-4.col-xs-12:nth-of-type(2):after {\n      right: 0;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 67 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    name: 'Token',
+    data: function data() {
+        return {};
+    },
+
+    methods: {
+        copyToken: function copyToken() {
+            var copyTextarea = document.querySelector('.js-copytextarea');
+            copyTextarea.select();
+
+            try {
+                var successful = document.execCommand('copy');
+                var msg = successful ? 'successful' : 'unsuccessful';
+                console.log('Copying text command was ' + msg);
+                alert("Text copied successfully");
+            } catch (err) {
+                console.log('Oops, unable to copy');
+            }
+        }
+    },
+    mounted: function mounted() {}
+});
+
+/***/ }),
+/* 68 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "section" }, [
+      _c("div", { staticClass: "container single-page" }, [
+        _vm._m(0, false, false),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(" "),
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-xs-12 col-md-12" }, [
+            _vm._m(1, false, false),
+            _vm._v(" "),
+            _c("div", { staticClass: "tokenAddress" }, [
+              _vm._v(
+                "\n                        0x8356BA7EE5704b7eFDa38A20F993738fdAaE8c44\n                    "
+              )
+            ]),
+            _vm._v(" "),
+            _c(
+              "textarea",
+              {
+                staticClass: "js-copytextarea",
+                staticStyle: { height: "0", opacity: "0" }
+              },
+              [_vm._v("0x8356BA7EE5704b7eFDa38A20F993738fdAaE8c44")]
+            ),
+            _vm._v(" "),
+            _c(
+              "p",
+              {
+                staticClass: "copyText",
+                on: {
+                  click: function($event) {
+                    $event.preventDefault()
+                    _vm.copyToken()
+                  }
+                }
+              },
+              [_vm._v("Copy Address")]
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _vm._m(2, false, false),
+        _vm._v(" "),
+        _vm._m(3, false, false),
+        _vm._v(" "),
+        _vm._m(4, false, false),
+        _vm._v(" "),
+        _vm._m(5, false, false)
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-xs-12 col-md-12" }, [
+        _c("h1", [
+          _vm._v("SEND ETH TO THIS ADRESS AND RECEIVE BDG TOKENS "),
+          _c("strong", [_vm._v("NOW!")])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "well well-purple" }, [
+      _c("p", [
+        _vm._v(
+          "To make smooth & fast transaction without rejection, set GAS LIMIT to "
+        ),
+        _c("strong", [_vm._v("200,000")]),
+        _vm._v(" and gas price to "),
+        _c("strong", [_vm._v("50 GWEI")]),
+        _vm._v(" or more.")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row grid-text" }, [
+      _c("div", { staticClass: "col-md-4 col-xs-12" }, [
+        _c("p", [_c("strong", [_vm._v("Exchange Rate")])]),
+        _vm._v(" "),
+        _c("p", [_vm._v("1 ETH = 10,000 BDG")])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-md-4 col-xs-12" }, [
+        _c("p", [_c("strong", [_vm._v("Set GAS Limit")])]),
+        _vm._v(" "),
+        _c("p", [_vm._v("200,000")])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-md-4 col-xs-12" }, [
+        _c("p", [_c("strong", [_vm._v("GAS Price")])]),
+        _vm._v(" "),
+        _c("p", [_vm._v("50 GWEI")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-xs-12 col-md-12" }, [
+        _c("h1", [_vm._v("How to create an ether wallet")]),
+        _vm._v(" "),
+        _c("p", { staticClass: "subtitle" }, [
+          _vm._v(
+            "First of all you need to have an Ether wallet. Creating an ether wallet is a must in order to participate in the crowdsale and receive your tokens."
+          )
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-xs-12 col-md-12" }, [
+        _c("div", { staticClass: "well" }, [
+          _c("p", [
+            _c("b", [
+              _c("span", { staticClass: "red" }, [
+                _vm._v("Do NOT send Ether from an exchange.")
+              ])
+            ]),
+            _vm._v(
+              " Use MyEtherWallet (recommended), MetaMask, Mist wallets, or other ERC20 compatible ones."
+            )
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-xs-12 col-md-12" }, [
+        _c(
+          "div",
+          {
+            staticClass: "panel-group faq-block",
+            attrs: { role: "tablist", "aria-multiselectable": "true" }
+          },
+          [
+            _c("div", { staticClass: "panel panel-default" }, [
+              _c(
+                "div",
+                { staticClass: "panel-heading", attrs: { role: "tab" } },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "collapsed faq-button",
+                      attrs: {
+                        "data-toggle": "collapse",
+                        "data-parent": "#accordion",
+                        href: "#001",
+                        "aria-expanded": "false",
+                        "aria-controls": "001"
+                      }
+                    },
+                    [
+                      _c(
+                        "h3",
+                        { staticClass: "panel-title instructions-title" },
+                        [
+                          _vm._v(
+                            "\n                                        MyEtherWallet [RECOMMENDED]                                            "
+                          )
+                        ]
+                      )
+                    ]
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "panel-collapse collapse in",
+                  attrs: {
+                    id: "001",
+                    role: "tabpanel",
+                    "aria-labelledby": "001"
+                  }
+                },
+                [
+                  _c("div", { staticClass: "panel-body" }, [
+                    _c("h4", [
+                      _c("b", [_vm._v("Step 1:")]),
+                      _vm._v(" Go to "),
+                      _c(
+                        "a",
+                        {
+                          attrs: {
+                            href: "https://www.myetherwallet.com/",
+                            target: "_blank",
+                            rel: "nofollow"
+                          }
+                        },
+                        [_vm._v("https://www.myetherwallet.com/")]
+                      ),
+                      _vm._v(
+                        " and make sure the URL is correct and MYETHERWALLET LLC [US] certificate is there."
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "https://www.bitdegree.org/en/token/assets/instructions/myetherwallet-1.png?static=true&v=549",
+                        alt: "MyEtherWallet"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("h4", [
+                      _c("b", [_vm._v("Step 2:")]),
+                      _vm._v(" Go to the “New Wallet” Tab.")
+                    ]),
+                    _vm._v(" "),
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "https://www.bitdegree.org/en/token/assets/instructions/myetherwallet-2.png?static=true&v=549",
+                        alt: "MyEtherWallet"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("h4", [
+                      _c("b", [_vm._v("Step 3:")]),
+                      _vm._v(" Enter a Strong Password.")
+                    ]),
+                    _vm._v(" "),
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "https://www.bitdegree.org/en/token/assets/instructions/myetherwallet-3.png?static=true&v=549",
+                        alt: "MyEtherWallet"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "Enter a password that will be used to access your wallet:"
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "1. Create a strong password, using upper and lower-case letters, and also numbers and symbols (e.g., “#”, “@”, etc.)."
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "2. Do not lose this password. Losing this password is equivalent to losing all ETH and BDG stored in your account. Click on the "
+                      ),
+                      _c("b", [_vm._v("Create New Wallet")]),
+                      _vm._v(" button.")
+                    ]),
+                    _vm._v(" "),
+                    _c("h4", [
+                      _c("b", [_vm._v("Step 4:")]),
+                      _vm._v(" Save Your Keystore File.")
+                    ]),
+                    _vm._v(" "),
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "https://www.bitdegree.org/en/token/assets/instructions/myetherwallet-4.png?static=true&v=549",
+                        alt: "MyEtherWallet"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "This file contains your private and public keys and is required every time you want to access your account."
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "instructions-note" }, [
+                      _c("span", [_c("b", [_vm._v("NOTE:")])]),
+                      _vm._v(
+                        " you won’t be able to access your account without this file and the password from the previous step. Losing either one of them is equivalent to losing all ETH and BDG stored in your account."
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("h4", [
+                      _c("b", [_vm._v("Step 5 (optional):")]),
+                      _vm._v(" Backup Your Private Key.")
+                    ]),
+                    _vm._v(" "),
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "https://www.bitdegree.org/en/token/assets/instructions/myetherwallet-5.png?static=true&v=549",
+                        alt: "MyEtherWallet"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "If you would like to make this account accessible by other Ethereum wallets, you can export and backup your private key."
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "instructions-note" }, [
+                      _c("span", [_c("b", [_vm._v("NOTE:")])]),
+                      _vm._v(
+                        "You should never share your private keys with anyone else. If your wallet address is the equivalent of your bank account number, then your private wallet key is your PIN. If anyone obtains your private key, they will have access to all of your funds."
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("h4", [
+                      _c("b", [_vm._v("Step 6:")]),
+                      _vm._v(" Unlock Your Wallet to View the Public Address.")
+                    ]),
+                    _vm._v(" "),
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "https://www.bitdegree.org/en/token/assets/instructions/myetherwallet-6.png?static=true&v=549",
+                        alt: "MyEtherWallet"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "Follow the instructions to unlock your wallet and get your public address:"
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("ul", [
+                      _c("li", [
+                        _vm._v(
+                          "Select the Keystore File (UTC / JSON) and select the keystore file you’ve downloaded in the previous step."
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _vm._v(
+                          "Input the password you set on step 3 and click on the Unlock button to unlock it."
+                        )
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("h4", [
+                      _c("b", [_vm._v("Step 7:")]),
+                      _vm._v(" Save Your Public Address")
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "Now that you have created the wallet you should now be able to see your Ethereum public address under the Your Address label or the Account Address section."
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "https://www.bitdegree.org/en/token/assets/instructions/myetherwallet-7.png?static=true&v=549",
+                        alt: "MyEtherWallet"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "instructions-note" }, [
+                      _c("span", [_c("b", [_vm._v("NOTE:")])]),
+                      _vm._v(
+                        "\n                                        You will need to provide this public address during registration for the BitDegree token sale & to receive ETH to your wallet."
+                      ),
+                      _c("br"),
+                      _vm._v(
+                        "\n                                        You will need to provide this public address to transfer ETH to your wallet."
+                      ),
+                      _c("br"),
+                      _vm._v(
+                        "\n                                        Do not lose your password and the keystore file, as you will need to use them in the BitDegree token sale."
+                      )
+                    ])
+                  ])
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "panel panel-default" }, [
+              _c(
+                "div",
+                { staticClass: "panel-heading", attrs: { role: "tab" } },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "collapsed faq-button",
+                      attrs: {
+                        "data-toggle": "collapse",
+                        "data-parent": "#accordion",
+                        href: "#002",
+                        "aria-expanded": "false",
+                        "aria-controls": "002"
+                      }
+                    },
+                    [
+                      _c(
+                        "h3",
+                        { staticClass: "panel-title instructions-title" },
+                        [
+                          _vm._v(
+                            "\n                                        ALTERNATIVE OPTION 1: MetaMask                                            "
+                          )
+                        ]
+                      )
+                    ]
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "panel-collapse collapse in",
+                  attrs: {
+                    id: "002",
+                    role: "tabpanel",
+                    "aria-labelledby": "002"
+                  }
+                },
+                [
+                  _c("div", { staticClass: "panel-body" }, [
+                    _c("p", [
+                      _vm._v(
+                        "MetaMask is a plugin for Google Chrome browser. It can be downloaded and installed from metamask.io"
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("h4", [
+                      _c("b", [_vm._v("Step 1:")]),
+                      _vm._v(" Go to "),
+                      _c(
+                        "a",
+                        {
+                          attrs: {
+                            href: "https://metamask.io",
+                            target: "_blank",
+                            rel: "nofollow"
+                          }
+                        },
+                        [_vm._v("https://metamask.io")]
+                      ),
+                      _vm._v(" and click on "),
+                      _c("b", [_vm._v("GET CHROME EXTENSION.")])
+                    ]),
+                    _vm._v(" "),
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "https://www.bitdegree.org/en/token/assets/instructions/metamask-1.png?static=true&v=549",
+                        alt: "MetaMask"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("h4", [
+                      _c("b", [_vm._v("Step 2:")]),
+                      _vm._v(
+                        " Chrome web store will open in a new tab. Click on "
+                      ),
+                      _c("b", [_vm._v("Add Extension")])
+                    ]),
+                    _vm._v(" "),
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "https://www.bitdegree.org/en/token/assets/instructions/metamask-2.png?static=true&v=549",
+                        alt: "MetaMask"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("h4", [
+                      _c("b", [_vm._v("Step 3:")]),
+                      _vm._v("  Click on "),
+                      _c("b", [_vm._v("+ADD TO CHROME")])
+                    ]),
+                    _vm._v(" "),
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "https://www.bitdegree.org/en/token/assets/instructions/metamask-3.png?static=true&v=549",
+                        alt: "MetaMask"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("h4", [
+                      _c("b", [_vm._v("Step 4:")]),
+                      _vm._v(" Read the Terms of Use and click on "),
+                      _c("b", [_vm._v("Accept.")])
+                    ]),
+                    _vm._v(" "),
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "https://www.bitdegree.org/en/token/assets/instructions/metamask-4.png?static=true&v=549",
+                        alt: "MetaMask"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("h4", [
+                      _c("b", [_vm._v("Step 5:")]),
+                      _vm._v(" Enter a secure password twice and click on "),
+                      _c("b", [_vm._v("CREATE.")])
+                    ]),
+                    _vm._v(" "),
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "https://www.bitdegree.org/en/token/assets/instructions/metamask-5.png?static=true&v=549",
+                        alt: "MetaMask"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("h4", [
+                      _c("b", [_vm._v("Step 6:")]),
+                      _vm._v(
+                        " Copy the words that appeared on your screen and save them somewhere safe. Then click on "
+                      ),
+                      _c("b", [_vm._v("I’ve copied it somewhere safe.")])
+                    ]),
+                    _vm._v(" "),
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "https://www.bitdegree.org/en/token/assets/instructions/metamask-6.png?static=true&v=549",
+                        alt: "MetaMask"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("h4", [
+                      _c("b", [_vm._v("Step 7:")]),
+                      _vm._v(" A wallet named "),
+                      _c("b", [_vm._v("Account 1")]),
+                      _vm._v(" will be created for you by default.")
+                    ]),
+                    _vm._v(" "),
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "https://www.bitdegree.org/en/token/assets/instructions/metamask-7.png?static=true&v=549",
+                        alt: "MetaMask"
+                      }
+                    })
+                  ])
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "panel panel-default" }, [
+              _c(
+                "div",
+                { staticClass: "panel-heading", attrs: { role: "tab" } },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "collapsed faq-button",
+                      attrs: {
+                        "data-toggle": "collapse",
+                        "data-parent": "#accordion",
+                        href: "#003",
+                        "aria-expanded": "false",
+                        "aria-controls": "003"
+                      }
+                    },
+                    [
+                      _c(
+                        "h3",
+                        { staticClass: "panel-title instructions-title" },
+                        [
+                          _vm._v(
+                            "\n                                        ALTERNATIVE OPTION 2: MIST                                            "
+                          )
+                        ]
+                      )
+                    ]
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "panel-collapse collapse in",
+                  attrs: {
+                    id: "003",
+                    role: "tabpanel",
+                    "aria-labelledby": "003"
+                  }
+                },
+                [
+                  _c("div", { staticClass: "panel-body" }, [
+                    _c("h4", [
+                      _c("b", [_vm._v("Step 1:")]),
+                      _vm._v(" Download the latest Mist release here "),
+                      _c(
+                        "a",
+                        {
+                          attrs: {
+                            href: "https://github.com/ethereum/mist/releases",
+                            target: "_blank",
+                            rel: "nofollow"
+                          }
+                        },
+                        [_vm._v("https://github.com/ethereum/mist/releases")]
+                      ),
+                      _vm._v(
+                        ". For this tutorial we are using Ethereum Mist for Mac OS."
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "https://www.bitdegree.org/en/token/assets/instructions/mist-1.png?static=true&v=549",
+                        alt: "Mist"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("h4", [
+                      _c("b", [_vm._v("Step 2:")]),
+                      _vm._v(" Click "),
+                      _c("b", [_vm._v("USE THE MAIN NETWORK")])
+                    ]),
+                    _vm._v(" "),
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "https://www.bitdegree.org/en/token/assets/instructions/mist-2.png?static=true&v=549",
+                        alt: "Mist"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("h4", [
+                      _c("b", [_vm._v("Step 3:")]),
+                      _vm._v(" Click "),
+                      _c("b", [_vm._v("SKIP")]),
+                      _vm._v(" on “Do you have wallet file”")
+                    ]),
+                    _vm._v(" "),
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "https://www.bitdegree.org/en/token/assets/instructions/mist-3.png?static=true&v=549",
+                        alt: "Mist"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("h4", [
+                      _c("b", [_vm._v("Step 4:")]),
+                      _vm._v(" Pick a secure password and enter it twice")
+                    ]),
+                    _vm._v(" "),
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "https://www.bitdegree.org/en/token/assets/instructions/mist-4.png?static=true&v=549",
+                        alt: "Mist"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("h4", [
+                      _c("b", [_vm._v("Step 5:")]),
+                      _vm._v(
+                        " Your Main Account address is here. Be sure to write it down."
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "https://www.bitdegree.org/en/token/assets/instructions/mist-5.png?static=true&v=549",
+                        alt: "Mist"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("h4", [
+                      _c("b", [_vm._v("Step 6:")]),
+                      _vm._v(" Click "),
+                      _c("b", [_vm._v("NEXT")]),
+                      _vm._v(" and wait for download.")
+                    ]),
+                    _vm._v(" "),
+                    _c("h4", [
+                      _c("b", [_vm._v("Step 7:")]),
+                      _vm._v(
+                        " Here is the account overview screen you will see once the download is complete, you can use "
+                      ),
+                      _c("b", [_vm._v("SEND")]),
+                      _vm._v(
+                        " to send Ether. To receive the ether from other party, simply share the address from "
+                      ),
+                      _c("b", [_vm._v("Step 5.")])
+                    ]),
+                    _vm._v(" "),
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "https://www.bitdegree.org/en/token/assets/instructions/mist-6.png?static=true&v=549",
+                        alt: "Mist"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "instructions-note" }, [
+                      _c("span", [_c("b", [_vm._v("NOTE:")])]),
+                      _vm._v(
+                        " You will need to provide this public address during registration for the BitDegree token sale & to receive ETH to your wallet."
+                      ),
+                      _c("br"),
+                      _vm._v(
+                        "\n                                        You will need to provide this public address to transfer ETH to your wallet."
+                      ),
+                      _c("br"),
+                      _vm._v(
+                        "\n                                        Do not lose your password and the keystore file, as you will need to use them in the BitDegree token sale."
+                      )
+                    ])
+                  ])
+                ]
+              )
+            ])
+          ]
+        )
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-5d29fee2", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

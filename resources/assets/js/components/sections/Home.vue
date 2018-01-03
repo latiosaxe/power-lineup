@@ -44,10 +44,10 @@
         <div class="subscribe">
             <div class="container upupup">
                 <p class="title">PowerLineUp (POW) Token Distribution</p>
-                <p class="subtitle">Only 30,000,000 POW tokens are going to be distributed. Since PreSale was a huge success, this
-                    open distribution is to promote the mass-adoption of POW token and the PowerLineUp
-                    platform giving a 300% bonus. Distribution starts Dec 20th 2017 and closes permanently at
-                    block 5523769.</p>
+                <p class="subtitle">Regular Price: 1 ETH = 1000 POW.<br/>
+                    CrowdSale starts Jan 1st 2018.<br/>
+                    Closes Permanently at Block<br/>
+                    5012600.</p>
                 <div class="green">
                     <div class="progress">
                         <div class="inner">
@@ -65,15 +65,21 @@
                     <div class="water" :style="{top: 100-tokens.percentage +'%'}"></div>
                 </div>
                 <p class="caption">
-                    Distribution bonus will close permanetly at block 5523769 (the last block of 2017) or sooner if all tokens are purchased. No distribution is going to be held
-                    ever again. Platform Will open Q2 2018. Tokens Will be tradeable at regular price.
+                    1st Day Mega Bonus 300%
+                    <!--Distribution bonus will close permanetly at block 5523769 (the last block of 2017) or sooner if all tokens are purchased. No distribution is going to be held-->
+                    <!--ever again. Platform Will open Q2 2018. Tokens Will be tradeable at regular price.-->
+                </p>
+                <p class="caption">
+                    1 ETH = 3000 POW
                 </p>
 
                 <div class="count-down-time">
                     <p class="time-left">Time Left: <span v-text="timeLeft"></span></p>
-                    <button @click.prevent="iWantTokens()">Get Tokens Now</button>
+                    <a href="/get-tokens" class="btn">Get Tokens Now</a>
+                    <!--<button @click.prevent="iWantTokens()">Get Tokens Now</button>-->
                 </div>
 
+                <p class="endedText">Next Stage 1 ETH = 2000 POW.</p>
                 <!--<div class="text">Apply for <strong>AirDrop</strong>.</div>-->
                 <!--<form @submit.prevent="submitEmail">-->
                     <!--<input type="email" v-model="userEmail" placeholder="alex@domain.com">-->
@@ -85,6 +91,43 @@
                 <div class="wave"></div>
                 <div class="wave"></div>
             </div>
+        </div>
+        <div class="tableReference">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Stage 1</td>
+                        <td>1st Day</td>
+                        <td>300% Bonus</td>
+                        <td>1 ETH = 3000 POW</td>
+                        <td>January 1st Only.</td>
+                    </tr>
+                    <tr>
+                        <td>Stage 2</td>
+                        <td>1st Week</td>
+                        <td>200% Bonus</td>
+                        <td>1 ETH = 2000 POW</td>
+                        <td>Opens Jan 2nd - Closes  Jan 7th 2018.</td>
+                    </tr>
+                    <tr>
+                        <td>Stage 3</td>
+                        <td>2nd Week</td>
+                        <td>150% Bonus</td>
+                        <td>1 ETH = 1500 POW</td>
+                        <td>Opens Jan 8th - Closes Jan  14th 2018.</td>
+                    </tr>
+                    <tr>
+                        <td>Last Stage</td>
+                        <td>Last 2 Weeks</td>
+                        <td>Regular Price</td>
+                        <td>1 ETH = 1000 POW</td>
+                        <td>Opens Jan 15th - Closes Jan 31th 2018.</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" class="text-center">Open Distribution Closes Permanently Jan 31st 2018 at Block 5012600.</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
         <div class="opinions">
             <div class="container">
@@ -311,10 +354,7 @@
             });
 
             setTimeout(function(){
-
-
-
-                var deadline = 'Dec 31 2017 23:00:00 GMT-0600';
+                var deadline = 'Jan 31 2018 23:00:00 GMT-0600';
                 function time_remaining(endtime){
                     var t = Date.parse(endtime) - Date.parse(new Date());
                     var seconds = Math.floor( (t/1000) % 60 );
@@ -331,18 +371,24 @@
 
                     function update_clock(){
                         var t = time_remaining(endtime);
-                        days_span = t.days + ' days ';
-                        hours_span = ('0' + t.hours).slice(-2) + ' hours ';
-                        minutes_span = ('0' + t.minutes).slice(-2) + ' minutes ';
-                        seconds_span = ('0' + t.seconds).slice(-2) + ' seconds';
-                        self.timeLeft = days_span + hours_span + minutes_span + seconds_span;
-                        if(t.total<=0){ clearInterval(timeinterval); }
+                        console.log( t );
+
+                        if( t.total > 0){
+                            days_span = t.days + ' days ';
+                            hours_span = ('0' + t.hours).slice(-2) + ' hours ';
+                            minutes_span = ('0' + t.minutes).slice(-2) + ' minutes ';
+                            seconds_span = ('0' + t.seconds).slice(-2) + ' seconds';
+                            self.timeLeft = days_span + hours_span + minutes_span + seconds_span;
+                            if(t.total<=0){ clearInterval(timeinterval); }
+                        }else{
+                            self.timeLeft = 'Time ended';
+                        }
                     }
                     update_clock();
                     var timeinterval = setInterval(update_clock,1000);
                 }
                 run_clock(deadline);
-                this.generateCanvas();
+                //this.generateCanvas();
             }.bind(this), 100);
         }
     }
@@ -399,6 +445,24 @@
         position: relative;
         z-index: 2;
     }
+    .tableReference{
+        width: 100%;
+        display: block;
+        padding: 10rem 0;
+        background: #b30e0e;
+        table{
+            margin: 0 auto;
+            max-width: 1200px;
+            tr{
+                td{
+                    color: #FFF;
+                    padding: 10px;
+                    font-size: 1.8rem;
+                    border: 1px solid #FFF;
+                }
+            }
+        }
+    }
     .subscribe{
         overflow: hidden;
         padding: 10rem 0;
@@ -427,11 +491,20 @@
         }
         .caption{
             z-index: 9;
-            top: 7rem;
+            /*top: 7rem;*/
             color: #000;
-            font-size: 1rem;
+            margin: 0;
+            font-size: 1.4rem;
+            text-align: center;
             letter-spacing: 2px;
             text-transform: uppercase;
+        }
+        .endedText{
+            color: #FFF;
+            margin-top: 20px;
+            text-shadow: 0 0 10px rgba(0,0,0,0.5);
+            text-align: center;
+            font-size: 1.3rem;
         }
         .text, form{
             color: #000;
@@ -446,7 +519,7 @@
             padding: 10px 20px;
             border: 2px solid $color-1;
         }
-        button{
+        button, .btn{
             border: 0;
             color: #FFF;
             border-radius: 0;
@@ -571,6 +644,8 @@
         height: 250px;
         margin-top: 15px;
         position: relative;
+        overflow: hidden;
+        clear: both;
         .progress {
             float: right;
             position: relative;
