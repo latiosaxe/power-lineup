@@ -1410,10 +1410,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_axios__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_vue_sweetalert__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_vue_sweetalert___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_vue_sweetalert__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_App_vue__ = __webpack_require__(39);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_App_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__components_App_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_sections_Home_vue__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_sections_Home_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__components_sections_Home_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_vue_multilanguage__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_vue_multilanguage___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_vue_multilanguage__);
 
 
 
@@ -1425,15 +1423,31 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_2_vue_
 
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_4_vue_sweetalert___default.a);
 
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('section-home', __webpack_require__(45));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('section-faqs', __webpack_require__(64));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('section-token', __webpack_require__(59));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('section-contact', __webpack_require__(70));
 
 
-var routes = [{
-    name: 'Home',
-    path: '/',
-    component: __WEBPACK_IMPORTED_MODULE_6__components_sections_Home_vue___default.a
-}];
-var router = new __WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]({ mode: 'history', routes: routes });
-new __WEBPACK_IMPORTED_MODULE_0_vue___default.a(__WEBPACK_IMPORTED_MODULE_0_vue___default.a.util.extend({ router: router }, __WEBPACK_IMPORTED_MODULE_5__components_App_vue___default.a)).$mount('#app');
+
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_5_vue_multilanguage___default.a, {
+    default: LOCAL
+});
+console.info("Language", LOCAL);
+
+var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
+    el: '#app',
+    data: function data() {
+        return {};
+    },
+
+    mounted: function mounted() {},
+    methods: {
+        followUser: function followUser(idTarget) {
+            console.log(idTarget);
+        }
+    }
+});
 
 /***/ }),
 /* 16 */
@@ -16027,97 +16041,9 @@ module.exports = function spread(callback) {
 
 
 /***/ }),
-/* 39 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-function injectStyle (ssrContext) {
-  if (disposed) return
-  __webpack_require__(40)
-}
-var normalizeComponent = __webpack_require__(13)
-/* script */
-var __vue_script__ = __webpack_require__(43)
-/* template */
-var __vue_template__ = __webpack_require__(44)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = injectStyle
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/assets/js/components/App.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-8142f38c", Component.options)
-  } else {
-    hotAPI.reload("data-v-8142f38c", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 40 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(41);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(12)("9e85698c", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-8142f38c\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./App.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-8142f38c\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./App.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 41 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(11)(undefined);
-// imports
-
-
-// module
-exports.push([module.i, "\n.fade-enter-active, .fade-leave-active {\n    -webkit-transition: opacity .5s;\n    transition: opacity .5s\n}\n.fade-enter, .fade-leave-active {\n    opacity: 0\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
+/* 39 */,
+/* 40 */,
+/* 41 */,
 /* 42 */
 /***/ (function(module, exports) {
 
@@ -16151,49 +16077,8 @@ module.exports = function listToStyles (parentId, list) {
 
 
 /***/ }),
-/* 43 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({});
-
-/***/ }),
-/* 44 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("transition", { attrs: { name: "fade" } }, [_c("router-view")], 1)
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-8142f38c", module.exports)
-  }
-}
-
-/***/ }),
+/* 43 */,
+/* 44 */,
 /* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16279,7 +16164,7 @@ exports = module.exports = __webpack_require__(11)(undefined);
 
 
 // module
-exports.push([module.i, "/*body{*/\n/*overflow-x: hidden;*/\n/*overflow-y: auto;*/\n/*}*/\nbody {\n  width: 100vw;\n  height: 100vh;\n  font-size: 2rem;\n  background: linear-gradient(-45deg, #e61b1b, #ec2548);\n  background-size: 100% 100%;\n  /*animation: Gradient 15s ease infinite;*/\n}\n#targetThree {\n  width: 100vw;\n  height: 100vh;\n  display: block;\n  background: transparent;\n}\n.mainLogo {\n  top: 50%;\n  left: 50%;\n  text-align: center;\n  position: absolute;\n  -webkit-transform: translate3d(-50%, -50%, 0);\n          transform: translate3d(-50%, -50%, 0);\n}\n.mainLogo h2 {\n    /*color: $color-1;  */\n    color: #FFF;\n    /*text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);*/\n    display: inline-block;\n    background: #e61b1b;\n    padding: 14px 30px;\n}\n.subscribe {\n  overflow: hidden;\n  padding: 10rem 0;\n  background: #FFF;\n  position: relative;\n}\n.subscribe .title {\n    z-index: 3;\n    top: 5rem;\n    left: 15px;\n    color: #000;\n    font-size: 3rem;\n    position: absolute;\n    letter-spacing: 2px;\n    text-transform: uppercase;\n}\n.subscribe .text, .subscribe form {\n    color: #000;\n    font-weight: bold;\n    vertical-align: middle;\n    display: inline-block;\n}\n.subscribe .text {\n    margin-right: 30px;\n}\n.subscribe input {\n    padding: 10px 20px;\n    border: 2px solid #e61b1b;\n}\n.subscribe button {\n    border: 0;\n    color: #FFF;\n    border-radius: 0;\n    padding: 12px 20px;\n    background: #e61b1b;\n}\n.subscribe .ocean {\n    height: 0;\n    width: 100%;\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    background: #e61b1b;\n}\n.subscribe .ocean .wave {\n      background: url(\"/images/wave.svg\") repeat-x;\n      position: absolute;\n      top: -198px;\n      width: 6400px;\n      height: 198px;\n      -webkit-animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;\n              animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;\n      -webkit-transform: translate3d(0, 0, 0);\n              transform: translate3d(0, 0, 0);\n}\n.subscribe .ocean .wave:nth-of-type(2) {\n        top: -175px;\n        -webkit-animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 7s ease -1.25s infinite;\n                animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 7s ease -1.25s infinite;\n        opacity: 1;\n}\n@-webkit-keyframes wave {\n0% {\n    margin-left: 0;\n}\n100% {\n    margin-left: -1600px;\n}\n}\n@keyframes wave {\n0% {\n    margin-left: 0;\n}\n100% {\n    margin-left: -1600px;\n}\n}\n@-webkit-keyframes swell {\n0%, 100% {\n    -webkit-transform: translate3d(0, -25px, 0);\n            transform: translate3d(0, -25px, 0);\n}\n50% {\n    -webkit-transform: translate3d(0, 5px, 0);\n            transform: translate3d(0, 5px, 0);\n}\n}\n@keyframes swell {\n0%, 100% {\n    -webkit-transform: translate3d(0, -25px, 0);\n            transform: translate3d(0, -25px, 0);\n}\n50% {\n    -webkit-transform: translate3d(0, 5px, 0);\n            transform: translate3d(0, 5px, 0);\n}\n}\n.opinions {\n  color: #FFF;\n  padding: 9rem 0;\n  background: -webkit-gradient(linear, left bottom, left top, from(#f44164), to(#b30e0e));\n  background: linear-gradient(0deg, #f44164, #b30e0e);\n  /*background: linear-gradient(-45deg, #e61b1b, #f44164);*/\n  background-size: 100% 100%;\n}\n.opinions .single {\n    width: 40%;\n    margin-bottom: 30px;\n    margin-left: 10%;\n    position: relative;\n}\n.opinions .single img {\n      width: 70%;\n      margin-top: 20px;\n}\n.opinions .single:last-of-type {\n      margin-left: 50%;\n      margin-bottom: 0;\n}\n.desc, .half-half {\n  position: relative;\n  padding: 9rem 0;\n  background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#cdcdcd));\n  background: linear-gradient(180deg, #FFF, #cdcdcd);\n  background-size: 100% 100%;\n}\n.desc .single, .half-half .single {\n    padding: 2rem;\n}\n.desc h3, .half-half h3 {\n    color: #000;\n    font-weight: bold;\n    text-transform: uppercase;\n    /*text-align: center;*/\n    letter-spacing: 15px;\n}\n.desc #targetThreeTwo, .half-half #targetThreeTwo {\n    position: absolute;\n    right: 0;\n    bottom: 0;\n}\n.half-half {\n  color: #FFF;\n  font-size: 0;\n  background: #e61b1b;\n}\n.half-half .half {\n    width: 50%;\n    vertical-align: top;\n    display: inline-block;\n    padding: 0 20px;\n}\n.half-half .half .title {\n      letter-spacing: 3px;\n      font-size: 2.2rem;\n}\n.half-half .half p {\n      margin: 30px 0;\n      font-size: 2rem;\n}\n.half-half .half img {\n      display: block;\n      max-width: 100%;\n      margin: 10px auto;\n}\n.half-half p {\n    margin: 15px 0;\n    font-size: 2rem;\n}\n.green {\n  height: 250px;\n  margin-top: 15px;\n  position: relative;\n}\n.green .progress {\n    float: right;\n    position: relative;\n    border-radius: 50%;\n    width: 250px;\n    height: 250px;\n    border: 5px solid #e61b1b;\n    -webkit-transition: all 1s ease;\n    transition: all 1s ease;\n}\n.green .progress .inner {\n      position: absolute;\n      overflow: hidden;\n      z-index: 2;\n      border-radius: 50%;\n      width: 240px;\n      height: 240px;\n      -webkit-transition: all 1s ease;\n      transition: all 1s ease;\n}\n.green .progress .inner .water {\n        position: absolute;\n        z-index: 1;\n        width: 200%;\n        height: 200%;\n        left: -50%;\n        border-radius: 40%;\n        -webkit-animation-iteration-count: infinite;\n        animation-iteration-count: infinite;\n        -webkit-animation-timing-function: linear;\n        animation-timing-function: linear;\n        -webkit-animation-name: spin;\n        animation-name: spin;\n        top: 25%;\n        background: rgba(230, 27, 27, 0.8);\n        -webkit-transition: all 1s ease;\n        transition: all 1s ease;\n        -webkit-animation-duration: 10s;\n        animation-duration: 10s;\n}\n.green .bar {\n    left: 0;\n    top: 50%;\n    z-index: 2;\n    right: 100px;\n    height: 70px;\n    margin-top: 15px;\n    position: absolute;\n    border-bottom: 3px solid #e61b1b;\n}\n.green .bar .block {\n      padding: 2px;\n      height: 28px;\n      display: block;\n      position: relative;\n      border-radius: 30px;\n      border: 4px solid #FFF;\n      -webkit-transition: width 500ms ease-out;\n      transition: width 500ms ease-out;\n      background: -webkit-gradient(linear, right top, left top, from(#e61b1b), to(#f44164));\n      background: linear-gradient(-90deg, #e61b1b, #f44164);\n}\n.green .progress .inner .glare,\n.red .progress .inner .glare,\n.orange .progress .inner .glare {\n  position: absolute;\n  top: -120%;\n  left: -120%;\n  z-index: 5;\n  width: 200%;\n  height: 200%;\n  -webkit-transform: rotate(45deg);\n  transform: rotate(45deg);\n  border-radius: 50%;\n}\n.green .progress .inner .glare,\n.red .progress .inner .glare,\n.orange .progress .inner .glare {\n  background-color: rgba(255, 255, 255, 0.15);\n}\n.green .progress .inner .glare,\n.red .progress .inner .glare,\n.orange .progress .inner .glare {\n  -webkit-transition: all 1s ease;\n  transition: all 1s ease;\n}\n.green .progress .inner .percent,\n.red .progress .inner .percent,\n.orange .progress .inner .percent {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  font-weight: bold;\n  text-align: center;\n}\n.green .progress .inner .percent,\n.red .progress .inner .percent,\n.orange .progress .inner .percent {\n  line-height: 240px;\n  font-size: 92.3076923076923px;\n}\n.green .progress .inner .percent {\n  color: #f44164;\n  z-index: 2;\n}\n.green .progress .inner .percent.white {\n    color: #FFF;\n    text-shadow: 0 0 20px rgba(236, 37, 72, 0.51);\n}\n.green .progress .inner .percent {\n  /*text-shadow: 0 0 10px #029502;*/\n}\n.green .progress .inner .percent,\n.red .progress .inner .percent,\n.orange .progress .inner .percent {\n  -webkit-transition: all 1s ease;\n  transition: all 1s ease;\n}\n@-webkit-keyframes spin {\nfrom {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n}\nto {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n}\n}\n@keyframes spin {\nfrom {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n}\nto {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n}\n}\n", ""]);
+exports.push([module.i, "/*body{*/\n/*overflow-x: hidden;*/\n/*overflow-y: auto;*/\n/*}*/\nbody {\n  width: 100vw;\n  height: 100vh;\n  font-size: 2rem;\n  background: linear-gradient(-45deg, #e61b1b, #ec2548);\n  background-size: 100% 100%;\n  /*animation: Gradient 15s ease infinite;*/\n}\n#targetThree {\n  width: 100vw;\n  height: 100vh;\n  display: block;\n  background: transparent;\n}\n.count-down-time {\n  color: #000;\n  font-weight: bold;\n  text-align: center;\n}\n.count-down-time .time-left {\n    margin: 0 0 10px 0;\n    letter-spacing: 2px;\n    padding: 40px 0 20px;\n    text-transform: uppercase;\n}\n.mainLogo {\n  top: 50%;\n  left: 50%;\n  text-align: center;\n  position: absolute;\n  -webkit-transform: translate3d(-50%, -50%, 0);\n          transform: translate3d(-50%, -50%, 0);\n}\n.mainLogo h2 {\n    /*color: $color-1;  */\n    color: #FFF;\n    /*text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);*/\n    display: inline-block;\n    background: #e61b1b;\n    padding: 14px 30px;\n}\n.upupup {\n  position: relative;\n  z-index: 2;\n}\n.tableReference {\n  width: 100%;\n  display: block;\n  padding: 10rem 0;\n  background: #b30e0e;\n}\n.tableReference table {\n    margin: 0 auto;\n    max-width: 1200px;\n}\n.tableReference table tr td {\n      color: #FFF;\n      padding: 10px;\n      font-size: 1.8rem;\n      border: 1px solid #FFF;\n}\n.subscribe {\n  overflow: hidden;\n  padding: 10rem 0;\n  background: #FFF;\n  position: relative;\n}\n.subscribe .title {\n    z-index: 3;\n    top: 2rem;\n    left: 15px;\n    color: #000;\n    font-size: 3rem;\n    position: absolute;\n    letter-spacing: 2px;\n    text-transform: uppercase;\n}\n.subscribe .subtitle {\n    z-index: 3;\n    top: 7rem;\n    width: 50%;\n    left: 15px;\n    color: #000;\n    font-size: 1rem;\n    position: absolute;\n    letter-spacing: 2px;\n    text-transform: uppercase;\n}\n.subscribe .caption {\n    z-index: 9;\n    /*top: 7rem;*/\n    color: #000;\n    margin: 0;\n    font-size: 1.4rem;\n    text-align: center;\n    letter-spacing: 2px;\n    text-transform: uppercase;\n}\n.subscribe .endedText {\n    color: #FFF;\n    margin-top: 20px;\n    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);\n    text-align: center;\n    font-size: 1.3rem;\n}\n.subscribe .text, .subscribe form {\n    color: #000;\n    font-weight: bold;\n    vertical-align: middle;\n    display: inline-block;\n}\n.subscribe .text {\n    margin-right: 30px;\n}\n.subscribe input {\n    padding: 10px 20px;\n    border: 2px solid #e61b1b;\n}\n.subscribe button, .subscribe .btn {\n    border: 0;\n    color: #FFF;\n    border-radius: 0;\n    padding: 12px 20px;\n    background: #e61b1b;\n}\n.subscribe .ocean {\n    height: 0;\n    width: 100%;\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    background: #e61b1b;\n}\n.subscribe .ocean .wave {\n      background: url(\"/images/wave.svg\") repeat-x;\n      position: absolute;\n      top: -198px;\n      width: 6400px;\n      height: 198px;\n      -webkit-animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;\n              animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;\n      -webkit-transform: translate3d(0, 0, 0);\n              transform: translate3d(0, 0, 0);\n}\n.subscribe .ocean .wave:nth-of-type(2) {\n        top: -175px;\n        -webkit-animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 7s ease -1.25s infinite;\n                animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 7s ease -1.25s infinite;\n        opacity: 1;\n}\n@-webkit-keyframes wave {\n0% {\n    margin-left: 0;\n}\n100% {\n    margin-left: -1600px;\n}\n}\n@keyframes wave {\n0% {\n    margin-left: 0;\n}\n100% {\n    margin-left: -1600px;\n}\n}\n@-webkit-keyframes swell {\n0%, 100% {\n    -webkit-transform: translate3d(0, -25px, 0);\n            transform: translate3d(0, -25px, 0);\n}\n50% {\n    -webkit-transform: translate3d(0, 5px, 0);\n            transform: translate3d(0, 5px, 0);\n}\n}\n@keyframes swell {\n0%, 100% {\n    -webkit-transform: translate3d(0, -25px, 0);\n            transform: translate3d(0, -25px, 0);\n}\n50% {\n    -webkit-transform: translate3d(0, 5px, 0);\n            transform: translate3d(0, 5px, 0);\n}\n}\n.opinions {\n  color: #FFF;\n  padding: 9rem 0;\n  background: -webkit-gradient(linear, left bottom, left top, from(#f44164), to(#b30e0e));\n  background: linear-gradient(0deg, #f44164, #b30e0e);\n  /*background: linear-gradient(-45deg, #e61b1b, #f44164);*/\n  background-size: 100% 100%;\n}\n.opinions .single {\n    width: 40%;\n    margin-bottom: 30px;\n    margin-left: 10%;\n    position: relative;\n}\n.opinions .single img {\n      width: 70%;\n      margin-top: 20px;\n}\n.opinions .single:last-of-type {\n      margin-left: 50%;\n      margin-bottom: 0;\n}\n.desc, .half-half {\n  position: relative;\n  padding: 9rem 0;\n  background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#cdcdcd));\n  background: linear-gradient(180deg, #FFF, #cdcdcd);\n  background-size: 100% 100%;\n}\n.desc .single, .half-half .single {\n    padding: 2rem;\n}\n.desc h3, .half-half h3 {\n    color: #000;\n    font-weight: bold;\n    text-transform: uppercase;\n    /*text-align: center;*/\n    letter-spacing: 15px;\n}\n.desc #targetThreeTwo, .half-half #targetThreeTwo {\n    position: absolute;\n    right: 0;\n    bottom: 0;\n}\n.half-half {\n  color: #FFF;\n  font-size: 0;\n  background: #e61b1b;\n}\n.half-half .half {\n    width: 50%;\n    vertical-align: top;\n    display: inline-block;\n    padding: 0 20px;\n}\n.half-half .half .title {\n      letter-spacing: 3px;\n      font-size: 2.2rem;\n}\n.half-half .half p {\n      margin: 30px 0;\n      font-size: 2rem;\n}\n.half-half .half img {\n      display: block;\n      max-width: 100%;\n      margin: 10px auto;\n}\n.half-half p {\n    margin: 15px 0;\n    font-size: 2rem;\n}\n.green {\n  height: 250px;\n  margin-top: 15px;\n  position: relative;\n  overflow: hidden;\n  clear: both;\n}\n.green .progress {\n    float: right;\n    position: relative;\n    border-radius: 50%;\n    width: 250px;\n    height: 250px;\n    border: 5px solid #e61b1b;\n    -webkit-transition: all 1s ease;\n    transition: all 1s ease;\n}\n.green .progress .inner {\n      position: absolute;\n      overflow: hidden;\n      z-index: 2;\n      border-radius: 50%;\n      width: 240px;\n      height: 240px;\n      -webkit-transition: all 1s ease;\n      transition: all 1s ease;\n}\n.green .progress .inner .water {\n        position: absolute;\n        z-index: 1;\n        width: 200%;\n        height: 200%;\n        left: -50%;\n        border-radius: 40%;\n        -webkit-animation-iteration-count: infinite;\n        animation-iteration-count: infinite;\n        -webkit-animation-timing-function: linear;\n        animation-timing-function: linear;\n        -webkit-animation-name: spin;\n        animation-name: spin;\n        top: 25%;\n        background: rgba(230, 27, 27, 0.8);\n        -webkit-transition: all 1s ease;\n        transition: all 1s ease;\n        -webkit-animation-duration: 10s;\n        animation-duration: 10s;\n}\n.green .bar {\n    left: 0;\n    top: 50%;\n    z-index: 2;\n    right: 100px;\n    height: 70px;\n    margin-top: 15px;\n    position: absolute;\n    border-bottom: 3px solid #e61b1b;\n}\n.green .bar .block {\n      padding: 2px;\n      height: 28px;\n      display: block;\n      position: relative;\n      border-radius: 30px;\n      border: 4px solid #FFF;\n      -webkit-transition: width 500ms ease-out;\n      transition: width 500ms ease-out;\n      background: -webkit-gradient(linear, right top, left top, from(#e61b1b), to(#f44164));\n      background: linear-gradient(-90deg, #e61b1b, #f44164);\n}\n.green .progress .inner .glare,\n.red .progress .inner .glare,\n.orange .progress .inner .glare {\n  position: absolute;\n  top: -120%;\n  left: -120%;\n  z-index: 5;\n  width: 200%;\n  height: 200%;\n  -webkit-transform: rotate(45deg);\n  transform: rotate(45deg);\n  border-radius: 50%;\n}\n.green .progress .inner .glare,\n.red .progress .inner .glare,\n.orange .progress .inner .glare {\n  background-color: rgba(255, 255, 255, 0.15);\n}\n.green .progress .inner .glare,\n.red .progress .inner .glare,\n.orange .progress .inner .glare {\n  -webkit-transition: all 1s ease;\n  transition: all 1s ease;\n}\n.green .progress .inner .percent,\n.red .progress .inner .percent,\n.orange .progress .inner .percent {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  font-weight: bold;\n  text-align: center;\n}\n.green .progress .inner .percent,\n.red .progress .inner .percent,\n.orange .progress .inner .percent {\n  line-height: 240px;\n  font-size: 92.3076923076923px;\n}\n.green .progress .inner .percent {\n  color: #f44164;\n  z-index: 2;\n}\n.green .progress .inner .percent.white {\n    color: #FFF;\n    text-shadow: 0 0 20px rgba(236, 37, 72, 0.51);\n}\n.green .progress .inner .percent {\n  /*text-shadow: 0 0 10px #029502;*/\n}\n.green .progress .inner .percent,\n.red .progress .inner .percent,\n.orange .progress .inner .percent {\n  -webkit-transition: all 1s ease;\n  transition: all 1s ease;\n}\n@-webkit-keyframes spin {\nfrom {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n}\nto {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n}\n}\n@keyframes spin {\nfrom {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n}\nto {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n}\n}\n.logos_3 {\n  width: 100%;\n  font-size: 0;\n  padding: 5rem 0;\n}\n.logos_3 li {\n    width: 33.33%;\n    display: inline-block;\n    vertical-align: middle;\n}\n.logos_3 li img {\n      display: block;\n      margin: 0 auto;\n      max-width: 90%;\n}\n.logos_4 {\n  width: 100%;\n  font-size: 0;\n  padding: 5rem 0;\n}\n.logos_4 li {\n    width: 25%;\n    display: inline-block;\n    vertical-align: middle;\n}\n.logos_4 li img {\n      display: block;\n      margin: 0 auto;\n      max-width: 80%;\n}\n", ""]);
 
 // exports
 
@@ -16294,6 +16179,119 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_sweetalert__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_sweetalert___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vue_sweetalert__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -16461,7 +16459,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 init: 0,
                 end: 0,
                 percentage: 0
-            }
+            },
+            timeLeft: ''
         };
     },
 
@@ -16573,8 +16572,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             });
 
             scene.add(mesh);
+        },
+        iWantTokens: function iWantTokens() {
+            console.log("Tokens");
         }
-
     },
     mounted: function mounted() {
         var self = this;
@@ -16589,6 +16590,42 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         });
 
         setTimeout(function () {
+            var deadline = 'Jan 31 2018 23:00:00 GMT-0600';
+            function time_remaining(endtime) {
+                var t = Date.parse(endtime) - Date.parse(new Date());
+                var seconds = Math.floor(t / 1000 % 60);
+                var minutes = Math.floor(t / 1000 / 60 % 60);
+                var hours = Math.floor(t / (1000 * 60 * 60) % 24);
+                var days = Math.floor(t / (1000 * 60 * 60 * 24));
+                return { 'total': t, 'days': days, 'hours': hours, 'minutes': minutes, 'seconds': seconds };
+            }
+            function run_clock(endtime) {
+                var days_span = void 0;
+                var hours_span = void 0;
+                var minutes_span = void 0;
+                var seconds_span = void 0;
+
+                function update_clock() {
+                    var t = time_remaining(endtime);
+                    console.log(t);
+
+                    if (t.total > 0) {
+                        days_span = t.days + ' days ';
+                        hours_span = ('0' + t.hours).slice(-2) + ' hours ';
+                        minutes_span = ('0' + t.minutes).slice(-2) + ' minutes ';
+                        seconds_span = ('0' + t.seconds).slice(-2) + ' seconds';
+                        self.timeLeft = days_span + hours_span + minutes_span + seconds_span;
+                        if (t.total <= 0) {
+                            clearInterval(timeinterval);
+                        }
+                    } else {
+                        self.timeLeft = 'Time ended';
+                    }
+                }
+                update_clock();
+                var timeinterval = setInterval(update_clock, 1000);
+            }
+            run_clock(deadline);
             this.generateCanvas();
         }.bind(this), 100);
     }
@@ -16606,72 +16643,103 @@ var render = function() {
     _vm._m(0),
     _vm._v(" "),
     _c("div", { staticClass: "subscribe" }, [
-      _c(
-        "div",
-        { staticClass: "container", staticStyle: { position: "relative" } },
-        [
-          _c("p", { staticClass: "title" }, [_vm._v("Tokens")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "green" }, [
-            _c("div", { staticClass: "progress" }, [
-              _c("div", { staticClass: "inner" }, [
-                _c(
-                  "div",
-                  {
-                    staticClass: "percent",
-                    class: [_vm.tokens.percentage > 34 ? "white" : ""]
-                  },
-                  [
-                    _c("span", {
-                      domProps: { textContent: _vm._s(_vm.tokens.percentage) }
-                    }),
-                    _vm._v("%")
-                  ]
-                ),
-                _vm._v(" "),
-                _c("div", {
-                  staticClass: "water",
-                  style: { top: 100 - _vm.tokens.percentage + "%" }
-                }),
-                _vm._v(" "),
-                _c("div", { staticClass: "glare" })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "bar" }, [
-              _c("div", { staticClass: "text" }, [
-                _c("span", {
-                  domProps: { textContent: _vm._s(_vm.tokens.init) }
-                }),
-                _vm._v(" / "),
-                _c("strong", {
-                  domProps: { textContent: _vm._s(_vm.tokens.end) }
-                }),
-                _vm._v(" Tokens\n                    ")
-              ]),
+      _c("div", { staticClass: "container upupup" }, [
+        _c("p", { staticClass: "title" }, [
+          _vm._v("PowerLineUp (POW) Token Distribution")
+        ]),
+        _vm._v(" "),
+        _vm._m(1),
+        _vm._v(" "),
+        _c("div", { staticClass: "green" }, [
+          _c("div", { staticClass: "progress" }, [
+            _c("div", { staticClass: "inner" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "percent",
+                  class: [_vm.tokens.percentage > 34 ? "white" : ""]
+                },
+                [
+                  _c("span", {
+                    domProps: { textContent: _vm._s(_vm.tokens.percentage) }
+                  }),
+                  _vm._v("%")
+                ]
+              ),
               _vm._v(" "),
               _c("div", {
-                staticClass: "block",
-                style: { width: _vm.tokens.percentage + "%" }
-              })
+                staticClass: "water",
+                style: { top: 100 - _vm.tokens.percentage + "%" }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "glare" })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "bar" }, [
+            _c("div", { staticClass: "text" }, [
+              _c("span", {
+                domProps: { textContent: _vm._s(_vm.tokens.init) }
+              }),
+              _vm._v(" / "),
+              _c("strong", {
+                domProps: { textContent: _vm._s(_vm.tokens.end) }
+              }),
+              _vm._v(" Tokens\n                    ")
             ]),
             _vm._v(" "),
             _c("div", {
-              staticClass: "water",
-              style: { top: 100 - _vm.tokens.percentage + "%" }
+              staticClass: "block",
+              style: { width: _vm.tokens.percentage + "%" }
             })
+          ]),
+          _vm._v(" "),
+          _c("div", {
+            staticClass: "water",
+            style: { top: 100 - _vm.tokens.percentage + "%" }
+          })
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "caption" }, [
+          _vm._v("\n                1st Day Mega Bonus 300%\n                ")
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "caption" }, [
+          _vm._v("\n                1 ETH = 3000 POW\n            ")
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "count-down-time" }, [
+          _c("p", { staticClass: "time-left" }, [
+            _vm._v("Time Left: "),
+            _c("span", { domProps: { textContent: _vm._s(_vm.timeLeft) } })
+          ]),
+          _vm._v(" "),
+          _c("a", { staticClass: "btn", attrs: { href: "/get-tokens" } }, [
+            _vm._v("Get Tokens Now")
           ])
-        ]
-      ),
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "endedText" }, [
+          _vm._v("Next Stage 1 ETH = 2000 POW.")
+        ])
+      ]),
       _vm._v(" "),
-      _vm._m(1)
+      _vm._m(2)
     ]),
-    _vm._v(" "),
-    _vm._m(2),
     _vm._v(" "),
     _vm._m(3),
     _vm._v(" "),
-    _vm._m(4)
+    _vm._m(4),
+    _vm._v(" "),
+    _vm._m(5),
+    _vm._v(" "),
+    _vm._m(6),
+    _vm._v(" "),
+    _vm._m(7),
+    _vm._v(" "),
+    _vm._m(8),
+    _vm._v(" "),
+    _vm._m(9)
   ])
 }
 var staticRenderFns = [
@@ -16715,10 +16783,90 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
+    return _c("p", { staticClass: "subtitle" }, [
+      _vm._v("Regular Price: 1 ETH = 1000 POW."),
+      _c("br"),
+      _vm._v("\n                CrowdSale starts Jan 1st 2018."),
+      _c("br"),
+      _vm._v("\n                Closes Permanently at Block"),
+      _c("br"),
+      _vm._v("\n                5012600.")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
     return _c("div", { staticClass: "ocean" }, [
       _c("div", { staticClass: "wave" }),
       _vm._v(" "),
       _c("div", { staticClass: "wave" })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "tableReference" }, [
+      _c("table", [
+        _c("tbody", [
+          _c("tr", [
+            _c("td", [_vm._v("Stage 1")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("1st Day")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("300% Bonus")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("1 ETH = 3000 POW")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("January 1st Only.")])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("td", [_vm._v("Stage 2")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("1st Week")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("200% Bonus")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("1 ETH = 2000 POW")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("Opens Jan 2nd - Closes  Jan 7th 2018.")])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("td", [_vm._v("Stage 3")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("2nd Week")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("150% Bonus")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("1 ETH = 1500 POW")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("Opens Jan 8th - Closes Jan  14th 2018.")])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("td", [_vm._v("Last Stage")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("Last 2 Weeks")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("Regular Price")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("1 ETH = 1000 POW")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("Opens Jan 15th - Closes Jan 31th 2018.")])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("td", { staticClass: "text-center", attrs: { colspan: "5" } }, [
+              _vm._v(
+                "Open Distribution Closes Permanently Jan 31st 2018 at Block 5012600."
+              )
+            ])
+          ])
+        ])
+      ])
     ])
   },
   function() {
@@ -16772,46 +16920,117 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "desc" }, [
-      _c(
-        "div",
-        {
-          staticClass: "container",
-          staticStyle: { position: "relative", "z-index": "2" }
-        },
-        [
-          _c("div", { staticClass: "single" }, [
-            _c("h3", [_vm._v("Fantasy Sports")]),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                "All the excitement of classic fantasy sports brought to the blockchain in an open peer-to-peer, fair, solid, massive game."
-              )
-            ])
+      _c("div", { staticClass: "container upupup" }, [
+        _c("div", { staticClass: "single" }, [
+          _c("h3", [_vm._v("Fantasy Sports")]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "All the excitement of classic fantasy sports brought to the blockchain in an open peer-to-peer, fair, solid, massive game."
+            )
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "single" }, [
-            _c("h3", [_vm._v("Fantasy Networks")]),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                "Prepare your budget to align Youtube stars in our already built-in Smart Contracts to play this brand new kind of Fantasy Tournament."
-              )
-            ])
-          ]),
+          _c("img", {
+            staticClass: "max",
+            attrs: {
+              src: "/images/home/fantasy-sports.jpg",
+              alt: "Fantasy Sport"
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "single" }, [
+          _c("h3", [_vm._v("Fantasy Networks")]),
           _vm._v(" "),
-          _c("div", { staticClass: "single" }, [
-            _c("h3", [_vm._v("Fantasy Movies")]),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                "Stake on your favorite movies and win with the next blockbuster or the unexpected boom of an indie underdog."
-              )
-            ])
+          _c("p", [
+            _vm._v(
+              "Prepare your budget to align Youtube stars in our already built-in Smart Contracts to play this brand new kind of Fantasy Tournament."
+            )
           ])
-        ]
-      ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "single" }, [
+          _c("h3", [_vm._v("Fantasy Movies")]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "Stake on your favorite movies and win with the next blockbuster or the unexpected boom of an indie underdog."
+            )
+          ])
+        ])
+      ]),
       _vm._v(" "),
       _c("div", { attrs: { id: "targetThreeTwo" } })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "white-block" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("p", [
+          _vm._v(
+            "\n                Betting is not fun. In Fantasy World you stake your tokens in a Smart contract on your favorite athletes, movies and stars, and you win new tokens if your strategy is good.\n            "
+          )
+        ]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "\n                But after every tournament, it doesn’t matter if you win or loose, you get back your original tokens! This is the new way to play strategic fantasy powered by POW Tokens and the Ethereum Network.\n            "
+          )
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "text-center" }, [
+          _c("img", {
+            attrs: { src: "/images/home/power_eth.jpg", alt: "Power + ETH" }
+          })
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "half-half" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "half" }, [
+          _c("div", { staticClass: "title" }, [_vm._v("Fantasy eSports")]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "For the first time be able to team-up with the stars of the new massive phenomena moving millions."
+            )
+          ]),
+          _vm._v(" "),
+          _c("img", {
+            staticClass: "max",
+            attrs: {
+              src: "/images/home/fantasy-eSports.jpg",
+              alt: "Fantasy eSports"
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "half" }, [
+          _c("div", { staticClass: "title" }, [_vm._v("Fantasy Internet")]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "Prepare your budget to align Youtube stars in our already built-in Smart Contracts to play this brand new kind of Fantasy Tournament."
+            )
+          ]),
+          _vm._v(" "),
+          _c("img", {
+            staticClass: "max",
+            attrs: {
+              src: "/images/home/fantasy-internet.jpg",
+              alt: "Fantasy Internet"
+            }
+          })
+        ])
+      ])
     ])
   },
   function() {
@@ -16857,18 +17076,102 @@ var staticRenderFns = [
           _vm._v(
             "\n                Watch out, you never expend or loose your tokens! You just stake them during the tournament to get more\n                Learn How.\n            "
           )
-        ]),
-        _vm._v(" "),
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "white-block" }, [
+      _c("div", { staticClass: "container" }, [
         _c("p", [
           _vm._v(
-            "\n                Betting is not fun. In Fantasy World you stake your tokens in a Smart contract on your\n                favorite athletes, movies and stars, and you win new tokens if your strategy is good.\n            "
+            "\n                Win big and change your tokens for digital assets from AppStore, Google Play, Spotify and Amazon, or Or change them for real world prizes like trips to the best tournaments around the world, meet-and-greets with your favorite stars and a huge stock of our partner brands.\n            "
           )
         ]),
         _vm._v(" "),
+        _c("ul", { staticClass: "logos_3" }, [
+          _c("li", [
+            _c("img", {
+              attrs: { src: "/images/logos/adidas.png", alt: "Adidas" }
+            })
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("img", {
+              attrs: { src: "/images/logos/expedia.png", alt: "Expedia" }
+            })
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("img", {
+              attrs: { src: "/images/logos/skullcandy.png", alt: "Skullcandy" }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("p", [_vm._v("Or just keep playing to win even more.")]),
+        _vm._v(" "),
+        _c("hr"),
+        _vm._v(" "),
         _c("p", [
           _vm._v(
-            "\n                But after every tournament, it doesn’t matter if you won or loose, you get back your original\n                tokens. This is the new way to play strategic fantasy powered by the ethereum network.\n            "
+            "\n                Enough Fantasy? Change your tokens back to ether in the main exchange markets, the proyected growth of our user base will always provide a bigger and bigger demand of the tokens.\n            "
           )
+        ]),
+        _vm._v(" "),
+        _c("ul", { staticClass: "logos_4" }, [
+          _c("li", [
+            _c("img", {
+              attrs: { src: "/images/logos/fuelbank.png", alt: "Fuel Bank" }
+            })
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("img", {
+              attrs: { src: "/images/logos/bittrex.png", alt: "Bittrex" }
+            })
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("img", {
+              attrs: { src: "/images/logos/delta.png", alt: "Ether Delta" }
+            })
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("img", {
+              attrs: { src: "/images/logos/hitbtc.png", alt: "HITbtc" }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("hr"),
+        _vm._v(" "),
+        _c("p", [_vm._v("As seen on :")]),
+        _vm._v(" "),
+        _c("ul", { staticClass: "logos_4" }, [
+          _c("li", [
+            _c("img", {
+              attrs: { src: "/images/logos/coin.png", alt: "coinDesk" }
+            })
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("img", { attrs: { src: "/images/logos/me.png", alt: "ME" } })
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("img", { attrs: { src: "/images/logos/espn.png", alt: "ESPN" } })
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("img", {
+              attrs: { src: "/images/logos/crypto.png", alt: "CRYPTO" }
+            })
+          ])
         ])
       ])
     ])
@@ -16888,6 +17191,1722 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 51 */,
+/* 52 */,
+/* 53 */,
+/* 54 */,
+/* 55 */,
+/* 56 */,
+/* 57 */,
+/* 58 */,
+/* 59 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(60)
+}
+var normalizeComponent = __webpack_require__(13)
+/* script */
+var __vue_script__ = __webpack_require__(62)
+/* template */
+var __vue_template__ = __webpack_require__(63)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/sections/Token.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-5d29fee2", Component.options)
+  } else {
+    hotAPI.reload("data-v-5d29fee2", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 60 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(61);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(12)("4c3d11a0", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-5d29fee2\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./Token.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-5d29fee2\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./Token.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 61 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(11)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "\n.tokenAddress {\n  width: 100%;\n  color: #e61b1b;\n  padding: 3rem 0;\n  background: #FFF;\n  text-align: center;\n  letter-spacing: 2px;\n}\n.copyText {\n  float: right;\n  margin: 10px 0;\n  cursor: pointer;\n  font-size: 1.5rem;\n  text-align: right;\n  display: inline-block;\n  border-bottom: 1px solid #FFF;\n}\n.grid-text {\n  margin: 5rem 0;\n  text-align: center;\n}\n.grid-text .col-md-4.col-xs-12 {\n    position: relative;\n}\n.grid-text .col-md-4.col-xs-12:nth-of-type(2):before, .grid-text .col-md-4.col-xs-12:nth-of-type(2):after {\n      content: '';\n      top: 0;\n      bottom: 0;\n      width: 1px;\n      /*height: 30px;*/\n      position: absolute;\n      background: #FFF;\n}\n.grid-text .col-md-4.col-xs-12:nth-of-type(2):before {\n      left: 0;\n}\n.grid-text .col-md-4.col-xs-12:nth-of-type(2):after {\n      right: 0;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 62 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    name: 'Token',
+    data: function data() {
+        return {};
+    },
+
+    methods: {
+        copyToken: function copyToken() {
+            var copyTextarea = document.querySelector('.js-copytextarea');
+            copyTextarea.select();
+
+            try {
+                var successful = document.execCommand('copy');
+                var msg = successful ? 'successful' : 'unsuccessful';
+                console.log('Copying text command was ' + msg);
+                alert("Text copied successfully");
+            } catch (err) {
+                console.log('Oops, unable to copy');
+            }
+        }
+    },
+    mounted: function mounted() {}
+});
+
+/***/ }),
+/* 63 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "section" }, [
+      _c("div", { staticClass: "container single-page" }, [
+        _vm._m(0),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(" "),
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-xs-12 col-md-12" }, [
+            _vm._m(1),
+            _vm._v(" "),
+            _c("div", { staticClass: "tokenAddress" }, [
+              _vm._v(
+                "\n                        0x8356BA7EE5704b7eFDa38A20F993738fdAaE8c44\n                    "
+              )
+            ]),
+            _vm._v(" "),
+            _c(
+              "textarea",
+              {
+                staticClass: "js-copytextarea",
+                staticStyle: { height: "0", opacity: "0" }
+              },
+              [_vm._v("0x8356BA7EE5704b7eFDa38A20F993738fdAaE8c44")]
+            ),
+            _vm._v(" "),
+            _c(
+              "p",
+              {
+                staticClass: "copyText",
+                on: {
+                  click: function($event) {
+                    $event.preventDefault()
+                    _vm.copyToken()
+                  }
+                }
+              },
+              [_vm._v("Copy Address")]
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _vm._m(2),
+        _vm._v(" "),
+        _vm._m(3),
+        _vm._v(" "),
+        _vm._m(4),
+        _vm._v(" "),
+        _vm._m(5)
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-xs-12 col-md-12" }, [
+        _c("h1", [
+          _vm._v("SEND ETH TO THIS ADRESS AND RECEIVE BDG TOKENS "),
+          _c("strong", [_vm._v("NOW!")])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "well well-purple" }, [
+      _c("p", [
+        _vm._v(
+          "To make smooth & fast transaction without rejection, set GAS LIMIT to "
+        ),
+        _c("strong", [_vm._v("200,000")]),
+        _vm._v(" and gas price to "),
+        _c("strong", [_vm._v("50 GWEI")]),
+        _vm._v(" or more.")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row grid-text" }, [
+      _c("div", { staticClass: "col-md-4 col-xs-12" }, [
+        _c("p", [_c("strong", [_vm._v("Exchange Rate")])]),
+        _vm._v(" "),
+        _c("p", [_vm._v("1 ETH = 10,000 BDG")])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-md-4 col-xs-12" }, [
+        _c("p", [_c("strong", [_vm._v("Set GAS Limit")])]),
+        _vm._v(" "),
+        _c("p", [_vm._v("200,000")])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-md-4 col-xs-12" }, [
+        _c("p", [_c("strong", [_vm._v("GAS Price")])]),
+        _vm._v(" "),
+        _c("p", [_vm._v("50 GWEI")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-xs-12 col-md-12" }, [
+        _c("h1", [_vm._v("How to create an ether wallet")]),
+        _vm._v(" "),
+        _c("p", { staticClass: "subtitle" }, [
+          _vm._v(
+            "First of all you need to have an Ether wallet. Creating an ether wallet is a must in order to participate in the crowdsale and receive your tokens."
+          )
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-xs-12 col-md-12" }, [
+        _c("div", { staticClass: "well" }, [
+          _c("p", [
+            _c("b", [
+              _c("span", { staticClass: "red" }, [
+                _vm._v("Do NOT send Ether from an exchange.")
+              ])
+            ]),
+            _vm._v(
+              " Use MyEtherWallet (recommended), MetaMask, Mist wallets, or other ERC20 compatible ones."
+            )
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-xs-12 col-md-12" }, [
+        _c(
+          "div",
+          {
+            staticClass: "panel-group faq-block",
+            attrs: { role: "tablist", "aria-multiselectable": "true" }
+          },
+          [
+            _c("div", { staticClass: "panel panel-default" }, [
+              _c(
+                "div",
+                { staticClass: "panel-heading", attrs: { role: "tab" } },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "collapsed faq-button",
+                      attrs: {
+                        "data-toggle": "collapse",
+                        "data-parent": "#accordion",
+                        href: "#001",
+                        "aria-expanded": "false",
+                        "aria-controls": "001"
+                      }
+                    },
+                    [
+                      _c(
+                        "h3",
+                        { staticClass: "panel-title instructions-title" },
+                        [
+                          _vm._v(
+                            "\n                                        MyEtherWallet [RECOMMENDED]                                            "
+                          )
+                        ]
+                      )
+                    ]
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "panel-collapse collapse in",
+                  attrs: {
+                    id: "001",
+                    role: "tabpanel",
+                    "aria-labelledby": "001"
+                  }
+                },
+                [
+                  _c("div", { staticClass: "panel-body" }, [
+                    _c("h4", [
+                      _c("b", [_vm._v("Step 1:")]),
+                      _vm._v(" Go to "),
+                      _c(
+                        "a",
+                        {
+                          attrs: {
+                            href: "https://www.myetherwallet.com/",
+                            target: "_blank",
+                            rel: "nofollow"
+                          }
+                        },
+                        [_vm._v("https://www.myetherwallet.com/")]
+                      ),
+                      _vm._v(
+                        " and make sure the URL is correct and MYETHERWALLET LLC [US] certificate is there."
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "https://www.bitdegree.org/en/token/assets/instructions/myetherwallet-1.png?static=true&v=549",
+                        alt: "MyEtherWallet"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("h4", [
+                      _c("b", [_vm._v("Step 2:")]),
+                      _vm._v(" Go to the “New Wallet” Tab.")
+                    ]),
+                    _vm._v(" "),
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "https://www.bitdegree.org/en/token/assets/instructions/myetherwallet-2.png?static=true&v=549",
+                        alt: "MyEtherWallet"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("h4", [
+                      _c("b", [_vm._v("Step 3:")]),
+                      _vm._v(" Enter a Strong Password.")
+                    ]),
+                    _vm._v(" "),
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "https://www.bitdegree.org/en/token/assets/instructions/myetherwallet-3.png?static=true&v=549",
+                        alt: "MyEtherWallet"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "Enter a password that will be used to access your wallet:"
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "1. Create a strong password, using upper and lower-case letters, and also numbers and symbols (e.g., “#”, “@”, etc.)."
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "2. Do not lose this password. Losing this password is equivalent to losing all ETH and BDG stored in your account. Click on the "
+                      ),
+                      _c("b", [_vm._v("Create New Wallet")]),
+                      _vm._v(" button.")
+                    ]),
+                    _vm._v(" "),
+                    _c("h4", [
+                      _c("b", [_vm._v("Step 4:")]),
+                      _vm._v(" Save Your Keystore File.")
+                    ]),
+                    _vm._v(" "),
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "https://www.bitdegree.org/en/token/assets/instructions/myetherwallet-4.png?static=true&v=549",
+                        alt: "MyEtherWallet"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "This file contains your private and public keys and is required every time you want to access your account."
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "instructions-note" }, [
+                      _c("span", [_c("b", [_vm._v("NOTE:")])]),
+                      _vm._v(
+                        " you won’t be able to access your account without this file and the password from the previous step. Losing either one of them is equivalent to losing all ETH and BDG stored in your account."
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("h4", [
+                      _c("b", [_vm._v("Step 5 (optional):")]),
+                      _vm._v(" Backup Your Private Key.")
+                    ]),
+                    _vm._v(" "),
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "https://www.bitdegree.org/en/token/assets/instructions/myetherwallet-5.png?static=true&v=549",
+                        alt: "MyEtherWallet"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "If you would like to make this account accessible by other Ethereum wallets, you can export and backup your private key."
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "instructions-note" }, [
+                      _c("span", [_c("b", [_vm._v("NOTE:")])]),
+                      _vm._v(
+                        "You should never share your private keys with anyone else. If your wallet address is the equivalent of your bank account number, then your private wallet key is your PIN. If anyone obtains your private key, they will have access to all of your funds."
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("h4", [
+                      _c("b", [_vm._v("Step 6:")]),
+                      _vm._v(" Unlock Your Wallet to View the Public Address.")
+                    ]),
+                    _vm._v(" "),
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "https://www.bitdegree.org/en/token/assets/instructions/myetherwallet-6.png?static=true&v=549",
+                        alt: "MyEtherWallet"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "Follow the instructions to unlock your wallet and get your public address:"
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("ul", [
+                      _c("li", [
+                        _vm._v(
+                          "Select the Keystore File (UTC / JSON) and select the keystore file you’ve downloaded in the previous step."
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _vm._v(
+                          "Input the password you set on step 3 and click on the Unlock button to unlock it."
+                        )
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("h4", [
+                      _c("b", [_vm._v("Step 7:")]),
+                      _vm._v(" Save Your Public Address")
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "Now that you have created the wallet you should now be able to see your Ethereum public address under the Your Address label or the Account Address section."
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "https://www.bitdegree.org/en/token/assets/instructions/myetherwallet-7.png?static=true&v=549",
+                        alt: "MyEtherWallet"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "instructions-note" }, [
+                      _c("span", [_c("b", [_vm._v("NOTE:")])]),
+                      _vm._v(
+                        "\n                                        You will need to provide this public address during registration for the BitDegree token sale & to receive ETH to your wallet."
+                      ),
+                      _c("br"),
+                      _vm._v(
+                        "\n                                        You will need to provide this public address to transfer ETH to your wallet."
+                      ),
+                      _c("br"),
+                      _vm._v(
+                        "\n                                        Do not lose your password and the keystore file, as you will need to use them in the BitDegree token sale."
+                      )
+                    ])
+                  ])
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "panel panel-default" }, [
+              _c(
+                "div",
+                { staticClass: "panel-heading", attrs: { role: "tab" } },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "collapsed faq-button",
+                      attrs: {
+                        "data-toggle": "collapse",
+                        "data-parent": "#accordion",
+                        href: "#002",
+                        "aria-expanded": "false",
+                        "aria-controls": "002"
+                      }
+                    },
+                    [
+                      _c(
+                        "h3",
+                        { staticClass: "panel-title instructions-title" },
+                        [
+                          _vm._v(
+                            "\n                                        ALTERNATIVE OPTION 1: MetaMask                                            "
+                          )
+                        ]
+                      )
+                    ]
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "panel-collapse collapse in",
+                  attrs: {
+                    id: "002",
+                    role: "tabpanel",
+                    "aria-labelledby": "002"
+                  }
+                },
+                [
+                  _c("div", { staticClass: "panel-body" }, [
+                    _c("p", [
+                      _vm._v(
+                        "MetaMask is a plugin for Google Chrome browser. It can be downloaded and installed from metamask.io"
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("h4", [
+                      _c("b", [_vm._v("Step 1:")]),
+                      _vm._v(" Go to "),
+                      _c(
+                        "a",
+                        {
+                          attrs: {
+                            href: "https://metamask.io",
+                            target: "_blank",
+                            rel: "nofollow"
+                          }
+                        },
+                        [_vm._v("https://metamask.io")]
+                      ),
+                      _vm._v(" and click on "),
+                      _c("b", [_vm._v("GET CHROME EXTENSION.")])
+                    ]),
+                    _vm._v(" "),
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "https://www.bitdegree.org/en/token/assets/instructions/metamask-1.png?static=true&v=549",
+                        alt: "MetaMask"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("h4", [
+                      _c("b", [_vm._v("Step 2:")]),
+                      _vm._v(
+                        " Chrome web store will open in a new tab. Click on "
+                      ),
+                      _c("b", [_vm._v("Add Extension")])
+                    ]),
+                    _vm._v(" "),
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "https://www.bitdegree.org/en/token/assets/instructions/metamask-2.png?static=true&v=549",
+                        alt: "MetaMask"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("h4", [
+                      _c("b", [_vm._v("Step 3:")]),
+                      _vm._v("  Click on "),
+                      _c("b", [_vm._v("+ADD TO CHROME")])
+                    ]),
+                    _vm._v(" "),
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "https://www.bitdegree.org/en/token/assets/instructions/metamask-3.png?static=true&v=549",
+                        alt: "MetaMask"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("h4", [
+                      _c("b", [_vm._v("Step 4:")]),
+                      _vm._v(" Read the Terms of Use and click on "),
+                      _c("b", [_vm._v("Accept.")])
+                    ]),
+                    _vm._v(" "),
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "https://www.bitdegree.org/en/token/assets/instructions/metamask-4.png?static=true&v=549",
+                        alt: "MetaMask"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("h4", [
+                      _c("b", [_vm._v("Step 5:")]),
+                      _vm._v(" Enter a secure password twice and click on "),
+                      _c("b", [_vm._v("CREATE.")])
+                    ]),
+                    _vm._v(" "),
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "https://www.bitdegree.org/en/token/assets/instructions/metamask-5.png?static=true&v=549",
+                        alt: "MetaMask"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("h4", [
+                      _c("b", [_vm._v("Step 6:")]),
+                      _vm._v(
+                        " Copy the words that appeared on your screen and save them somewhere safe. Then click on "
+                      ),
+                      _c("b", [_vm._v("I’ve copied it somewhere safe.")])
+                    ]),
+                    _vm._v(" "),
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "https://www.bitdegree.org/en/token/assets/instructions/metamask-6.png?static=true&v=549",
+                        alt: "MetaMask"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("h4", [
+                      _c("b", [_vm._v("Step 7:")]),
+                      _vm._v(" A wallet named "),
+                      _c("b", [_vm._v("Account 1")]),
+                      _vm._v(" will be created for you by default.")
+                    ]),
+                    _vm._v(" "),
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "https://www.bitdegree.org/en/token/assets/instructions/metamask-7.png?static=true&v=549",
+                        alt: "MetaMask"
+                      }
+                    })
+                  ])
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "panel panel-default" }, [
+              _c(
+                "div",
+                { staticClass: "panel-heading", attrs: { role: "tab" } },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "collapsed faq-button",
+                      attrs: {
+                        "data-toggle": "collapse",
+                        "data-parent": "#accordion",
+                        href: "#003",
+                        "aria-expanded": "false",
+                        "aria-controls": "003"
+                      }
+                    },
+                    [
+                      _c(
+                        "h3",
+                        { staticClass: "panel-title instructions-title" },
+                        [
+                          _vm._v(
+                            "\n                                        ALTERNATIVE OPTION 2: MIST                                            "
+                          )
+                        ]
+                      )
+                    ]
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "panel-collapse collapse in",
+                  attrs: {
+                    id: "003",
+                    role: "tabpanel",
+                    "aria-labelledby": "003"
+                  }
+                },
+                [
+                  _c("div", { staticClass: "panel-body" }, [
+                    _c("h4", [
+                      _c("b", [_vm._v("Step 1:")]),
+                      _vm._v(" Download the latest Mist release here "),
+                      _c(
+                        "a",
+                        {
+                          attrs: {
+                            href: "https://github.com/ethereum/mist/releases",
+                            target: "_blank",
+                            rel: "nofollow"
+                          }
+                        },
+                        [_vm._v("https://github.com/ethereum/mist/releases")]
+                      ),
+                      _vm._v(
+                        ". For this tutorial we are using Ethereum Mist for Mac OS."
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "https://www.bitdegree.org/en/token/assets/instructions/mist-1.png?static=true&v=549",
+                        alt: "Mist"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("h4", [
+                      _c("b", [_vm._v("Step 2:")]),
+                      _vm._v(" Click "),
+                      _c("b", [_vm._v("USE THE MAIN NETWORK")])
+                    ]),
+                    _vm._v(" "),
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "https://www.bitdegree.org/en/token/assets/instructions/mist-2.png?static=true&v=549",
+                        alt: "Mist"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("h4", [
+                      _c("b", [_vm._v("Step 3:")]),
+                      _vm._v(" Click "),
+                      _c("b", [_vm._v("SKIP")]),
+                      _vm._v(" on “Do you have wallet file”")
+                    ]),
+                    _vm._v(" "),
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "https://www.bitdegree.org/en/token/assets/instructions/mist-3.png?static=true&v=549",
+                        alt: "Mist"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("h4", [
+                      _c("b", [_vm._v("Step 4:")]),
+                      _vm._v(" Pick a secure password and enter it twice")
+                    ]),
+                    _vm._v(" "),
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "https://www.bitdegree.org/en/token/assets/instructions/mist-4.png?static=true&v=549",
+                        alt: "Mist"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("h4", [
+                      _c("b", [_vm._v("Step 5:")]),
+                      _vm._v(
+                        " Your Main Account address is here. Be sure to write it down."
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "https://www.bitdegree.org/en/token/assets/instructions/mist-5.png?static=true&v=549",
+                        alt: "Mist"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("h4", [
+                      _c("b", [_vm._v("Step 6:")]),
+                      _vm._v(" Click "),
+                      _c("b", [_vm._v("NEXT")]),
+                      _vm._v(" and wait for download.")
+                    ]),
+                    _vm._v(" "),
+                    _c("h4", [
+                      _c("b", [_vm._v("Step 7:")]),
+                      _vm._v(
+                        " Here is the account overview screen you will see once the download is complete, you can use "
+                      ),
+                      _c("b", [_vm._v("SEND")]),
+                      _vm._v(
+                        " to send Ether. To receive the ether from other party, simply share the address from "
+                      ),
+                      _c("b", [_vm._v("Step 5.")])
+                    ]),
+                    _vm._v(" "),
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "https://www.bitdegree.org/en/token/assets/instructions/mist-6.png?static=true&v=549",
+                        alt: "Mist"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "instructions-note" }, [
+                      _c("span", [_c("b", [_vm._v("NOTE:")])]),
+                      _vm._v(
+                        " You will need to provide this public address during registration for the BitDegree token sale & to receive ETH to your wallet."
+                      ),
+                      _c("br"),
+                      _vm._v(
+                        "\n                                        You will need to provide this public address to transfer ETH to your wallet."
+                      ),
+                      _c("br"),
+                      _vm._v(
+                        "\n                                        Do not lose your password and the keystore file, as you will need to use them in the BitDegree token sale."
+                      )
+                    ])
+                  ])
+                ]
+              )
+            ])
+          ]
+        )
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-5d29fee2", module.exports)
+  }
+}
+
+/***/ }),
+/* 64 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(65)
+}
+var normalizeComponent = __webpack_require__(13)
+/* script */
+var __vue_script__ = __webpack_require__(67)
+/* template */
+var __vue_template__ = __webpack_require__(68)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/sections/Faqs.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-767df3f7", Component.options)
+  } else {
+    hotAPI.reload("data-v-767df3f7", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 65 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(66);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(12)("f3c80814", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-767df3f7\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./Faqs.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-767df3f7\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./Faqs.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 66 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(11)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/***/ }),
+/* 67 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_sweetalert__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_sweetalert___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vue_sweetalert__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    name: 'Faqs',
+    data: function data() {
+        return {
+            userEmail: ''
+        };
+    },
+
+    methods: {},
+    mounted: function mounted() {}
+});
+
+/***/ }),
+/* 68 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("div", { staticClass: "section" }, [
+        _c("div", { staticClass: "mainLogo" }, [
+          _c("img", {
+            attrs: { src: "/images/PowerLineUp.png", alt: "Power LineUp" }
+          }),
+          _vm._v(" "),
+          _c("h2", [_vm._v("Building content")])
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-767df3f7", module.exports)
+  }
+}
+
+/***/ }),
+/* 69 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var MultiLanguage = function () {
+  function MultiLanguage() {
+    _classCallCheck(this, MultiLanguage);
+  }
+
+  _createClass(MultiLanguage, [{
+    key: 'init',
+
+
+    /* constructor, setter languages object */
+    value: function init(_languages, _vue) {
+      this.defaultLanguage = '';
+      this.languages = _languages;
+      this.vue = _vue;
+
+      var userLang = void 0;
+
+      if (_languages.default) {
+        this.defaultLanguage = _languages.default;
+        delete _languages.default;
+        /* set current language from default */
+        userLang = this.matchLanguage(this.defaultLanguage);
+      }
+      /* if we're in a browser */
+      var isBrowser = false;
+      try {
+        isBrowser = typeof navigator !== 'undefined';
+      } catch (e) {}
+
+      if (!userLang && isBrowser) {
+        userLang = navigator.language || navigator.userLanguage;
+        userLang = this.matchLanguage(userLang) || this.matchLanguage(userLang.substr(0, 2));
+      }
+
+      if (!userLang) userLang = Object.keys(this.languages)[0];
+
+      this.userLang = userLang;
+
+      if (localStorage.getItem('vue-lang') !== null) this.userLang = localStorage.getItem('vue-lang');
+
+      window.localStorage.setItem('vue-lang', this.userLang);
+    }
+  }, {
+    key: 'relaunchByDirective',
+    value: function relaunchByDirective(el, binding, vnode) {
+      var hasParams = typeof binding.value !== 'undefined';
+      var current = void 0,
+          params = [];
+
+      if (hasParams) {
+        params = binding.value;
+
+        if ((typeof params === 'undefined' ? 'undefined' : _typeof(params)) !== 'object') params = [params];
+      }
+
+      function getLanguage(current) {
+        if (!current) return;
+
+        var find = current;
+
+        Object.keys(binding.modifiers).forEach(function (path) {
+          var f = find[path.trim()];
+          if (f) find = f;
+        });
+
+        return typeof find === 'string' ? find : '';
+      }
+
+      if (!vnode.context.$options.messages || !(current = getLanguage(vnode.context.$options.messages[vnode.context.language]))) current = getLanguage(this.languages[vnode.context.language]);
+
+      if (!current) {
+        var val = el.innerHTML.trim();
+        if (val !== '') {
+          if (!vnode.context.$options.messages) vnode.context.$options.messages = {};
+
+          var optionPath = vnode.context.$options.messages[vnode.context.language];
+
+          if (!optionPath) optionPath = vnode.context.$options.messages[vnode.context.language] = {};
+
+          var modifiers = Object.keys(binding.modifiers);
+
+          modifiers.forEach(function (path, idx) {
+            if (idx + 1 === modifiers.length) {
+              optionPath[path] = {};
+              optionPath = optionPath[path];
+            } else optionPath[path] = val;
+          });
+
+          current = val;
+        }
+      }
+
+      if (current && hasParams) {
+        Object.keys(params).forEach(function (path) {
+          current = current.replace('{' + path + '}', params[path]);
+        });
+      }
+
+      el.innerHTML = current;
+    }
+  }, {
+    key: 'search',
+    value: function search(current, path, params) {
+
+      if (path.indexOf('.') !== -1) path = path.split('.');else path = [path];
+
+      if ((typeof params === 'undefined' ? 'undefined' : _typeof(params)) != 'object') params = [params];
+
+      var find = current;
+      path.forEach(function (p) {
+        return find = find[p.trim()];
+      });
+
+      Object.keys(params).forEach(function (path) {
+        find = find.replace('{' + path + '}', params[path]);
+      });
+
+      return find;
+    }
+  }, {
+    key: 'matchLanguage',
+    value: function matchLanguage(lang) {
+      if (!lang) return '';
+      var match = '';
+      Object.keys(this.languages).forEach(function (path) {
+        path = path.toLowerCase();
+        if (lang.toLowerCase() === path) match = path;
+      });
+
+      return match;
+    }
+  }]);
+
+  return MultiLanguage;
+}();
+
+var multi = new MultiLanguage();
+
+/* Register in VueJS 2, receive path from language and default language*/
+MultiLanguage.install = function (Vue, languages) {
+
+  var bus = new Vue();
+  multi.init(languages, Vue);
+
+  Vue.mixin({
+    data: function data() {
+      return { language: window.localStorage.getItem('vue-lang') };
+    },
+
+    watch: {
+      language: function language(value) {
+        multi.defaultLanguage = value;
+        window.localStorage.setItem('vue-lang', value);
+        bus.$emit('lang-changed', multi.defaultLanguage);
+        this.$forceUpdate();
+      }
+    },
+    mounted: function mounted() {
+      var _this = this;
+
+      bus.$on('lang-changed', function (language) {
+        return _this.language = language;
+      });
+    },
+
+    methods: {
+      translate: function translate(path) {
+        var params = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+        var result = '';
+
+        if (this.$options.messages && this.$options.messages[this.language]) result = multi.search(this.$options.messages[this.language], path, params);
+
+        if (!result) result = multi.search(multi.languages[this.language], path, params);
+        return result;
+      }
+    }
+  });
+
+  /* create directive, change content with modifications in components */
+  Vue.directive('lang', {
+    bind: function bind(el, binding, vnode) {
+      multi.relaunchByDirective(el, binding, vnode);
+    },
+    componentUpdated: function componentUpdated(el, binding, vnode) {
+      multi.relaunchByDirective(el, binding, vnode);
+    }
+  });
+};
+
+/* export my class */
+exports.default = MultiLanguage;
+
+
+/***/ }),
+/* 70 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(71)
+}
+var normalizeComponent = __webpack_require__(13)
+/* script */
+var __vue_script__ = __webpack_require__(73)
+/* template */
+var __vue_template__ = __webpack_require__(74)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/sections/Contact.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-86005094", Component.options)
+  } else {
+    hotAPI.reload("data-v-86005094", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 71 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(72);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(12)("4052f892", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-86005094\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./Contact.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-86005094\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./Contact.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 72 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(11)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "\n.sec_people {\n  color: #FFF;\n  margin-top: 100px;\n}\n.sec_people li {\n    width: 50%;\n    display: inline-block;\n    margin-bottom: 20px;\n    opacity: 0;\n    -webkit-transform: translateY(20px);\n            transform: translateY(20px);\n    -webkit-transition: all 300ms ease-out;\n    transition: all 300ms ease-out;\n}\n.sec_people li .left, .sec_people li .right {\n      width: 47%;\n      font-size: 0;\n      display: inline-block;\n      vertical-align: bottom;\n}\n.sec_people li .left {\n      margin-right: 2%;\n}\n.sec_people li .left img {\n        width: 100%;\n}\n.sec_people li p, .sec_people li a {\n      margin: 0 0 5px 0;\n      color: #FFF;\n      font-size: 14px;\n}\n.sec_people li a {\n      display: block;\n}\n.sec_people li.active {\n      opacity: 1;\n      -webkit-transform: translateY(0);\n              transform: translateY(0);\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 73 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    name: 'Contact',
+    data: function data() {
+        return {
+            people: [{
+                name: 'Moses Estrello',
+                title: 'Head of North America Operations',
+                emal: 'moses.estrello@powerlineup.io',
+                address: 'Paseo de la Reforma 483, Cuauhtémoc, 06500.',
+                country: 'Mexico City, Mexico.',
+                pic: 'moises.jpg',
+                active: false
+            }, {
+                name: 'Jekaterina Rantanen ',
+                title: 'Head of Northern Europe Operations',
+                emal: 'jekaterina.rantanen@powerlineup.io',
+                address: 'Betonimiehenkuja 3D, 02150 Espoo.',
+                country: 'Helsinki, Finland.',
+                pic: 'jekaterina.jpg',
+                active: false
+            }, {
+                name: 'Philippe Ribac',
+                title: 'Head of Southern Europe Operations',
+                emal: 'philippe.ribac@powerlineup.io',
+                address: '5, parvis Alan Turing, 75013',
+                country: 'Paris, France.',
+                pic: 'philippe.jpg',
+                active: false
+            }, {
+                name: 'Martin Obando',
+                title: 'Head of South America Operations',
+                emal: 'martin.obando@powerlineup.io',
+                address: 'KREAB Building, Portugal 794, 17665.',
+                country: 'Quito, Ecuador',
+                pic: 'martin.jpg',
+                active: false
+            }]
+        };
+    },
+
+    messages: {
+        de: {
+            title: 'Contact'
+        },
+        en: {
+            title: 'Contact'
+        },
+        fi: {
+            title: 'Contact'
+        },
+        fr: {
+            title: 'Contact'
+        }
+    },
+    methods: {},
+    mounted: function mounted() {
+        this.people.forEach(function (value, index) {
+            console.log(index, value);
+            setTimeout(function () {
+                value.active = true;
+            }, 100 * index);
+        });
+    }
+});
+
+/***/ }),
+/* 74 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "section" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "sec_people" }, [
+          _c("h1", {
+            directives: [
+              {
+                name: "lang",
+                rawName: "v-lang.title",
+                modifiers: { title: true }
+              }
+            ]
+          }),
+          _vm._v(" "),
+          _c(
+            "ul",
+            _vm._l(_vm.people, function(person) {
+              return _c("li", { class: { active: person.active } }, [
+                _c("div", { staticClass: "left" }, [
+                  _c("img", {
+                    attrs: { src: "/images/people/" + person.pic, alt: "" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "right" }, [
+                  _c("p", { staticClass: "name" }, [
+                    _vm._v(_vm._s(person.name))
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "title" }, [
+                    _vm._v(_vm._s(person.title))
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "address" }, [
+                    _vm._v(_vm._s(person.address))
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "country" }, [
+                    _vm._v(_vm._s(person.country))
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "emal" }, [
+                    _c("a", { attrs: { href: "mailto:" + person.emal } }, [
+                      _vm._v(_vm._s(person.emal))
+                    ])
+                  ])
+                ])
+              ])
+            })
+          )
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-86005094", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

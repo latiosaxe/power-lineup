@@ -6,17 +6,36 @@ import VueAxios from 'vue-axios';
 import axios from 'axios';
 Vue.use(VueAxios, axios);
 
-import VueSweetAlert from 'vue-sweetalert'
-Vue.use(VueSweetAlert)
+import VueSweetAlert from 'vue-sweetalert';
+Vue.use(VueSweetAlert);
 
-import App from './components/App.vue';
-import Home from './components/sections/Home.vue';
-const routes = [
-    {
-        name: 'Home',
-        path: '/',
-        component: Home
+
+Vue.component('section-home', require('./components/sections/Home.vue'));
+Vue.component('section-faqs', require('./components/sections/Faqs.vue'));
+Vue.component('section-token', require('./components/sections/Token.vue'));
+Vue.component('section-contact', require('./components/sections/Contact.vue'));
+
+
+import MultiLanguage from 'vue-multilanguage';
+
+Vue.use(MultiLanguage, {
+    default: LOCAL
+});
+console.info("Language", LOCAL);
+
+const app = new Vue({
+    el: '#app',
+    data() {
+        return {
+
+        }
+    },
+    mounted:function () {
+
+    },
+    methods:{
+        followUser (idTarget){
+            console.log( idTarget );
+        }
     }
-];
-const router = new VueRouter({ mode: 'history', routes: routes});
-new Vue(Vue.util.extend({ router }, App )).$mount('#app');
+});

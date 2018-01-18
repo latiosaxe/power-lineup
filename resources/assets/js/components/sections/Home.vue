@@ -39,12 +39,15 @@
                   }
                 }
             </script>
-
             <div id="targetThree"></div>
         </div>
         <div class="subscribe">
-            <div class="container" style="position: relative">
-                <p class="title">Tokens</p>
+            <div class="container upupup">
+                <p class="title">PowerLineUp (POW) Token Distribution</p>
+                <p class="subtitle">Regular Price: 1 ETH = 1000 POW.<br/>
+                    CrowdSale starts Jan 1st 2018.<br/>
+                    Closes Permanently at Block<br/>
+                    5012600.</p>
                 <div class="green">
                     <div class="progress">
                         <div class="inner">
@@ -61,6 +64,22 @@
                     </div>
                     <div class="water" :style="{top: 100-tokens.percentage +'%'}"></div>
                 </div>
+                <p class="caption">
+                    1st Day Mega Bonus 300%
+                    <!--Distribution bonus will close permanetly at block 5523769 (the last block of 2017) or sooner if all tokens are purchased. No distribution is going to be held-->
+                    <!--ever again. Platform Will open Q2 2018. Tokens Will be tradeable at regular price.-->
+                </p>
+                <p class="caption">
+                    1 ETH = 3000 POW
+                </p>
+
+                <div class="count-down-time">
+                    <p class="time-left">Time Left: <span v-text="timeLeft"></span></p>
+                    <a href="/get-tokens" class="btn">Get Tokens Now</a>
+                    <!--<button @click.prevent="iWantTokens()">Get Tokens Now</button>-->
+                </div>
+
+                <p class="endedText">Next Stage 1 ETH = 2000 POW.</p>
                 <!--<div class="text">Apply for <strong>AirDrop</strong>.</div>-->
                 <!--<form @submit.prevent="submitEmail">-->
                     <!--<input type="email" v-model="userEmail" placeholder="alex@domain.com">-->
@@ -72,6 +91,43 @@
                 <div class="wave"></div>
                 <div class="wave"></div>
             </div>
+        </div>
+        <div class="tableReference">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Stage 1</td>
+                        <td>1st Day</td>
+                        <td>300% Bonus</td>
+                        <td>1 ETH = 3000 POW</td>
+                        <td>January 1st Only.</td>
+                    </tr>
+                    <tr>
+                        <td>Stage 2</td>
+                        <td>1st Week</td>
+                        <td>200% Bonus</td>
+                        <td>1 ETH = 2000 POW</td>
+                        <td>Opens Jan 2nd - Closes  Jan 7th 2018.</td>
+                    </tr>
+                    <tr>
+                        <td>Stage 3</td>
+                        <td>2nd Week</td>
+                        <td>150% Bonus</td>
+                        <td>1 ETH = 1500 POW</td>
+                        <td>Opens Jan 8th - Closes Jan  14th 2018.</td>
+                    </tr>
+                    <tr>
+                        <td>Last Stage</td>
+                        <td>Last 2 Weeks</td>
+                        <td>Regular Price</td>
+                        <td>1 ETH = 1000 POW</td>
+                        <td>Opens Jan 15th - Closes Jan 31th 2018.</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" class="text-center">Open Distribution Closes Permanently Jan 31st 2018 at Block 5012600.</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
         <div class="opinions">
             <div class="container">
@@ -94,10 +150,11 @@
             </div>
         </div>
         <div class="desc">
-            <div class="container" style="position: relative; z-index: 2">
+            <div class="container upupup">
                 <div class="single">
                     <h3>Fantasy Sports</h3>
                     <p>All the excitement of classic fantasy sports brought to the blockchain in an open peer-to-peer, fair, solid, massive game.</p>
+                    <img src="/images/home/fantasy-sports.jpg" alt="Fantasy Sport" class="max">
                 </div>
                 <div class="single">
                     <h3>Fantasy Networks</h3>
@@ -110,6 +167,37 @@
             </div>
             <div id="targetThreeTwo"></div>
         </div>
+
+        <div class="white-block">
+            <div class="container">
+                <p>
+                    Betting is not fun. In Fantasy World you stake your tokens in a Smart contract on your favorite athletes, movies and stars, and you win new tokens if your strategy is good.
+                </p>
+                <p>
+                    But after every tournament, it doesn’t matter if you win or loose, you get back your original tokens! This is the new way to play strategic fantasy powered by POW Tokens and the Ethereum Network.
+                </p>
+                <p class="text-center">
+                    <img src="/images/home/power_eth.jpg" alt="Power + ETH">
+                </p>
+            </div>
+        </div>
+
+
+        <div class="half-half">
+            <div class="container">
+                <div class="half">
+                    <div class="title">Fantasy eSports</div>
+                    <p>For the first time be able to team-up with the stars of the new massive phenomena moving millions.</p>
+                    <img src="/images/home/fantasy-eSports.jpg" alt="Fantasy eSports" class="max">
+                </div>
+                <div class="half">
+                    <div class="title">Fantasy Internet</div>
+                    <p>Prepare your budget to align Youtube stars in our already built-in Smart Contracts to play this brand new kind of Fantasy Tournament.</p>
+                    <img src="/images/home/fantasy-internet.jpg" alt="Fantasy Internet" class="max">
+                </div>
+            </div>
+        </div>
+
         <div class="half-half">
             <div class="container">
                 <div class="half">
@@ -132,21 +220,46 @@
                         internet are welcome.</p>
                     <img src="images/SoloMining.png" alt="Solo Mining">
                 </div>
-
                 <p>
                     Watch out, you never expend or loose your tokens! You just stake them during the tournament to get more
                     Learn How.
                 </p>
-                <p>
-                    Betting is not fun. In Fantasy World you stake your tokens in a Smart contract on your
-                    favorite athletes, movies and stars, and you win new tokens if your strategy is good.
-                </p>
-                <p>
-                    But after every tournament, it doesn’t matter if you won or loose, you get back your original
-                    tokens. This is the new way to play strategic fantasy powered by the ethereum network.
-                </p>
             </div>
         </div>
+
+
+        <div class="white-block">
+            <div class="container">
+                <p>
+                    Win big and change your tokens for digital assets from AppStore, Google Play, Spotify and Amazon, or Or change them for real world prizes like trips to the best tournaments around the world, meet-and-greets with your favorite stars and a huge stock of our partner brands.
+                </p>
+                <ul class="logos_3">
+                    <li><img src="/images/logos/adidas.png" alt="Adidas"></li>
+                    <li><img src="/images/logos/expedia.png" alt="Expedia"></li>
+                    <li><img src="/images/logos/skullcandy.png" alt="Skullcandy"></li>
+                </ul>
+                <p>Or just keep playing to win even more.</p>
+                <hr>
+                <p>
+                    Enough Fantasy? Change your tokens back to ether in the main exchange markets, the proyected growth of our user base will always provide a bigger and bigger demand of the tokens.
+                </p>
+                <ul class="logos_4">
+                    <li><img src="/images/logos/fuelbank.png" alt="Fuel Bank"></li>
+                    <li><img src="/images/logos/bittrex.png" alt="Bittrex"></li>
+                    <li><img src="/images/logos/delta.png" alt="Ether Delta"></li>
+                    <li><img src="/images/logos/hitbtc.png" alt="HITbtc"></li>
+                </ul>
+                <hr>
+                <p>As seen on :</p>
+                <ul class="logos_4">
+                    <li><img src="/images/logos/coin.png" alt="coinDesk"></li>
+                    <li><img src="/images/logos/me.png" alt="ME"></li>
+                    <li><img src="/images/logos/espn.png" alt="ESPN"></li>
+                    <li><img src="/images/logos/crypto.png" alt="CRYPTO"></li>
+                </ul>
+            </div>
+        </div>
+
     </div>
 </template>
 <script>
@@ -165,7 +278,8 @@
                     init: 0,
                     end: 0,
                     percentage: 0
-                }
+                },
+                timeLeft: '',
             }
         },
         methods: {
@@ -186,23 +300,23 @@
                 });
             },
             generateCanvas: function () {
-                var renderCalls = [];
+                let renderCalls = [];
                 function render () {
                     requestAnimationFrame( render );
                     renderCalls.forEach((callback)=>{ callback(); });
                 }
                 render();
 
-                var scene = new THREE.Scene();
+                let scene = new THREE.Scene();
 
-                var camera = new THREE.PerspectiveCamera( 80, window.innerWidth / window.innerHeight, 0.1, 800 );
+                let camera = new THREE.PerspectiveCamera( 80, window.innerWidth / window.innerHeight, 0.1, 800 );
                 camera.position.set(0, 5, 10);
 
-                var camera2 = new THREE.PerspectiveCamera( 80, window.innerWidth / window.innerHeight, 0.1, 800 );
+                let camera2 = new THREE.PerspectiveCamera( 80, window.innerWidth / window.innerHeight, 0.1, 800 );
                 camera2.position.set(0, 20, 20);
 
-                var renderer = new THREE.WebGLRenderer({ alpha: true });
-                var renderer2 = new THREE.WebGLRenderer({ alpha: true });
+                let renderer = new THREE.WebGLRenderer({ alpha: true });
+                let renderer2 = new THREE.WebGLRenderer({ alpha: true });
                 renderer.setClearColor( 0xffffff, 0);
                 renderer.setPixelRatio( window.devicePixelRatio );
                 renderer.setSize( window.innerWidth, window.innerHeight );
@@ -234,16 +348,16 @@
                 function renderScene(){ renderer.render( scene, camera ); renderer2.render( scene, camera2 ); }
                 renderCalls.push(renderScene);
 
-                var width = 50.0,
+                let width = 50.0,
                         height = 120.0;
 
-                var texture = new THREE.TextureLoader().load("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 8 8'%3E %3Crect width='100%25' height='0.75' y='1' /%3E  %3C/svg%3E" );
+                let texture = new THREE.TextureLoader().load("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 8 8'%3E %3Crect width='100%25' height='0.75' y='1' /%3E  %3C/svg%3E" );
                 texture.wrapS = THREE.RepeatWrapping;
                 texture.wrapT = THREE.RepeatWrapping;
                 texture.repeat.set( width, height );
-                var geometry = new THREE.PlaneGeometry( width, height, width, height );
+                let geometry = new THREE.PlaneGeometry( width, height, width, height );
 
-                var shaderMat = new THREE.ShaderMaterial({
+                let shaderMat = new THREE.ShaderMaterial({
                     transparent: true,
                     depthTest: true,
                     side: THREE.DoubleSide,
@@ -264,7 +378,7 @@
 
                 shaderMat.transparent = true;
 
-                var mesh = new THREE.Mesh( geometry, shaderMat );
+                let mesh = new THREE.Mesh( geometry, shaderMat );
                 mesh.rotation.x = Math.PI * 0.55;
                 mesh.rotation.z = Math.PI * 0.45;
                 mesh.rotation.y = Math.PI * 0.05;
@@ -278,7 +392,9 @@
 
                 scene.add(mesh);
             },
-
+            iWantTokens: function () {
+                console.log( "Tokens" );
+            }
         },
         mounted(){
             let self = this;
@@ -295,7 +411,41 @@
             });
 
             setTimeout(function(){
-                this.generateCanvas()
+                let deadline = 'Jan 31 2018 23:00:00 GMT-0600';
+                function time_remaining(endtime){
+                    let t = Date.parse(endtime) - Date.parse(new Date());
+                    let seconds = Math.floor( (t/1000) % 60 );
+                    let minutes = Math.floor( (t/1000/60) % 60 );
+                    let hours = Math.floor( (t/(1000*60*60)) % 24 );
+                    let days = Math.floor( t/(1000*60*60*24) );
+                    return {'total':t, 'days':days, 'hours':hours, 'minutes':minutes, 'seconds':seconds};
+                }
+                function run_clock(endtime){
+                    let days_span;
+                    let hours_span;
+                    let minutes_span;
+                    let seconds_span;
+
+                    function update_clock(){
+                        let t = time_remaining(endtime);
+                        console.log( t );
+
+                        if( t.total > 0){
+                            days_span = t.days + ' days ';
+                            hours_span = ('0' + t.hours).slice(-2) + ' hours ';
+                            minutes_span = ('0' + t.minutes).slice(-2) + ' minutes ';
+                            seconds_span = ('0' + t.seconds).slice(-2) + ' seconds';
+                            self.timeLeft = days_span + hours_span + minutes_span + seconds_span;
+                            if(t.total<=0){ clearInterval(timeinterval); }
+                        }else{
+                            self.timeLeft = 'Time ended';
+                        }
+                    }
+                    update_clock();
+                    let timeinterval = setInterval(update_clock,1000);
+                }
+                run_clock(deadline);
+                this.generateCanvas();
             }.bind(this), 100);
         }
     }
@@ -322,7 +472,17 @@
         display: block;
         background: transparent;
     }
-
+    .count-down-time{
+        color: #000;
+        font-weight: bold;
+        text-align: center;
+        .time-left{
+            margin: 0 0 10px 0;
+            letter-spacing: 2px;
+            padding: 40px 0 20px;
+            text-transform: uppercase;
+        }
+    }
     .mainLogo{
         top: 50%;
         left: 50%;
@@ -338,7 +498,28 @@
             padding: 14px 30px;
         }
     }
-
+    .upupup{
+        position: relative;
+        z-index: 2;
+    }
+    .tableReference{
+        width: 100%;
+        display: block;
+        padding: 10rem 0;
+        background: #b30e0e;
+        table{
+            margin: 0 auto;
+            max-width: 1200px;
+            tr{
+                td{
+                    color: #FFF;
+                    padding: 10px;
+                    font-size: 1.8rem;
+                    border: 1px solid #FFF;
+                }
+            }
+        }
+    }
     .subscribe{
         overflow: hidden;
         padding: 10rem 0;
@@ -346,13 +527,41 @@
         position: relative;
         .title{
             z-index: 3;
-            top: 5rem;
+            top: 2rem;
             left: 15px;
             color: #000;
             font-size: 3rem;
             position: absolute;
             letter-spacing: 2px;
             text-transform: uppercase;
+        }
+        .subtitle{
+            z-index: 3;
+            top: 7rem;
+            width: 50%;
+            left: 15px;
+            color: #000;
+            font-size: 1rem;
+            position: absolute;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .caption{
+            z-index: 9;
+            /*top: 7rem;*/
+            color: #000;
+            margin: 0;
+            font-size: 1.4rem;
+            text-align: center;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .endedText{
+            color: #FFF;
+            margin-top: 20px;
+            text-shadow: 0 0 10px rgba(0,0,0,0.5);
+            text-align: center;
+            font-size: 1.3rem;
         }
         .text, form{
             color: #000;
@@ -367,7 +576,7 @@
             padding: 10px 20px;
             border: 2px solid $color-1;
         }
-        button{
+        button, .btn{
             border: 0;
             color: #FFF;
             border-radius: 0;
@@ -492,6 +701,8 @@
         height: 250px;
         margin-top: 15px;
         position: relative;
+        overflow: hidden;
+        clear: both;
         .progress {
             float: right;
             position: relative;
@@ -639,5 +850,37 @@
         }
     }
 
+
+    .logos_3{
+        width: 100%;
+        font-size: 0;
+        padding: 5rem 0;
+        li{
+            width: 33.33%;
+            display: inline-block;
+            vertical-align: middle;
+            img{
+                display: block;
+                margin: 0 auto;
+                max-width: 90%;
+            }
+        }
+    }
+
+    .logos_4{
+        width: 100%;
+        font-size: 0;
+        padding: 5rem 0;
+        li{
+            width: 25%;
+            display: inline-block;
+            vertical-align: middle;
+            img{
+                display: block;
+                margin: 0 auto;
+                max-width: 80%;
+            }
+        }
+    }
 
 </style>

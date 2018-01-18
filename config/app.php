@@ -79,7 +79,7 @@ return [
     */
 
     'locale' => 'en',
-
+//    'locales' => ['en' => 'English', 'de' => 'Germany', 'fi' => 'Finland', 'fr' => 'France'],
     /*
     |--------------------------------------------------------------------------
     | Application Fallback Locale
@@ -92,6 +92,8 @@ return [
     */
 
     'fallback_locale' => 'en',
+    'locale_prefix' => '',
+
 
     /*
     |--------------------------------------------------------------------------
@@ -177,6 +179,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
+
     ],
 
     /*
@@ -226,6 +230,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        'LaravelLocalization' => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class,
+        'AppHelper' => App\Http\Controllers\UtilsController::class,
     ],
 
 ];

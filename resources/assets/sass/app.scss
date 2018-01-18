@@ -1,4 +1,3 @@
-
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 
@@ -7,3 +6,133 @@
 
 // Bootstrap
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+$color-1: #e61b1b;
+
+body {
+	width: 100vw;
+	height: 100vh;
+	font-size: 2rem;
+	background: linear-gradient(-45deg, #e61b1b, #ec2548);
+	background-size: 100% 100%;
+	/*animation: Gradient 15s ease infinite;*/
+}
+
+.mainLogo{
+	top: 50%;
+	left: 50%;
+	text-align: center;
+	position: absolute;
+	transform: translate3d( -50%, -50%, 0 );
+	h2{
+		/*color: $color-1;  */
+		color: #FFF;
+		/*text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);*/
+		display: inline-block;
+		background: $color-1;
+		padding: 14px 30px;
+	}
+}
+ul{
+	margin: 0;
+	padding: 0;
+	li{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+}
+header{
+	top: 0;
+	left: 0;
+	right: 0;
+	position: absolute;
+	nav{
+		top: 10px;
+		right: 10px;
+		position: absolute;
+		ul{
+			margin: 0;
+			padding: 0;
+			display: inline-block;
+			vertical-align: middle;
+			li{
+				display: inline-block;
+				a{
+					color: #FFF;
+					display: block;
+					padding: 5px 10px;
+					text-decoration: none;
+					&:hover{
+						color: #FFF;
+					}
+				}
+				&.active{
+					border-bottom: 1px solid #FFF;
+					a{
+						pointer-events: none;
+					}
+				}
+			}
+			&.lang{
+				li{
+					vertical-align: middle;
+					a{
+						padding: 5px;
+						font-size: 12px;
+						&.active{
+							font-weight: bold; 
+							pointer-events: none;
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.white-block{
+	background: #fff;
+	padding: 5rem 0;
+}
+.single-page{
+	color: #FFF;
+	padding: 10rem 0;
+}
+.panel{
+	border: 0;
+	background: transparent;
+	a{
+		color: #FFF;
+	}
+	.panel-heading{
+		border: 0;
+		color: #FFF;
+		padding: 2rem 0;
+		background: transparent;
+		h3{
+			font-size: 2.5rem;
+		}
+	}
+	.panel-body{
+		padding: 2rem 0;
+		img{
+			margin: 4rem auto;
+			display: block;
+			max-width: 100%;
+		}
+	}
+}
+.well{
+	background: linear-gradient(45deg, #e61b1b, #ec2548);
+	background-size: 100% 100%;
+	p{
+		&:last-of-type{
+			margin-bottom: 0;
+		}
+	}
+	&.well-purple{
+		background: linear-gradient(45deg, #e61b1b, #ec2acd);
+		background-size: 100% 100%;
+	}
+}

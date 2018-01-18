@@ -26,11 +26,16 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/images/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-
+    <script>
+        var LOCAL = '{{ LaravelLocalization::getCurrentLocale() }}';
+    </script>
 </head>
 <body>
-<div id="app">
-</div>
+    @include('website.partial.header')
+    <div id="app">
+        @yield('content')
+    </div>
+
 <script>
     window.Laravel = <?php echo json_encode([
             'csrfToken' => csrf_token(),
