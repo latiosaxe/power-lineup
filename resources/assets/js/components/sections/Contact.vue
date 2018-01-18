@@ -26,6 +26,11 @@
 </template>
 <script>
 
+    import MultiLanguage from 'vue-multilanguage';
+
+    Vue.use(MultiLanguage, {
+        default: LOCAL
+    });
     export default {
         name: 'Contact',
         data () {

@@ -1413,6 +1413,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_vue_multilanguage__ = __webpack_require__(69);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_vue_multilanguage___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_vue_multilanguage__);
 
+window.Vue = __webpack_require__(16);
+
 
 
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]);
@@ -18742,6 +18744,8 @@ exports.push([module.i, "\n.sec_people {\n  color: #FFF;\n  margin-top: 100px;\n
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_multilanguage__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_multilanguage___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue_multilanguage__);
 //
 //
 //
@@ -18770,6 +18774,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 
+
+
+Vue.use(__WEBPACK_IMPORTED_MODULE_0_vue_multilanguage___default.a, {
+    default: LOCAL
+});
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: 'Contact',
     data: function data() {
