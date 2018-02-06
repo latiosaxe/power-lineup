@@ -4,7 +4,7 @@
             <div class="container single-page">
                 <div class="row">
                     <div class="col-xs-12 col-md-12">
-                        <h1>SEND ETH TO THIS ADRESS AND RECEIVE BDG TOKENS <strong>NOW!</strong></h1>
+                        <h1>SEND ETH TO THIS ADRESS AND RECEIVE POW TOKENS <strong>NOW!</strong></h1>
                     </div>
                 </div>
                 <br>
@@ -24,7 +24,7 @@
                 <div class="row grid-text">
                     <div class="col-md-4 col-xs-12">
                         <p><strong>Exchange Rate</strong></p>
-                        <p>1 ETH = 10,000 BDG</p>
+                        <p>1 ETH = 10,000 POW</p>
                     </div>
                     <div class="col-md-4 col-xs-12">
                         <p><strong>Set GAS Limit</strong></p>
@@ -73,12 +73,12 @@
                                         <img src="https://www.bitdegree.org/en/token/assets/instructions/myetherwallet-3.png?static=true&amp;v=549" alt="MyEtherWallet">
                                         <p>Enter a password that will be used to access your wallet:</p>
                                         <p>1. Create a strong password, using upper and lower-case letters, and also numbers and symbols (e.g., “#”, “@”, etc.).</p>
-                                        <p>2. Do not lose this password. Losing this password is equivalent to losing all ETH and BDG stored in your account. Click on the <b>Create New Wallet</b> button.</p>
+                                        <p>2. Do not lose this password. Losing this password is equivalent to losing all ETH and POW stored in your account. Click on the <b>Create New Wallet</b> button.</p>
 
                                         <h4><b>Step 4:</b> Save Your Keystore File.</h4>
                                         <img src="https://www.bitdegree.org/en/token/assets/instructions/myetherwallet-4.png?static=true&amp;v=549" alt="MyEtherWallet">
                                         <p>This file contains your private and public keys and is required every time you want to access your account.</p>
-                                        <p class="instructions-note"><span><b>NOTE:</b></span> you won’t be able to access your account without this file and the password from the previous step. Losing either one of them is equivalent to losing all ETH and BDG stored in your account.</p>
+                                        <p class="instructions-note"><span><b>NOTE:</b></span> you won’t be able to access your account without this file and the password from the previous step. Losing either one of them is equivalent to losing all ETH and POW stored in your account.</p>
 
                                         <h4><b>Step 5 (optional):</b> Backup Your Private Key.</h4>
                                         <img src="https://www.bitdegree.org/en/token/assets/instructions/myetherwallet-5.png?static=true&amp;v=549" alt="MyEtherWallet">
