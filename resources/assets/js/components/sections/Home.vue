@@ -237,10 +237,13 @@
                 <li><img src="/images/featured-league/nfl.png" alt=""></li>
                 <li><img src="/images/featured-league/nba.png" alt=""></li>
                 <li><img src="/images/featured-league/mlb.png" alt=""></li>
-                <li><img src="/images/featured-league/atp.png" alt=""></li>
-                <li><img src="/images/featured-league/lol.png" alt=""></li>
-                <li><img src="/images/featured-league/russia.png" alt=""></li>
-                <li><img src="/images/featured-league/evo.png" alt=""></li>
+            </ul>
+            <br>
+            <ul class="logos_4">
+              <li><img src="/images/featured-league/atp.png" alt=""></li>
+              <li><img src="/images/featured-league/lol.png" alt=""></li>
+              <li><img src="/images/featured-league/russia.png" alt=""></li>
+              <li><img src="/images/featured-league/evo.png" alt=""></li>
             </ul>
           </div>
         </div>
