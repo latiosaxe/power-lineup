@@ -229,6 +229,23 @@
 
 
         <div class="white-block">
+          <div class="container">
+            <p><strong>Featured Leagues</strong></p>
+
+            <ul class="logos_4">
+                <li><img src="/images/featured-league/UEFA_Champions_League.png" alt=""></li>
+                <li><img src="/images/featured-league/nfl.png" alt=""></li>
+                <li><img src="/images/featured-league/nba.png" alt=""></li>
+                <li><img src="/images/featured-league/mlb.png" alt=""></li>
+                <li><img src="/images/featured-league/atp.png" alt=""></li>
+                <li><img src="/images/featured-league/lol.png" alt=""></li>
+                <li><img src="/images/featured-league/russia.png" alt=""></li>
+                <li><img src="/images/featured-league/evo.png" alt=""></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="white-block">
             <div class="container">
                 <p>
                     Win big and change your tokens for digital assets from AppStore, Google Play, Spotify and Amazon, or Or change them for real world prizes like trips to the best tournaments around the world, meet-and-greets with your favorite stars and a huge stock of our partner brands.
